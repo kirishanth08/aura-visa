@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express Entry & Skilled Worker Visa - AuraVisa</title>
+  <meta name="description" content="In-depth guide to Canadian Express Entry and Federal Skilled Worker (FSW) immigration: points breakdown, documents, processing timeline, and government fees.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Interactive Service Selector Sub-Bar -->
+  <div class="service-nav-wrapper">
+    <div class="container">
+      <div class="service-nav-pills" id="service-pills">
+        <button class="service-pill-btn active" data-service="express-entry">
+          <span>🇨🇦</span> <span>Canada Express Entry</span>
+        </button>
+        <button class="service-pill-btn" data-service="australia-gsm">
+          <span>🇦🇺</span> <span>Australia GSM</span>
+        </button>
+        <button class="service-pill-btn" data-service="uk-skilled-worker">
+          <span>🇬🇧</span> <span>UK Skilled Worker</span>
+        </button>
+        <button class="service-pill-btn" data-service="golden-visa">
+          <span>🏛️</span> <span>Golden Visa & Investor</span>
+        </button>
+        <button class="service-pill-btn" data-service="student-permits">
+          <span>🎓</span> <span>Student Permits</span>
+        </button>
+        <button class="service-pill-btn" data-service="family-sponsorship">
+          <span>👨‍👩‍👧</span> <span>Family Sponsorship</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: Skilled Worker & Express Entry Visa Deep-Dive Hero -->
+  <section class="hero-wrapper" id="service-detail-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill" id="service-hero-pill"><i class="bi bi-flag-fill text-danger me-1"></i> Canada Permanent Residency Stream</div>
+          <h1 class="display-4 fw-extrabold mb-3" id="service-title">Federal Skilled Worker & Express Entry Program</h1>
+          <p class="lead text-muted mb-4" id="service-lead">
+            Canada's premier economic immigration pathway offering direct Permanent Resident (PR) status for university graduates, IT engineers, healthcare practitioners, and business professionals.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#booking-form" class="btn btn-primary-aura"><i class="bi bi-check2-circle me-1"></i> Apply for Representation</a>
+            <a href="eligibility-checker.html" class="btn btn-outline-aura"><i class="bi bi-calculator me-1"></i> Calculate CRS Score</a>
+          </div>
+          <div class="d-flex align-items-center gap-4 text-muted small">
+            <div id="service-time-badge"><i class="bi bi-clock text-primary me-1"></i> 6-8 Months Processing</div>
+            <div id="service-dependents-badge"><i class="bi bi-person-check text-success me-1"></i> Includes Family Dependents</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <!-- DISTINCT IMAGE: Page 5 (Skilled professional engineer in modern tech office) -->
+            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&auto=format&fit=crop&q=80" alt="Official passport open showing consular visa stamp and permanent residency entry endorsement" class="hero-featured-img" id="service-hero-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Eligibility Criteria & Comprehensive Ranking System (CRS) Breakdown -->
+  <section class="section-space-alt" id="crs-breakdown">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle" id="service-formula-subtitle">Selection Formula</span>
+        <h2 class="section-heading" id="service-formula-title">How the CRS Point System Evaluates Candidates</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;" id="service-formula-desc">
+          The Comprehensive Ranking System (CRS) awards points out of 1,200 based on core human capital, spousal factors, and government provincial nominations.
+        </p>
+      </div>
+
+      <div class="row g-4" id="service-formula-cards">
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center h-100">
+            <span class="badge-aura badge-aura-primary mb-2 mx-auto">Max 110 Points</span>
+            <h5 class="fw-bold mb-2">Age Factor</h5>
+            <p class="text-muted small mb-0">Maximum points are awarded to applicants aged between 20 and 29 years, tapering down after age 30.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center h-100">
+            <span class="badge-aura badge-aura-success mb-2 mx-auto">Max 150 Points</span>
+            <h5 class="fw-bold mb-2">Education Level</h5>
+            <p class="text-muted small mb-0">Verified via Educational Credential Assessment (ECA). Master's and Ph.D. degrees earn highest bracket.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center h-100">
+            <span class="badge-aura badge-aura-warning mb-2 mx-auto">Max 160 Points</span>
+            <h5 class="fw-bold mb-2">Language (IELTS / CELPIP)</h5>
+            <p class="text-muted small mb-0">Achieving Canadian Language Benchmark (CLB 9 / IELTS 8777) delivers an exponential score surge.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center h-100">
+            <span class="badge-aura badge-aura-danger mb-2 mx-auto">Bonus +600 Points</span>
+            <h5 class="fw-bold mb-2">Provincial Nomination</h5>
+            <p class="text-muted small mb-0">Securing a nomination through Ontario, BC, or Alberta PNP guarantees an immediate Invitation to Apply (ITA).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Required Supporting Documents Checklist -->
+  <section class="section-space" id="documents-checklist">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-subtitle">Verification Standards</span>
+          <h2 class="section-heading mb-3">Mandatory Document Dossier</h2>
+          <p class="text-muted mb-4">
+            A single missing stamp or miscalculated work tenure can trigger an immediate application rejection. Our legal audit team verifies every entry against IRCC guidelines.
+          </p>
+          <div class="d-flex flex-column gap-3" id="service-doc-list">
+            <div class="d-flex align-items-start gap-3 p-3 bg-surface border rounded-3">
+              <i class="bi bi-file-earmark-check-fill text-primary fs-4 mt-1"></i>
+              <div>
+                <h6 class="fw-bold mb-1">ECA Report (WES / ICAS)</h6>
+                <small class="text-muted">Equivalency report demonstrating degrees match Canadian educational standards.</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3 p-3 bg-surface border rounded-3">
+              <i class="bi bi-translate text-success fs-4 mt-1"></i>
+              <div>
+                <h6 class="fw-bold mb-1">Language Test Results (IELTS / TEF)</h6>
+                <small class="text-muted">Official score report less than 2 years old verifying English and/or French fluency.</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3 p-3 bg-surface border rounded-3">
+              <i class="bi bi-briefcase-fill text-warning fs-4 mt-1"></i>
+              <div>
+                <h6 class="fw-bold mb-1">Employment Reference Letters on Letterhead</h6>
+                <small class="text-muted">Detailed reference letters mapping duties directly to Canadian NOC 2021 codes.</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3 p-3 bg-surface border rounded-3">
+              <i class="bi bi-shield-check text-danger fs-4 mt-1"></i>
+              <div>
+                <h6 class="fw-bold mb-1">Police Clearance & Upfront Medicals</h6>
+                <small class="text-muted">Certificates from all nations resided in for 6+ consecutive months, plus panel physician exams.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 p-lg-5 bg-surface border rounded-4 shadow-sm" id="service-funds-card">
+            <h4 class="fw-bold mb-3">Proof of Settlement Funds (2026)</h4>
+            <p class="text-muted small mb-4">IRCC mandates unencumbered liquid funds depending on the number of family members migrating:</p>
+            <div class="table-responsive mb-4">
+              <table class="table table-auravisa mb-0">
+                <thead>
+                  <tr>
+                    <th>Family Size</th>
+                    <th>Required CAD ($)</th>
+                    <th>USD Equivalent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1 (Single Applicant)</td>
+                    <td class="fw-bold text-primary">$14,690 CAD</td>
+                    <td>~$10,800 USD</td>
+                  </tr>
+                  <tr>
+                    <td>2 (Couple)</td>
+                    <td class="fw-bold text-primary">$18,288 CAD</td>
+                    <td>~$13,500 USD</td>
+                  </tr>
+                  <tr>
+                    <td>3 (Couple + 1 Child)</td>
+                    <td class="fw-bold text-primary">$22,483 CAD</td>
+                    <td>~$16,600 USD</td>
+                  </tr>
+                  <tr>
+                    <td>4 (Family of Four)</td>
+                    <td class="fw-bold text-primary">$27,297 CAD</td>
+                    <td>~$20,150 USD</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="small text-muted">
+              <i class="bi bi-info-circle me-1"></i> Funds must be maintained in accessible liquid bank accounts (fixed deposits, savings).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: 6-Stage Application Milestone Roadmap -->
+  <section class="section-space-alt" id="express-roadmap">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Execution Pipeline</span>
+        <h2 class="section-heading" id="service-roadmap-title">6-Stage Application Milestone Timeline</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;" id="service-roadmap-desc">
+          From first document audit to your passport stamp, our licensed counsel guides every step.
+        </p>
+      </div>
+
+      <div class="row g-4" id="service-roadmap-steps">
+        <div class="col-md-4 col-lg-2">
+          <div class="card-auravisa p-3 text-center h-100">
+            <div class="step-number-badge mx-auto">1</div>
+            <h6 class="fw-bold mb-1">ECA & IELTS</h6>
+            <small class="text-muted">Evaluation & score benchmarking.</small>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="card-auravisa p-3 text-center h-100">
+            <div class="step-number-badge mx-auto">2</div>
+            <h6 class="fw-bold mb-1">Profile Entry</h6>
+            <small class="text-muted">Submission to federal Express Entry pool.</small>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="card-auravisa p-3 text-center h-100">
+            <div class="step-number-badge mx-auto">3</div>
+            <h6 class="fw-bold mb-1">PNP Nomination</h6>
+            <small class="text-muted">State stream application (+600 pts).</small>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="card-auravisa p-3 text-center h-100">
+            <div class="step-number-badge mx-auto">4</div>
+            <h6 class="fw-bold mb-1">ITA Received</h6>
+            <small class="text-muted">Official Invitation to Apply from IRCC.</small>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="card-auravisa p-3 text-center h-100">
+            <div class="step-number-badge mx-auto">5</div>
+            <h6 class="fw-bold mb-1">e-APR Filing</h6>
+            <small class="text-muted">Full dossier upload within 60 days.</small>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="card-auravisa p-3 text-center h-100">
+            <div class="step-number-badge mx-auto">6</div>
+            <h6 class="fw-bold mb-1">CoPR & Visa</h6>
+            <small class="text-muted">Confirmation of Permanent Residence.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Government Processing Times & Official Fee Table -->
+  <section class="section-space" id="fees-schedule">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Cost Transparency</span>
+        <h2 class="section-heading" id="service-fee-title">Official IRCC Government Fee Schedule</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;" id="service-fee-desc">
+          All government fees are paid directly to the Receiver General for Canada.
+        </p>
+      </div>
+
+      <div class="table-responsive" id="service-fee-container">
+        <table class="table table-auravisa">
+          <thead>
+            <tr>
+              <th>Fee Category</th>
+              <th>Applicant Covered</th>
+              <th>Government Fee</th>
+              <th>Refundability Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Principal Applicant Processing Fee</td>
+              <td>Main Applicant</td>
+              <td class="fw-bold text-primary">$950 CAD</td>
+              <td>Non-refundable once processing begins</td>
+            </tr>
+            <tr>
+              <td>Right of Permanent Residence Fee (RPRF)</td>
+              <td>Main Applicant</td>
+              <td class="fw-bold text-primary">$575 CAD</td>
+              <td>Refundable if visa refused or withdrawn</td>
+            </tr>
+            <tr>
+              <td>Spouse / Common-Law Partner Fee</td>
+              <td>Dependent Spouse</td>
+              <td class="fw-bold text-primary">$950 CAD</td>
+              <td>Non-refundable</td>
+            </tr>
+            <tr>
+              <td>Spouse RPRF Fee</td>
+              <td>Dependent Spouse</td>
+              <td class="fw-bold text-primary">$575 CAD</td>
+              <td>Refundable if refused</td>
+            </tr>
+            <tr>
+              <td>Dependent Child Fee</td>
+              <td>Per child under 22</td>
+              <td class="fw-bold text-primary">$260 CAD</td>
+              <td>Non-refundable</td>
+            </tr>
+            <tr>
+              <td>Biometrics Fee</td>
+              <td>Single Applicant / Family Max</td>
+              <td class="fw-bold text-primary">$85 / $170 CAD</td>
+              <td>Covers digital fingerprints and photo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: Dedicated Case Officer Consultation Booking Form -->
+  <section class="section-space-alt" id="booking-form">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-subtitle">Take the First Step</span>
+          <h2 class="section-heading mb-3" id="service-booking-title">Speak with a Licensed Canadian Immigration Consultant (RCIC)</h2>
+          <p class="text-muted mb-4" id="service-booking-desc">
+            Our certified practitioners will audit your credentials, compute your official CRS ranking, and evaluate opportunities for Ontario, BC, or Alberta PNP sponsorship.
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="fs-1 text-primary"><i class="bi bi-patch-check"></i></div>
+            <div>
+              <div class="fw-bold">100% Confidential Legal Evaluation</div>
+              <small class="text-muted">Protected under attorney-client privilege regulations.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 p-lg-5 bg-surface border rounded-4 shadow">
+            <h4 class="fw-bold mb-3">Schedule Case Officer Review</h4>
+            <form class="needs-validation-aura" novalidate>
+              <div class="mb-3">
+                <label class="form-label">Selected Visa Program</label>
+                <input type="text" class="form-control" id="service-booking-stream" readonly value="Canada Federal Skilled Worker & Express Entry">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Full Legal Name</label>
+                <input type="text" class="form-control" placeholder="As written in passport" required>
+              </div>
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" placeholder="name@email.com" required>
+                </div>
+                <div class="col-6">
+                  <label class="form-label">Phone / WhatsApp</label>
+                  <input type="tel" class="form-control" placeholder="+1..." required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Current Occupation / Field</label>
+                <input type="text" class="form-control" placeholder="e.g. Software Engineer, Registered Nurse" required>
+              </div>
+              <button class="btn btn-accent-aura w-100 py-2" type="submit">
+                <i class="bi bi-calendar-check me-1"></i> Request Legal Consultation
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-auravisa">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="brand-logo mb-3" href="index.html">
+            <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+            <span>Aura<span class="text-warning">Visa</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            AuraVisa is a globally registered immigration consultancy providing end-to-end relocation, permanent residency, work permits, and university placement with licensed attorneys worldwide.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Students)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Visa Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="country-guide.html">Country Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Immigration</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="service-details.html?service=express-entry">Express Entry</a></li>
+            <li><a href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+            <li><a href="eligibility-checker.html">CRS Calculator</a></li>
+            <li><a href="success-stories.html">Case Studies</a></li>
+            <li><a href="blog.html">Migration News</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5>Immigration Policy Alerts</h5>
+          <p class="text-muted small">Subscribe to weekly visa draws, cutoff changes, and immigration law updates directly from our registered counsel.</p>
+          <form class="needs-validation-aura d-flex gap-2" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-accent-aura px-3" type="submit">Join</button>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="bi bi-shield-check me-1 text-success"></i> Strict Zero-Spam Policy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AuraVisa Global Migration Advisory Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="404.html">Privacy Policy</a>
+          <a href="coming-soon.html">Terms of Engagement</a>
+          <a href="maintenance.html">Compliance Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/service-details.js"></script>
+</body>
+</html>

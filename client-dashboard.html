@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard - AuraVisa Portal</title>
+  <meta name="description" content="AuraVisa client dashboard: track application progress, view case officer notes, and manage uploaded documents.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Dashboard Main Layout -->
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar py-3">
+      <div class="px-3 mb-3">
+        <small class="text-muted fw-bold text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.5px;">Navigation</small>
+      </div>
+      <a href="client-dashboard.html" class="sidebar-nav-item active">
+        <i class="bi bi-speedometer2"></i> Overview
+      </a>
+      <a href="client-application-details.html" class="sidebar-nav-item">
+        <i class="bi bi-folder2-open"></i> Application File
+      </a>
+      <a href="client-documents.html" class="sidebar-nav-item">
+        <i class="bi bi-file-earmark-arrow-up"></i> Document Vault
+      </a>
+      <a href="client-appointments.html" class="sidebar-nav-item">
+        <i class="bi bi-calendar-event"></i> Consultations
+      </a>
+      <a href="client-payments.html" class="sidebar-nav-item">
+        <i class="bi bi-credit-card"></i> Invoices & Retainers
+      </a>
+      <a href="client-profile.html" class="sidebar-nav-item">
+        <i class="bi bi-person-gear"></i> Profile Settings
+      </a>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="dashboard-main">
+      <!-- SECTION 1: Applicant Welcome Banner & Case Health Score -->
+      <section class="mb-4" id="welcome-banner">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <div class="row align-items-center g-4">
+            <div class="col-12">
+              <span class="badge-aura badge-aura-success mb-2">Active Representation</span>
+              <h2 class="fs-3 fw-bold mb-1" id="clientGreeting">Welcome back, Sarah Chen</h2>
+              <p class="text-muted small mb-3">
+                Your Canadian Express Entry (FSW) application is proceeding on schedule. Lead Attorney <strong>Jonathan Vance, KC</strong> recently reviewed your police certificates.
+              </p>
+              <div class="d-flex flex-wrap gap-4 small text-muted">
+                <div>Case Ref: <strong class="text-main">#AV-2026-8942</strong></div>
+                <div>Target Country: <strong class="text-main">Canada</strong></div>
+                <div>CRS Score: <strong class="text-primary">488 Points</strong></div>
+                <div>Case Officer: <strong class="text-main">Victoria Stirling</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: Live Application Status & Stage Progress Bar -->
+      <section class="mb-4" id="progress-stage">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold mb-0">Application Progress: Stage 4 of 6</h5>
+            <span class="badge-aura badge-aura-primary">Invitation to Apply (ITA) Verified</span>
+          </div>
+          <p class="small text-muted mb-3">Your post-ITA e-APR electronic dossier is 85% compiled and awaiting medical clearance upload.</p>
+          <div class="progress mb-3" style="height: 12px;">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 68%;" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="row g-2 text-center small text-muted">
+            <div class="col-2 text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 1. ECA</div>
+            <div class="col-2 text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 2. IELTS</div>
+            <div class="col-2 text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 3. Pool Entry</div>
+            <div class="col-2 text-primary fw-bold"><i class="bi bi-record-circle-fill"></i> 4. Post-ITA</div>
+            <div class="col-2 text-muted">5. Biometrics</div>
+            <div class="col-2 text-muted">6. CoPR Grant</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Action Required: Pending Document Uploads & Deadlines -->
+      <section class="mb-4" id="pending-actions">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0 text-danger"><i class="bi bi-exclamation-triangle-fill me-2"></i>Action Items Required</h5>
+            <span class="small text-muted">Deadline: March 28, 2026 (18 Days Left)</span>
+          </div>
+          <div class="list-group list-group-flush">
+            <div class="list-group-item d-flex justify-content-between align-items-center px-0 py-3 bg-transparent">
+              <div>
+                <h6 class="fw-bold mb-1">Upfront Medical Exam Report (e-Medical)</h6>
+                <small class="text-muted">Issued by an official IRCC-approved panel physician.</small>
+              </div>
+              <a href="client-documents.html" class="btn btn-sm btn-primary-aura">Upload PDF</a>
+            </div>
+            <div class="list-group-item d-flex justify-content-between align-items-center px-0 py-3 bg-transparent">
+              <div>
+                <h6 class="fw-bold mb-1">Updated 6-Month Liquid Proof of Funds Letter</h6>
+                <small class="text-muted">Official stamped bank balance certificate showing minimum $18,288 CAD.</small>
+              </div>
+              <a href="client-documents.html" class="btn btn-sm btn-primary-aura">Upload PDF</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: Upcoming Case Officer Consultation Schedule -->
+      <section class="mb-4" id="upcoming-consultation">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0">Scheduled Video Consultation</h5>
+            <a href="client-appointments.html" class="btn btn-sm btn-outline-aura">Manage Bookings</a>
+          </div>
+          <div class="p-3 bg-light rounded-3 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-primary-subtle text-primary p-3 rounded-circle fs-4">
+                <i class="bi bi-camera-video-fill"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Pre-Filing Final Dossier Audit Session</h6>
+                <small class="text-muted">with Victoria Stirling, LLB &bull; Zoom Secure Room #849-291</small>
+              </div>
+            </div>
+            <div class="text-md-end">
+              <div class="fw-bold text-primary">Thursday, March 19, 2026</div>
+              <small class="text-muted">2:30 PM - 3:15 PM EST</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: Recent Case Activity Log & Status Notifications -->
+      <section id="activity-log">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-3">Recent Case Timeline & Logs</h5>
+          <div class="timeline-track">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <h6 class="fw-bold mb-1">Police Clearance Certificate Approved</h6>
+              <small class="text-muted d-block">Verified by Paralegal David Kim &bull; March 8, 2026 at 11:42 AM</small>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <h6 class="fw-bold mb-1">Invitation to Apply (ITA) Acknowledged</h6>
+              <small class="text-muted d-block">Logged into IRCC GCKey Portal &bull; March 1, 2026 at 4:15 PM</small>
+            </div>
+            <div class="timeline-item mb-0">
+              <div class="timeline-dot"></div>
+              <h6 class="fw-bold mb-1">WES Educational Credential Report Verified</h6>
+              <small class="text-muted d-block">Master's equivalency recognized (Score: +25 Pts) &bull; Feb 15, 2026</small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const stored = localStorage.getItem('auravisa_logged_in_user');
+        if (stored) {
+          const user = JSON.parse(stored);
+          if (user && user.name) {
+            const greeting = document.getElementById('clientGreeting');
+            if (greeting) {
+              greeting.textContent = 'Welcome back, ' + user.name;
+            }
+          }
+        }
+      } catch(e) {}
+    });
+  </script>
+</body>
+</html>

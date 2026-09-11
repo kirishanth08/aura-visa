@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - AuraVisa Global Immigration Advisory</title>
+  <meta name="description" content="Discover AuraVisa's 15-year legacy of legal integrity, certified government bar accreditations, and client-first immigration advocacy worldwide.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: About Hero & Corporate Overview -->
+  <section class="hero-wrapper" id="about-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill"><i class="bi bi-buildings text-warning"></i> Established 2011 &bull; 15 Years of Integrity</div>
+          <h1 class="display-4 fw-extrabold mb-3">Empowering Global Dreams Through Legal Precision</h1>
+          <p class="lead text-muted mb-4">
+            Founded by former consular officers and certified immigration attorneys, AuraVisa is dedicated to delivering transparent, ethical, and results-driven immigration representation.
+          </p>
+          <div class="row g-3 text-muted small">
+            <div class="col-sm-6"><i class="bi bi-shield-lock-fill text-success me-1"></i> Fiduciary Retainer Protection</div>
+            <div class="col-sm-6"><i class="bi bi-people-fill text-secondary me-1"></i> 65+ Licensed Legal Associates</div>
+            <div class="col-sm-6"><i class="bi bi-globe-central-south text-primary me-1"></i> 4 Direct Continental Offices</div>
+            <div class="col-sm-6"><i class="bi bi-award-fill text-warning me-1"></i> 100% Bar Regulatory Compliance</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <!-- DISTINCT IMAGE: Page 3 (Corporate immigration consultancy board meeting) -->
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop&q=80" alt="AuraVisa legal team conducting immigration case consultation in modern boardroom" class="hero-featured-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Founding Story & 15-Year Migration Legacy -->
+  <section class="section-space-alt" id="about-story">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-subtitle">Our Journey</span>
+          <h2 class="section-heading mb-3">From a Toronto Boutique Law Firm to an International Authority</h2>
+          <p class="text-muted">
+            In 2011, AuraVisa began with a single mission: to eliminate the ambiguity, predatory fees, and misrepresentations that too often plague international migration. Our founders, seasoned Canadian and British solicitors, created a boutique practice anchored in fiduciary ethics.
+          </p>
+          <p class="text-muted">
+            Today, our firm represents clients across 45 countries. We have shepherded software engineers, medical doctors, academic researchers, and whole families through complex Express Entry draws, Australian SkillSelect pools, and UK sponsor licenses with uncompromising attention to statutory detail.
+          </p>
+          <div class="d-flex gap-4 pt-2">
+            <div>
+              <h3 class="fw-bold text-primary mb-0">18.5k+</h3>
+              <small class="text-muted">Passports Stamped</small>
+            </div>
+            <div class="border-start ps-4">
+              <h3 class="fw-bold text-primary mb-0">100%</h3>
+              <small class="text-muted">Document Verification</small>
+            </div>
+            <div class="border-start ps-4">
+              <h3 class="fw-bold text-primary mb-0">0</h3>
+              <small class="text-muted">Disciplinary Actions</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 p-lg-5 bg-surface rounded-4 shadow-sm border">
+            <h4 class="fw-bold mb-4">Milestone Timeline</h4>
+            <div class="timeline-track">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="fw-bold mb-1">2011 - Foundation in Toronto</h6>
+                <p class="small text-muted mb-0">Established as a specialized Canadian Federal Skilled Worker legal practice.</p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="fw-bold mb-1">2015 - Expansion into Australia & UK</h6>
+                <p class="small text-muted mb-0">Secured MARA registration in Sydney and OISC level 3 certification in London.</p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="fw-bold mb-1">2020 - Digital Case Tracking Platform</h6>
+                <p class="small text-muted mb-0">Launched the encrypted AuraVisa Client Portal for real-time document verification.</p>
+              </div>
+              <div class="timeline-item mb-0">
+                <div class="timeline-dot"></div>
+                <h6 class="fw-bold mb-1">2026 - Global Mobility Network</h6>
+                <p class="small text-muted mb-0">Crossed 18,500 lifetime approvals with physical offices in Toronto, London, Sydney, and Dubai.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Mission, Vision, and Ethical Governance Pillars -->
+  <section class="section-space" id="about-mission">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Core Philosophy</span>
+        <h2 class="section-heading">Our Three Foundational Pillars</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          Immigration is not merely paperwork; it is the trajectory of human lives. We hold ourselves to the highest global legal ethics.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 text-center">
+            <div class="bg-primary-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                <path d="M7 21h10"/>
+                <path d="M12 3v18"/>
+                <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+              </svg>
+            </div>
+            <h4 class="fs-5 fw-bold mb-2">Honest Case Assessment</h4>
+            <p class="text-muted small mb-0">
+              We never take on a file we cannot win. If your background lacks qualifications for a specific destination, we advise honest improvements rather than taking retainers.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 text-center">
+            <div class="bg-success-subtle text-success rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px; font-size: 1.5rem;">
+              <i class="bi bi-shield-shaded"></i>
+            </div>
+            <h4 class="fs-5 fw-bold mb-2">Fiduciary Transparency</h4>
+            <p class="text-muted small mb-0">
+              Every dollar paid is logged into trust accounts tied to concrete application milestones. Zero hidden administrative surcharges or sudden fee increases.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 text-center">
+            <div class="bg-warning-subtle text-warning rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px; font-size: 1.5rem;">
+              <i class="bi bi-headset"></i>
+            </div>
+            <h4 class="fs-5 fw-bold mb-2">Empathetic Client Advocacy</h4>
+            <p class="text-muted small mb-0">
+              Direct access to your designated licensed case attorney. We provide proactive updates on policy changes, draw trends, and procedural inquiries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Government Accreditations -->
+  <section class="section-space-alt" id="about-accreditations">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Regulatory Compliance</span>
+        <h2 class="section-heading">Globally Certified & Regulated Practitioners</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Our practice is overseen by official government regulatory authorities in Canada, Australia, the United Kingdom, and the European Union.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-award fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold mb-1">CICC (Canada)</h5>
+            <small class="text-muted d-block mb-2">College of Immigration and Citizenship Consultants</small>
+            <span class="badge-aura badge-aura-success mx-auto">Reg: #R519284</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-patch-check fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold mb-1">MARA (Australia)</h5>
+            <small class="text-muted d-block mb-2">Migration Agents Registration Authority</small>
+            <span class="badge-aura badge-aura-primary mx-auto">Reg: #1804921</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-file-earmark-check fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold mb-1">OISC (UK)</h5>
+            <small class="text-muted d-block mb-2">Office of the Immigration Services Commissioner</small>
+            <span class="badge-aura badge-aura-warning mx-auto">Reg: #F20180011</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-globe fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold mb-1">EIA (Europe)</h5>
+            <small class="text-muted d-block mb-2">European Immigration Alliance Accredited</small>
+            <span class="badge-aura badge-aura-success mx-auto">Verified Member</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regional Chambers Quick Strip -->
+      <div class="mt-4 p-3 bg-surface rounded-3 border d-flex flex-wrap justify-content-around align-items-center gap-3 text-center small">
+        <div><i class="bi bi-geo-alt-fill text-danger me-1"></i><strong>Toronto HQ:</strong> 100 King St W, Suite 5600</div>
+        <div><i class="bi bi-geo-alt-fill text-primary me-1"></i><strong>London Chambers:</strong> 30 St Mary Axe (Gherkin)</div>
+        <div><i class="bi bi-geo-alt-fill text-success me-1"></i><strong>Sydney Chambers:</strong> 1 Farrer Place</div>
+        <div><i class="bi bi-geo-alt-fill text-warning me-1"></i><strong>Dubai DIFC:</strong> Gate Precinct 4, Level 3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Senior Immigration Consultants & Legal Team -->
+  <section class="section-space" id="about-team">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Legal Advocates</span>
+        <h2 class="section-heading">Meet Our Senior Legal Counsel</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Decades of combined consular experience representing individuals, corporations, and families.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa text-center">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Jonathan Vance, KC Managing Partner & Canadian Bar Counsel" class="card-img-top-cover" style="height: 240px; object-fit: cover; object-position: top center;">
+            <div class="card-body-padded">
+              <h5 class="fw-bold mb-1">Jonathan Vance, KC</h5>
+              <small class="text-secondary fw-semibold d-block mb-2">Managing Partner & Canadian Bar Counsel</small>
+              <p class="text-muted small mb-0">18 years specializing in Federal Court appeals and Provincial Nominee negotiations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa text-center">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Victoria Stirling, LLB Head of UK & EU Immigration" class="card-img-top-cover" style="height: 240px; object-fit: cover; object-position: top center;">
+            <div class="card-body-padded">
+              <h5 class="fw-bold mb-1">Victoria Stirling, LLB</h5>
+              <small class="text-secondary fw-semibold d-block mb-2">Head of UK & EU Immigration</small>
+              <p class="text-muted small mb-0">Former Home Office legal auditor with expertise in Skilled Worker sponsor licensing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa text-center">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Liam O'Connor, RMA Principal Australian Migration Counsel" class="card-img-top-cover" style="height: 240px; object-fit: cover; object-position: top center;">
+            <div class="card-body-padded">
+              <h5 class="fw-bold mb-1">Liam O'Connor, RMA</h5>
+              <small class="text-secondary fw-semibold d-block mb-2">Principal Australian Migration Counsel</small>
+              <p class="text-muted small mb-0">MARA registered specialist in General Skilled Migration and regional employer sponsorship.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa text-center">
+            <img src="https://images.unsplash.com/photo-1573497019236-17f8177b81e8?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Dr. Fatima Al-Zahra Director of Middle East Operations" class="card-img-top-cover" style="height: 240px; object-fit: cover; object-position: top center;">
+            <div class="card-body-padded">
+              <h5 class="fw-bold mb-1">Dr. Fatima Al-Zahra</h5>
+              <small class="text-secondary fw-semibold d-block mb-2">Director of Middle East Operations</small>
+              <p class="text-muted small mb-0">Leads investor Golden Visas and family reunification programs across GCC and Europe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: Client Endorsements & Global Testimonials -->
+  <section class="section-space-alt" id="about-testimonials">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Real Client Journeys</span>
+        <h2 class="section-heading">Trusted by Immigrants Across 45+ Nations</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Hear directly from professionals, researchers, and families who achieved legal residency with AuraVisa counsel.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 d-flex flex-column h-100">
+            <div class="d-flex align-items-center gap-1 text-warning mb-3 fs-6">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-main fst-italic small mb-4 flex-grow-1">
+              "Jonathan Vance and the AuraVisa team navigated our Express Entry file with extraordinary precision. When our NOC category shifted mid-stream, they adjusted our dossier in 48 hours without extra fees. Permanent Residency was approved in just 7 months."
+            </p>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&crop=faces&q=80" alt="Dr. Aris Thorne Canada Permanent Resident" class="rounded-circle object-fit-cover shadow-sm" style="width: 52px; height: 52px;">
+              <div>
+                <h6 class="fw-bold mb-0">Dr. Aris Thorne</h6>
+                <small class="text-muted d-block">Canada Express Entry PR &bull; Toronto, ON</small>
+                <span class="badge-aura badge-aura-success mt-1">Granted Dec 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 d-flex flex-column h-100">
+            <div class="d-flex align-items-center gap-1 text-warning mb-3 fs-6">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-main fst-italic small mb-4 flex-grow-1">
+              "Securing a UK Global Talent Visa as an AI research scientist seemed daunting until Victoria Stirling took my petition. Her endorsement strategy with the Royal Academy of Engineering was flawless. I received Stage 1 endorsement in 12 days."
+            </p>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&auto=format&fit=crop&crop=faces&q=80" alt="Elena Rostova UK Global Talent Visa Holder" class="rounded-circle object-fit-cover shadow-sm" style="width: 52px; height: 52px;">
+              <div>
+                <h6 class="fw-bold mb-0">Elena Rostova</h6>
+                <small class="text-muted d-block">UK Global Talent Visa &bull; London, UK</small>
+                <span class="badge-aura badge-aura-primary mt-1">Granted Jan 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 d-flex flex-column h-100">
+            <div class="d-flex align-items-center gap-1 text-warning mb-3 fs-6">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-main fst-italic small mb-4 flex-grow-1">
+              "Liam O'Connor's knowledge of MARA regulations and Australia's points system is second to none. He accurately predicted the invitation round for Subclass 189 and prepared every skills assessment document beforehand. Outstanding transparency."
+            </p>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&auto=format&fit=crop&crop=faces&q=80" alt="Marcus Tan Australia Subclass 189 Permanent Resident" class="rounded-circle object-fit-cover shadow-sm" style="width: 52px; height: 52px;">
+              <div>
+                <h6 class="fw-bold mb-0">Marcus Tan</h6>
+                <small class="text-muted d-block">Australia Subclass 189 PR &bull; Sydney, NSW</small>
+                <span class="badge-aura badge-aura-warning mt-1">Granted Nov 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-auravisa">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="brand-logo mb-3" href="index.html">
+            <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+            <span>Aura<span class="text-warning">Visa</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            AuraVisa is a globally registered immigration consultancy providing end-to-end relocation, permanent residency, work permits, and university placement with licensed attorneys worldwide.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Students)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Visa Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="country-guide.html">Country Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Immigration</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="service-details.html?service=express-entry">Express Entry</a></li>
+            <li><a href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+            <li><a href="eligibility-checker.html">CRS Calculator</a></li>
+            <li><a href="success-stories.html">Case Studies</a></li>
+            <li><a href="blog.html">Migration News</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5>Immigration Policy Alerts</h5>
+          <p class="text-muted small">Subscribe to weekly visa draws, cutoff changes, and immigration law updates directly from our registered counsel.</p>
+          <form class="needs-validation-aura d-flex gap-2" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-accent-aura px-3" type="submit">Join</button>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="bi bi-shield-check me-1 text-success"></i> Strict Zero-Spam Policy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AuraVisa Global Migration Advisory Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="404.html">Privacy Policy</a>
+          <a href="coming-soon.html">Terms of Engagement</a>
+          <a href="maintenance.html">Compliance Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

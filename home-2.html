@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Abroad & University Admissions - AuraVisa</title>
+  <meta name="description" content="Discover global study opportunities, guaranteed scholarships, and streamlined student visas for top-tier universities worldwide with AuraVisa.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: International Study Abroad & University Admissions Hero -->
+  <section class="hero-wrapper" id="student-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill">
+            <i class="bi bi-award text-warning"></i> Study at QS World Top 100 Universities
+          </div>
+          <h1 class="display-4 fw-extrabold mb-3">Launch Your International Academic & Career Journey</h1>
+          <p class="lead text-muted mb-4">
+            From university shortlisting and SOP vetting to scholarship grants and fast-tracked student visa approvals with post-study permanent residency pathways.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#quick-matcher" class="btn btn-primary-aura">
+              <i class="bi bi-compass-fill me-1"></i> Find Universities
+            </a>
+            <a href="contact.html" class="btn btn-outline-aura">
+              <i class="bi bi-chat-dots me-1"></i> 1-on-1 Academic Advisor
+            </a>
+          </div>
+          <div class="d-flex align-items-center gap-4 text-muted small">
+            <div><i class="bi bi-check2-circle text-success me-1"></i> $4.2M+ Scholarships Secured</div>
+            <div><i class="bi bi-check2-circle text-success me-1"></i> 99.1% Student Visa Rate</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <!-- DISTINCT IMAGE: Page 2 (International students studying on campus) -->
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&auto=format&fit=crop&q=80" 
+                 alt="Group of diverse international students studying on university campus" 
+                 class="hero-featured-img">
+            <div class="position-absolute top-0 end-0 bg-surface p-3 rounded-4 shadow-lg border m-3">
+              <div class="fw-bold text-primary fs-5">850+</div>
+              <small class="text-muted">Direct Partner Universities</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Fast Eligibility & Course Matching Interactive Widget -->
+  <section class="section-space-alt" id="quick-matcher">
+    <div class="container">
+      <div class="p-4 p-lg-5 bg-surface rounded-4 shadow border">
+        <div class="row align-items-center mb-4">
+          <div class="col-lg-8">
+            <span class="section-subtitle">Intelligent Admissions Tool</span>
+            <h2 class="fs-2 fw-bold mb-1">Instant Course & Country Matcher</h2>
+            <p class="text-muted mb-0">Select your current degree level and target intake to preview eligible programs and scholarships.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <span class="badge-aura badge-aura-success fs-6"><i class="bi bi-lightning-charge-fill me-1"></i> AI-Powered</span>
+          </div>
+        </div>
+
+        <form class="row g-3 needs-validation-aura" novalidate>
+          <div class="col-md-3">
+            <label class="form-label">Degree Level</label>
+            <select class="form-select" required>
+              <option value="" selected disabled>Select degree...</option>
+              <option value="bachelor">Bachelor's Degree (Undergraduate)</option>
+              <option value="master">Master's / Postgraduate</option>
+              <option value="phd">Doctorate (Ph.D.) / Research</option>
+              <option value="diploma">Graduate Diploma / Co-op</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Field of Interest</label>
+            <select class="form-select" required>
+              <option value="" selected disabled>Choose field...</option>
+              <option value="tech">Computer Science & AI</option>
+              <option value="business">Business & MBA</option>
+              <option value="engineering">Mechanical & Civil Engineering</option>
+              <option value="health">Healthcare & Nursing</option>
+              <option value="law">International Law</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Target Destination</label>
+            <select class="form-select" required>
+              <option value="" selected disabled>Select country...</option>
+              <option value="ca">Canada (PGWP 3 Years)</option>
+              <option value="uk">United Kingdom (Graduate Route)</option>
+              <option value="au">Australia (Subclass 500)</option>
+              <option value="de">Germany (Zero Tuition Fee)</option>
+              <option value="us">United States (F-1 STEM OPT)</option>
+            </select>
+          </div>
+          <div class="col-md-3 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary-aura w-100 py-2">
+              <i class="bi bi-search me-1"></i> Search Programs
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Top Study Destinations & Scholarship Pathways -->
+  <section class="section-space" id="study-destinations">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Global Opportunities</span>
+        <h2 class="section-heading">Premier Academic Destinations</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          Choose destinations offering world-renowned academic degrees and guaranteed post-study work authorization leading to permanent residency.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Canada -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&auto=format&fit=crop&q=80" alt="University of Toronto historic campus building" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <span class="badge-aura badge-aura-primary mb-2 align-self-start">Top for PR</span>
+              <h4 class="fs-5 fw-bold mb-2">Canada</h4>
+              <p class="text-muted small mb-3">
+                Enjoy up to 3 years of Post-Graduation Work Permit (PGWP) with direct pathways to Permanent Residency under Canadian Experience Class.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check-circle text-success me-1"></i> Part-time work: 24 hrs/wk</li>
+                <li><i class="bi bi-check-circle text-success me-1"></i> Spouse open work permit</li>
+              </ul>
+              <a href="service-details.html" class="btn btn-sm btn-outline-aura mt-auto">View Admissions</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- UK -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1543832923-44667a44c804?w=600&auto=format&fit=crop&q=80" alt="Oxford University campus UK" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <span class="badge-aura badge-aura-success mb-2 align-self-start">1-Year Masters</span>
+              <h4 class="fs-5 fw-bold mb-2">United Kingdom</h4>
+              <p class="text-muted small mb-3">
+                Accelerate your career with prestigious 1-year master's degrees followed by a 2-year Graduate Route visa for full-time corporate work.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check-circle text-success me-1"></i> No job offer needed for Graduate Route</li>
+                <li><i class="bi bi-check-circle text-success me-1"></i> Renowned Russell Group unis</li>
+              </ul>
+              <a href="service-details.html" class="btn btn-sm btn-outline-aura mt-auto">View Admissions</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Australia -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&auto=format&fit=crop&q=80" alt="Sydney University Australia lecture campus" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <span class="badge-aura badge-aura-warning mb-2 align-self-start">High Lifestyle</span>
+              <h4 class="fs-5 fw-bold mb-2">Australia</h4>
+              <p class="text-muted small mb-3">
+                Subclass 500 student visas offering regional bonus PR points, high minimum hourly wages, and post-study work rights up to 4 years.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check-circle text-success me-1"></i> Group of Eight universities</li>
+                <li><i class="bi bi-check-circle text-success me-1"></i> Regional PR point advantages</li>
+              </ul>
+              <a href="service-details.html" class="btn btn-sm btn-outline-aura mt-auto">View Admissions</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Germany -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&auto=format&fit=crop&q=80" alt="Munich campus Germany" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <span class="badge-aura badge-aura-danger mb-2 align-self-start">Zero Tuition</span>
+              <h4 class="fs-5 fw-bold mb-2">Germany</h4>
+              <p class="text-muted small mb-3">
+                Study tuition-free at renowned state universities with English-taught engineering, IT, and business master's programs.
+              </p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check-circle text-success me-1"></i> 18-month job search visa</li>
+                <li><i class="bi bi-check-circle text-success me-1"></i> Fast-track EU Blue Card</li>
+              </ul>
+              <a href="service-details.html" class="btn btn-sm btn-outline-aura mt-auto">View Admissions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: End-to-End Student Visa & Settlement Timeline -->
+  <section class="section-space-alt" id="student-timeline">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Roadmap to Campus</span>
+        <h2 class="section-heading">Your 5-Stage Admissions Pathway</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Our academic counselors assist you through every milestone from course selection to campus landing.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4 col-lg">
+          <div class="card-auravisa p-4 text-center h-100">
+            <div class="step-number-badge mx-auto">1</div>
+            <h5 class="fw-bold mb-2">Profile & Test Prep</h5>
+            <p class="text-muted small mb-0">IELTS/TOEFL/PTE mock coaching, GPA equivalency, and university course shortlisting.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg">
+          <div class="card-auravisa p-4 text-center h-100">
+            <div class="step-number-badge mx-auto">2</div>
+            <h5 class="fw-bold mb-2">SOP & Applications</h5>
+            <p class="text-muted small mb-0">Custom Statement of Purpose writing, recommendation letters, and scholarship petitions.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg">
+          <div class="card-auravisa p-4 text-center h-100">
+            <div class="step-number-badge mx-auto">3</div>
+            <h5 class="fw-bold mb-2">Offer Letter / I-20</h5>
+            <p class="text-muted small mb-0">Acceptance confirmation, scholarship verification, and deposit guidance.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg">
+          <div class="card-auravisa p-4 text-center h-100">
+            <div class="step-number-badge mx-auto">4</div>
+            <h5 class="fw-bold mb-2">Visa Dossier Filing</h5>
+            <p class="text-muted small mb-0">Proof of funds, GIC accounts, consular mock interviews, and biometric appointments.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg">
+          <div class="card-auravisa p-4 text-center h-100">
+            <div class="step-number-badge mx-auto">5</div>
+            <h5 class="fw-bold mb-2">Pre-Departure & Landing</h5>
+            <p class="text-muted small mb-0">Student housing arrangement, SIM card setup, health insurance, and alumni network intro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Student Testimonials & Free Counseling CTA -->
+  <section class="section-space" id="student-cta-testimonials">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-subtitle">Free Student Advisory</span>
+          <h2 class="section-heading mb-3">Book Your 1-on-1 University Counseling Session</h2>
+          <p class="text-muted mb-4">
+            Meet with certified overseas education advisors to review your academic transcripts, discover exclusive institutional fee waivers, and map your post-study career trajectory.
+          </p>
+          <div class="p-4 bg-surface rounded-4 border shadow-sm mb-4">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Elena Rostova" class="rounded-circle" style="width: 54px; height: 54px; object-fit: cover;">
+              <div>
+                <h6 class="fw-bold mb-0">Elena Rostova</h6>
+                <small class="text-muted">Master of Data Science, University of British Columbia</small>
+              </div>
+            </div>
+            <p class="text-muted small fst-italic mb-0">
+              "AuraVisa helped me secure a $15,000 international excellence entrance award at UBC. My study permit was approved in just 3 weeks with SDS stream!"
+            </p>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="contact.html" class="btn btn-primary-aura">Book Counseling Call</a>
+            <a href="success-stories.html" class="btn btn-outline-aura">View 500+ Alumni</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="p-4 p-lg-5 bg-surface rounded-4 shadow border">
+            <h4 class="fw-bold mb-3">Quick Application Inquiry</h4>
+            <form class="needs-validation-aura" novalidate>
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="Jane Doe" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="jane@example.com" required>
+              </div>
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" placeholder="+1..." required>
+                </div>
+                <div class="col-6">
+                  <label class="form-label">Target Intake</label>
+                  <select class="form-select" required>
+                    <option value="fall2026">Fall 2026</option>
+                    <option value="spring2027">Spring 2027</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-accent-aura w-100 py-2">
+                <i class="bi bi-send-fill me-1"></i> Request Free Consultation
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standard Global Footer -->
+  <footer class="footer-auravisa">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="brand-logo mb-3" href="index.html">
+            <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+            <span>Aura<span class="text-warning">Visa</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            AuraVisa is a globally registered immigration consultancy providing end-to-end relocation, permanent residency, work permits, and university placement with licensed attorneys worldwide.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Students)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Visa Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="country-guide.html">Country Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Immigration</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="service-details.html?service=express-entry">Express Entry</a></li>
+            <li><a href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+            <li><a href="eligibility-checker.html">CRS Calculator</a></li>
+            <li><a href="success-stories.html">Case Studies</a></li>
+            <li><a href="blog.html">Migration News</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5>Immigration Policy Alerts</h5>
+          <p class="text-muted small">Subscribe to weekly visa draws, cutoff changes, and immigration law updates directly from our registered counsel.</p>
+          <form class="needs-validation-aura d-flex gap-2" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-accent-aura px-3" type="submit">Join</button>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="bi bi-shield-check me-1 text-success"></i> Strict Zero-Spam Policy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AuraVisa Global Migration Advisory Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="404.html">Privacy Policy</a>
+          <a href="coming-soon.html">Terms of Engagement</a>
+          <a href="maintenance.html">Compliance Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

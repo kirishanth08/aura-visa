@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US EB-2 NIW: Self-Petition Green Cards for AI & STEM Pioneers - AuraVisa</title>
+  <meta name="description" content="Legal analysis of United States EB-2 National Interest Waiver (NIW) petitions, Matter of Dhanasar prongs, and PERM labor certification exemptions for tech founders.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body d-flex flex-column flex-xl-row align-items-xl-center justify-content-xl-between p-4 p-xl-0">
+            <ul class="navbar-nav mx-auto mb-3 mb-xl-0 gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="index.html">Home 1 (General Consultancy)</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 (Student & Education)</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="client-dashboard.html">Client Portal</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Console</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link active" href="blog.html">News</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: Article Header & Publication Metadata -->
+  <section class="hero-wrapper" id="article-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge-aura badge-aura-danger">United States Immigration</span>
+            <span class="text-muted small">&bull; Published Jan 15, 2026 &bull; 10 min read</span>
+          </div>
+          <h1 class="display-5 fw-extrabold mb-3">
+            US EB-2 NIW: Self-Petition Green Cards for AI Specialists & Tech Pioneers
+          </h1>
+          <p class="lead text-muted mb-4">
+            How machine learning researchers, cybersecurity architects, and startup founders can waive the PERM labor certification requirement under the precedent decision *Matter of Dhanasar* to secure lawful permanent residency.
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <span class="badge-aura badge-aura-primary p-2 rounded-circle fs-5"><i class="bi bi-person-fill"></i></span>
+            <div>
+              <div class="fw-bold">Marcus Thorne, Esq.</div>
+              <small class="text-muted">US Immigration Partner &bull; New York State Bar & AILA Member</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="position-relative">
+            <!-- DISTINCT IMAGE: Page 42 (Silicon Valley tech towers & engineering innovation center) -->
+            <img src="https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?w=1200&auto=format&fit=crop&q=80" alt="Modern San Francisco and Silicon Valley innovation hub skyscrapers" class="hero-featured-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Article Main Narrative & Detailed Statutory Policy Breakdown -->
+  <section class="section-space-alt" id="article-body">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="p-4 p-lg-5 bg-surface rounded-4 shadow-sm border">
+            <h3 class="fw-bold mb-3">1. The Power of Self-Petitioning Under Dhanasar</h3>
+            <p class="text-muted">
+              Traditional employment-based immigrant visas in the United States require a permanent job offer from an employer and a grueling 18-to-24 month labor market test via the Department of Labor's PERM process. The National Interest Waiver (NIW), established under INA § 203(b)(2)(B), allows the candidate to completely bypass employer sponsorship and petition on their own behalf.
+            </p>
+            <p class="text-muted">
+              Under USCIS Policy Manual guidance aligning with presidential executive directives on Artificial Intelligence, advanced degree professionals working in dual-use technologies, robotics, clean energy, and quantum computing are granted favorable administrative adjudications.
+            </p>
+
+            <h3 class="fw-bold mt-5 mb-3">2. The Three-Prong Dhanasar Framework</h3>
+            <div class="row g-3 mb-4">
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 h-100">
+                  <h6 class="fw-bold text-primary mb-1">Prong 1: Substantial Merit</h6>
+                  <p class="small text-muted mb-0">The endeavor must hold transformative national or global implications in science, commerce, healthcare, or national defense.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 h-100">
+                  <h6 class="fw-bold text-success mb-1">Prong 2: Well Positioned</h6>
+                  <p class="small text-muted mb-0">Demonstrated by citations, peer-reviewed publications, venture capital backing, proprietary patents, and expert letters of recommendation.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 h-100">
+                  <h6 class="fw-bold text-warning mb-1">Prong 3: Balance of Benefits</h6>
+                  <p class="small text-muted mb-0">Proving the United States benefits significantly more from waiving the job offer requirement than enforcing it.</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-muted">
+              USCIS Premium Processing (Form I-907) is now fully operational for all Form I-140 NIW petitions, guaranteeing an adjudicated decision within 45 calendar days.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Dhanasar Evidentiary Checklist Table -->
+  <section class="section-space" id="article-table">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Evidentiary Standard</span>
+        <h2 class="section-heading">Key Evidence Supporting Form I-140 NIW Petitions</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="table-responsive">
+            <table class="table table-auravisa">
+              <thead>
+                <tr>
+                  <th>Evidentiary Category</th>
+                  <th>Recommended Documentation</th>
+                  <th>Legal Impact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Advanced Degree Equivalency</strong></td>
+                  <td>Master's or Ph.D. degree credentials evaluated by WES</td>
+                  <td><span class="badge-aura badge-aura-success">Mandatory Threshold</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Citation Metrics & Impact</strong></td>
+                  <td>Google Scholar index, 50+ citations, h-index >= 6</td>
+                  <td><span class="badge-aura badge-aura-primary">Prong 2 Pillar</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Government & Industry Grants</strong></td>
+                  <td>NSF, NIH, DARPA, or venture capital seed investments</td>
+                  <td><span class="badge-aura badge-aura-success">Exceptional Merit</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Independent Advisory Letters</strong></td>
+                  <td>5-7 testimonial letters from unaffiliated industry authorities</td>
+                  <td><span class="badge-aura badge-aura-primary">Crucial Corroboration</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Author Profile & Licensed Credentials -->
+  <section class="section-space-alt" id="author-bio">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="p-4 p-lg-5 bg-surface rounded-4 border shadow-sm">
+            <div class="d-flex flex-column flex-sm-row align-items-center gap-4 text-center text-sm-start">
+              <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80" alt="Marcus Thorne" class="rounded-circle shadow-sm" style="width: 100px; height: 100px; object-fit: cover;">
+              <div>
+                <h4 class="fw-bold mb-1">About the Author: Marcus Thorne, Esq.</h4>
+                <div class="text-secondary fw-semibold small mb-2">Partner, US Business & Extraordinary Ability Practice &bull; New York & Washington D.C.</div>
+                <p class="text-muted small mb-0">
+                  Marcus represents international researchers, silicon engineering founders, and Fortune 500 tech specialists before the USCIS Texas and Nebraska Service Centers. He holds a 98.6% approval rate across EB-1A and EB-2 NIW filings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CV Pre-Evaluation Form -->
+  <section class="section-space" id="article-discussion">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="p-4 p-lg-5 bg-surface rounded-4 border shadow-sm">
+            <h4 class="fw-bold mb-3">Request a Complimentary EB-2 NIW Case Evaluation</h4>
+            <p class="text-muted small mb-4">Our US attorneys will evaluate your CV, publication record, and proposed endeavor to assess approval viability under Matter of Dhanasar.</p>
+            <form class="needs-validation-aura" novalidate>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control" placeholder="Candidate Name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" placeholder="scholar@university.edu" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Field of Research, Citations & Publications Summary</label>
+                <textarea class="form-control" rows="3" placeholder="Detail your degree, Google Scholar link, total citations, and ongoing technological endeavor..." required></textarea>
+              </div>
+              <button class="btn btn-primary-aura" type="submit">Submit for Attorney Pre-Evaluation</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standard Global Footer -->
+  <footer class="footer-auravisa">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="brand-logo mb-3" href="index.html">
+            <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+            <span>Aura<span class="text-warning">Visa</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            AuraVisa is a globally registered immigration consultancy providing end-to-end relocation, permanent residency, work permits, and university placement with licensed attorneys worldwide.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Students)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Visa Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="country-guide.html">Country Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Immigration</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="service-details.html?service=express-entry">Express Entry</a></li>
+            <li><a href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+            <li><a href="eligibility-checker.html">CRS Calculator</a></li>
+            <li><a href="success-stories.html">Case Studies</a></li>
+            <li><a href="blog.html">Migration News</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5>Immigration Policy Alerts</h5>
+          <p class="text-muted small">Subscribe to weekly visa draws, cutoff changes, and immigration law updates directly from our registered counsel.</p>
+          <form class="needs-validation-aura d-flex gap-2" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-accent-aura px-3" type="submit">Join</button>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="bi bi-shield-check me-1 text-success"></i> Strict Zero-Spam Policy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AuraVisa Global Migration Advisory Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="404.html">Privacy Policy</a>
+          <a href="coming-soon.html">Terms of Engagement</a>
+          <a href="maintenance.html">Compliance Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

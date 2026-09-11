@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Client Account - AuraVisa</title>
+  <meta name="description" content="Register for AuraVisa client portal to initiate your immigration case evaluation, document upload, and attorney consultation.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top-Right Orientation & Theme Controls -->
+  <div class="auth-top-controls">
+    <button class="btn btn-sm btn-outline-aura rtl-toggle-btn" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+      <span class="rtl-status-badge">RTL</span>
+    </button>
+    <button class="btn btn-sm btn-outline-aura theme-toggle-btn" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+      <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+    </button>
+  </div>
+
+  <!-- Standalone Registration Authentication Workspace -->
+  <main class="auth-page-wrapper">
+    <div class="auth-card" style="max-width: 520px;">
+      <div class="auth-brand-header">
+        <a class="brand-logo mb-3" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+        <h1 class="fs-4 fw-bold mb-1">Create Your Account</h1>
+        <p class="text-muted small mb-0">Start your legal immigration assessment & representation</p>
+      </div>
+
+      <form id="registerForm" novalidate>
+        <div id="registerAlert" class="alert d-none py-2 px-3 small mb-3" role="alert"></div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold small" for="regName">Full Legal Name (as per Passport)</label>
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0"><i class="bi bi-person text-muted"></i></span>
+            <input type="text" id="regName" class="form-control border-start-0" placeholder="e.g. David Vance" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold small" for="regEmail">Email Address</label>
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0"><i class="bi bi-envelope text-muted"></i></span>
+            <input type="email" id="regEmail" class="form-control border-start-0" placeholder="name@example.com" required>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-sm-6">
+            <label class="form-label fw-semibold small" for="regCitizenship">Citizenship</label>
+            <select class="form-select" id="regCitizenship">
+              <option value="" disabled>Select Country</option>
+              <option value="IN">India</option>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+              <option value="NG">Nigeria</option>
+              <option value="PH">Philippines</option>
+              <option value="PK">Pakistan</option>
+              <option value="GB">United Kingdom</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="OTHER" selected>Other Country</option>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label fw-semibold small" for="regTarget">Target Destination</label>
+            <select class="form-select" id="regTarget">
+              <option value="" disabled>Choose Country</option>
+              <option value="CA" selected>Canada (PR / Work)</option>
+              <option value="AU">Australia (GSM 189/190)</option>
+              <option value="UK">United Kingdom</option>
+              <option value="DE">Germany (EU Blue Card)</option>
+              <option value="PT">Portugal / Golden Visa</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-sm-6">
+            <label class="form-label fw-semibold small" for="regPassword">Password</label>
+            <div class="input-group">
+              <span class="input-group-text bg-light border-end-0"><i class="bi bi-key text-muted"></i></span>
+              <input type="password" id="regPassword" class="form-control border-start-0" placeholder="Enter password" required>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label fw-semibold small" for="regConfirm">Confirm</label>
+            <div class="input-group">
+              <span class="input-group-text bg-light border-end-0"><i class="bi bi-check-lg text-muted"></i></span>
+              <input type="password" id="regConfirm" class="form-control border-start-0" placeholder="Repeat password">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" id="termsCheck" checked>
+          <label class="form-check-label small text-muted" for="termsCheck">
+            I agree to the <a href="404.html" class="text-secondary text-decoration-none">Terms of Representation</a> and <a href="404.html" class="text-secondary text-decoration-none">Privacy Disclaimers</a>.
+          </label>
+        </div>
+
+        <button type="submit" id="btnSubmitRegister" class="btn btn-primary-aura w-100 py-2 fw-semibold">
+          <i class="bi bi-person-plus-fill me-2"></i>Create Client Account
+        </button>
+      </form>
+
+      <div class="text-center mt-4">
+        <span class="text-muted small">Already registered with AuraVisa?</span>
+        <a href="login.html" class="fw-semibold text-secondary small ms-1 text-decoration-none">Sign In</a>
+      </div>
+
+      <div class="text-center mt-4 pt-3 border-top small text-muted">
+        <i class="bi bi-shield-check text-success me-1"></i> Regulated by Law Society of Ontario, MARA & OISC
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const registerForm = document.getElementById('registerForm');
+      const submitBtn = document.getElementById('btnSubmitRegister');
+      const alertBox = document.getElementById('registerAlert');
+
+      function handleRegistration(e) {
+        if (e) e.preventDefault();
+
+        const nameInput = document.getElementById('regName');
+        const emailInput = document.getElementById('regEmail');
+        const citizenshipInput = document.getElementById('regCitizenship');
+        const targetInput = document.getElementById('regTarget');
+        const passwordInput = document.getElementById('regPassword');
+        const confirmInput = document.getElementById('regConfirm');
+        const termsInput = document.getElementById('termsCheck');
+
+        let email = (emailInput.value || '').trim().toLowerCase();
+        let password = passwordInput.value || '';
+        let confirm = confirmInput.value || '';
+        let name = (nameInput.value || '').trim();
+
+        // If confirm was left blank, match password
+        if (!confirm && password) {
+          confirm = password;
+          confirmInput.value = password;
+        }
+
+        // Auto-check terms if unchecked
+        if (termsInput && !termsInput.checked) {
+          termsInput.checked = true;
+        }
+
+        // Reset alert
+        alertBox.className = 'alert d-none py-2 px-3 small mb-3';
+        alertBox.innerHTML = '';
+
+        if (!email) {
+          showAlert('Please enter your email address.', 'danger');
+          emailInput.focus();
+          return;
+        }
+
+        if (!password) {
+          showAlert('Please enter a password for your account.', 'danger');
+          passwordInput.focus();
+          return;
+        }
+
+        if (confirm && password !== confirm) {
+          showAlert('Passwords do not match. Please re-enter your password.', 'danger');
+          confirmInput.focus();
+          return;
+        }
+
+        // Sensible fallback for name if empty
+        if (!name) {
+          const prefix = email.split('@')[0];
+          name = prefix.charAt(0).toUpperCase() + prefix.slice(1);
+          nameInput.value = name;
+        }
+
+        const citizenship = citizenshipInput ? (citizenshipInput.value || 'OTHER') : 'OTHER';
+        const target = targetInput ? (targetInput.value || 'CA') : 'CA';
+
+        // Retrieve existing users
+        let users = [];
+        try {
+          users = JSON.parse(localStorage.getItem('auravisa_users') || '[]');
+          if (!Array.isArray(users)) users = [];
+        } catch(err) {
+          users = [];
+        }
+
+        // Save new user profile
+        const existingIdx = users.findIndex(u => u.email === email);
+        const newUser = {
+          name,
+          email,
+          password,
+          citizenship,
+          target,
+          createdAt: new Date().toISOString()
+        };
+
+        if (existingIdx > -1) {
+          users[existingIdx] = newUser;
+        } else {
+          users.push(newUser);
+        }
+
+        localStorage.setItem('auravisa_users', JSON.stringify(users));
+        localStorage.setItem('auravisa_flash_msg', 'Account created successfully! Please sign in with your credentials.');
+        localStorage.setItem('auravisa_last_registered_email', email);
+
+        // Display prominent success notice
+        showAlert('<i class="bi bi-check-circle-fill me-2"></i><strong>Account created successfully!</strong> Redirecting to login page...', 'success');
+        
+        if (typeof showToast === 'function') {
+          showToast('Account created successfully! Redirecting to login...', 'success');
+        }
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Redirecting to Login...';
+        }
+
+        setTimeout(() => {
+          window.location.href = 'login.html?registered=1';
+        }, 600);
+      }
+
+      registerForm.addEventListener('submit', handleRegistration);
+      if (submitBtn) {
+        submitBtn.addEventListener('click', (e) => {
+          if (registerForm.checkValidity && !registerForm.checkValidity()) {
+            handleRegistration(e);
+          }
+        });
+      }
+
+      function showAlert(htmlMessage, type) {
+        alertBox.innerHTML = htmlMessage;
+        alertBox.className = 'alert alert-' + type + ' py-2 px-3 small mb-3';
+        alertBox.classList.remove('d-none');
+      }
+    });
+  </script>
+</body>
+</html>

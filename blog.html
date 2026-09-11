@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Immigration News & Policy Insights - AuraVisa</title>
+  <meta name="description" content="Stay informed with expert analysis on Canada Express Entry draws, Australia GSM rounds, UK Home Office policy changes, and European residency visas.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: Immigration News & Policy Updates Hero -->
+  <section class="hero-wrapper" id="blog-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill"><i class="bi bi-broadcast text-warning"></i> Authoritative Legal Commentary</div>
+          <h1 class="display-4 fw-extrabold mb-3">Global Migration Policy, Draws & Case Law Analysis</h1>
+          <p class="lead text-muted mb-4">
+            Direct statutory updates authored by certified immigration barristers, MARA registered agents, and former consular decision-makers.
+          </p>
+          <div class="d-flex align-items-center gap-4 text-muted small">
+            <div><i class="bi bi-clock-history text-primary me-1"></i> Updated Daily</div>
+            <div><i class="bi bi-file-earmark-text text-success me-1"></i> Fact-Checked Legal Sourcing</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <!-- DISTINCT IMAGE: Page 10 (Newsroom editor analyzing migration policy) -->
+            <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1200&auto=format&fit=crop&q=80" alt="Legal immigration law library and statutory ministerial instruction gazettes" class="hero-featured-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Editor's Pick Featured Deep-Dive Article -->
+  <section class="section-space-alt" id="featured-article">
+    <div class="container">
+      <div class="p-4 p-lg-5 bg-surface rounded-4 shadow border">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <img src="https://images.unsplash.com/photo-1569974498991-d3c12a504f95?w=600&auto=format&fit=crop&q=80" alt="Parliament building representing Canadian federal immigration policies and Express Entry quotas" class="rounded-4 w-100 shadow-sm" style="height: 340px; object-fit: cover;">
+          </div>
+          <div class="col-lg-6">
+            <div class="d-flex gap-2 mb-2">
+              <span class="badge-aura badge-aura-danger">Critical IRCC Update</span>
+              <span class="text-muted small">March 2, 2026</span>
+            </div>
+            <h2 class="fs-2 fw-bold mb-3">Canada Category-Based Express Entry: What the 2026 Quotas Mean for STEM & Healthcare</h2>
+            <p class="text-muted small mb-4">
+              Immigration, Refugees and Citizenship Canada (IRCC) has finalized its updated category allocations. While general draw CRS cutoffs remain above 510, targeted STEM and French-proficiency rounds have dropped to historic lows of 420.
+            </p>
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=100&auto=format&fit=crop&q=80" alt="Jonathan Vance senior immigration barrister" class="rounded-circle" style="width: 44px; height: 44px; object-fit: cover;">
+              <div>
+                <h6 class="fw-bold mb-0">Jonathan Vance, KC</h6>
+                <small class="text-muted">Managing Legal Partner</small>
+              </div>
+            </div>
+            <a href="blog-details.html" class="btn btn-primary-aura">Read In-Depth Legal Breakdown <i class="bi bi-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Category Filter -->
+  <section class="section-space-alt" id="blog-filter">
+    <div class="container">
+      <div class="text-center section-title-wrap mb-0">
+        <span class="section-subtitle">Search by Topic</span>
+        <h2 class="section-heading mb-3">Browse Policy by Jurisdictions</h2>
+        <div class="d-flex justify-content-center flex-wrap gap-2">
+          <button class="btn btn-primary-aura active" data-filter-target="blog" data-filter-value="all">All Articles</button>
+          <button class="btn btn-outline-aura" data-filter-target="blog" data-filter-value="australia">Australia GSM</button>
+          <button class="btn btn-outline-aura" data-filter-target="blog" data-filter-value="uk">UK Visas</button>
+          <button class="btn btn-outline-aura" data-filter-target="blog" data-filter-value="golden">Golden Visas</button>
+          <button class="btn btn-outline-aura" data-filter-target="blog" data-filter-value="germany">Germany / EU</button>
+          <button class="btn btn-outline-aura" data-filter-target="blog" data-filter-value="usa">US Visas</button>
+          <button class="btn btn-outline-aura" data-filter-target="blog" data-filter-value="nz">New Zealand</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Recent Policy Articles & Analysis Grid -->
+  <section class="section-space" id="recent-articles-grid">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Article 1: Australia GSM -->
+        <div class="col-md-6 col-lg-4" data-filter-group="blog" data-category="australia">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <a href="blog-details-australia.html" class="d-block overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?w=600&auto=format&fit=crop&q=80" alt="Australia skilled migration Darling Harbour evening skyline" class="card-img-top-cover">
+            </a>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <span class="badge-aura badge-aura-primary mb-2 align-self-start">Australia GSM</span>
+              <h5 class="fw-bold mb-2">
+                <a href="blog-details-australia.html" class="text-decoration-none text-main">Australia Subclass 189/190 Invitation Round Analysis</a>
+              </h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                A granular breakdown of the recent 8,500 invitations issued by Home Affairs with special focus on engineering and regional shortages.
+              </p>
+              <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">
+                <span>Liam O'Connor, RMA</span>
+                <span>Feb 24, 2026</span>
+              </div>
+              <a href="blog-details-australia.html" class="btn btn-sm btn-outline-aura w-100 mt-3 text-center">
+                Read Analysis <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 2: UK Skilled Worker -->
+        <div class="col-md-6 col-lg-4" data-filter-group="blog" data-category="uk">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <a href="blog-details-uk.html" class="d-block overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&auto=format&fit=crop&q=80" alt="City of London financial district towers and Home Office corporate zone" class="card-img-top-cover">
+            </a>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <span class="badge-aura badge-aura-warning mb-2 align-self-start">UK Immigration</span>
+              <h5 class="fw-bold mb-2">
+                <a href="blog-details-uk.html" class="text-decoration-none text-main">Navigating UK Skilled Worker Minimum Salary Rules</a>
+              </h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                How corporate sponsors and prospective workers can leverage the Immigration Salary List (ISL) discounts to meet sponsorship criteria.
+              </p>
+              <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">
+                <span>Victoria Stirling, LLB</span>
+                <span>Feb 18, 2026</span>
+              </div>
+              <a href="blog-details-uk.html" class="btn btn-sm btn-outline-aura w-100 mt-3 text-center">
+                Read Analysis <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3: Golden Visa Europe -->
+        <div class="col-md-6 col-lg-4" data-filter-group="blog" data-category="golden">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <a href="blog-details-golden-visa.html" class="d-block overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?w=600&auto=format&fit=crop&q=80" alt="Mediterranean coastal investment estate in Lisbon Portugal" class="card-img-top-cover">
+            </a>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <span class="badge-aura badge-aura-success mb-2 align-self-start">European Residency</span>
+              <h5 class="fw-bold mb-2">
+                <a href="blog-details-golden-visa.html" class="text-decoration-none text-main">Greece vs. Portugal Golden Visa: Comparing 2026 Fund Routes</a>
+              </h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                With real estate thresholds increasing in major metros, explore regulated CMVM private equity funds offering seamless residency.
+              </p>
+              <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">
+                <span>Dr. Fatima Al-Zahra</span>
+                <span>Feb 10, 2026</span>
+              </div>
+              <a href="blog-details-golden-visa.html" class="btn btn-sm btn-outline-aura w-100 mt-3 text-center">
+                Read Analysis <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 4: Germany Opportunity Card -->
+        <div class="col-md-6 col-lg-4" data-filter-group="blog" data-category="germany">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <a href="blog-details-germany.html" class="d-block overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=600&auto=format&fit=crop&q=80" alt="Berlin Brandenburg modern parliamentary federal district" class="card-img-top-cover">
+            </a>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <span class="badge-aura badge-aura-info mb-2 align-self-start">Germany / EU</span>
+              <h5 class="fw-bold mb-2">
+                <a href="blog-details-germany.html" class="text-decoration-none text-main">Germany Opportunity Card (Chancenkarte): Point System 2026</a>
+              </h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Complete evaluation of the 6-point statutory threshold allowing non-EU academics and skilled specialists to enter Germany without an existing job offer.
+              </p>
+              <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">
+                <span>Hans-Dietrich Becker, RA</span>
+                <span>Jan 28, 2026</span>
+              </div>
+              <a href="blog-details-germany.html" class="btn btn-sm btn-outline-aura w-100 mt-3 text-center">
+                Read Analysis <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 5: US EB-2 NIW -->
+        <div class="col-md-6 col-lg-4" data-filter-group="blog" data-category="usa">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <a href="blog-details-eb2-niw.html" class="d-block overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&auto=format&fit=crop&q=80" alt="Silicon Valley engineering innovation district and tech towers" class="card-img-top-cover">
+            </a>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <span class="badge-aura badge-aura-danger mb-2 align-self-start">US Green Card</span>
+              <h5 class="fw-bold mb-2">
+                <a href="blog-details-eb2-niw.html" class="text-decoration-none text-main">US EB-2 NIW: Self-Petition Green Cards for AI & STEM Pioneers</a>
+              </h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                How tech founders and senior engineers satisfy Matter of Dhanasar prongs to bypass employer sponsorship and PERM labor certifications.
+              </p>
+              <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">
+                <span>Marcus Thorne, Esq.</span>
+                <span>Jan 15, 2026</span>
+              </div>
+              <a href="blog-details-eb2-niw.html" class="btn btn-sm btn-outline-aura w-100 mt-3 text-center">
+                Read Analysis <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 6: New Zealand Green List -->
+        <div class="col-md-6 col-lg-4" data-filter-group="blog" data-category="nz">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <a href="blog-details-new-zealand.html" class="d-block overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1508962914676-134849a727f0?w=600&auto=format&fit=crop&q=80" alt="Auckland New Zealand modern metropolitan waterfront and Sky Tower" class="card-img-top-cover">
+            </a>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <span class="badge-aura badge-aura-success mb-2 align-self-start">New Zealand PR</span>
+              <h5 class="fw-bold mb-2">
+                <a href="blog-details-new-zealand.html" class="text-decoration-none text-main">New Zealand Green List Fast-Track: 2026 Tier 1 Roles</a>
+              </h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Direct-to-Residence visa pathways for healthcare professionals, structural engineers, and senior ICT leaders with expedited residence lodgements.
+              </p>
+              <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">
+                <span>Aroha Te Rangi, LIA</span>
+                <span>Jan 08, 2026</span>
+              </div>
+              <a href="blog-details-new-zealand.html" class="btn btn-sm btn-outline-aura w-100 mt-3 text-center">
+                Read Analysis <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Immigration Policy Alert & Newsletter Subscription -->
+  <section class="section-space-alt" id="newsletter-section">
+    <div class="container text-center">
+      <div class="p-5 bg-surface border rounded-4 shadow-sm mx-auto" style="max-width: 800px;">
+        <span class="section-subtitle">Never Miss a Draw</span>
+        <h2 class="fs-2 fw-bold mb-3">Subscribe to AuraVisa Legal Dispatch</h2>
+        <p class="text-muted mb-4">
+          Receive instantaneous notifications whenever IRCC or Australian SkillSelect conducts an invitation round, publishes quota changes, or revises occupations.
+        </p>
+        <form class="needs-validation-aura d-flex flex-column flex-sm-row gap-2 justify-content-center" novalidate>
+          <input type="email" class="form-control" placeholder="Enter your email" style="max-width: 400px;" required>
+          <button class="btn btn-primary-aura px-4" type="submit">Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-auravisa">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="brand-logo mb-3" href="index.html">
+            <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+            <span>Aura<span class="text-warning">Visa</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            AuraVisa is a globally registered immigration consultancy providing end-to-end relocation, permanent residency, work permits, and university placement with licensed attorneys worldwide.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Students)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Visa Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="country-guide.html">Country Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Immigration</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="service-details.html?service=express-entry">Express Entry</a></li>
+            <li><a href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+            <li><a href="eligibility-checker.html">CRS Calculator</a></li>
+            <li><a href="success-stories.html">Case Studies</a></li>
+            <li><a href="blog.html">Migration News</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5>Immigration Policy Alerts</h5>
+          <p class="text-muted small">Subscribe to weekly visa draws, cutoff changes, and immigration law updates directly from our registered counsel.</p>
+          <form class="needs-validation-aura d-flex gap-2" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-accent-aura px-3" type="submit">Join</button>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="bi bi-shield-check me-1 text-success"></i> Strict Zero-Spam Policy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AuraVisa Global Migration Advisory Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="404.html">Privacy Policy</a>
+          <a href="coming-soon.html">Terms of Engagement</a>
+          <a href="maintenance.html">Compliance Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

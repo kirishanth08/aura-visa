@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immigration & Visa Services - AuraVisa</title>
+  <meta name="description" content="Explore our full spectrum of immigration services: skilled worker PR, university visas, Golden Investor residency, and corporate relocation.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: Services Directory Hero with Category Tabs -->
+  <section class="hero-wrapper" id="services-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill"><i class="bi bi-award text-warning"></i> End-to-End Legal Immigration Support</div>
+          <h1 class="display-4 fw-extrabold mb-3">Comprehensive Visa & Settlement Solutions</h1>
+          <p class="lead text-muted mb-4">
+            We provide full legal representation from initial eligibility auditing and document attestation to consular hearings and permanent residency confirmation.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-primary-aura active" data-filter-target="services" data-filter-value="all">All Services</button>
+            <button class="btn btn-outline-aura" data-filter-target="services" data-filter-value="pr">Permanent Residency</button>
+            <button class="btn btn-outline-aura" data-filter-target="services" data-filter-value="work">Work Permits</button>
+            <button class="btn btn-outline-aura" data-filter-target="services" data-filter-value="business">Investor & Golden Visa</button>
+          </div>
+          <div class="mt-4 pt-3 border-top d-flex flex-wrap align-items-center gap-2">
+            <small class="text-muted fw-bold text-uppercase me-2" style="font-size: 0.75rem; letter-spacing: 0.5px;">Explore Next Steps:</small>
+            <a href="country-guide.html" class="btn btn-sm btn-outline-aura">
+              <i class="bi bi-compass text-primary me-1"></i> Country Guide
+            </a>
+            <a href="eligibility-checker.html" class="btn btn-sm btn-outline-aura">
+              <i class="bi bi-calculator text-primary me-1"></i> Eligibility Checker
+            </a>
+            <a href="success-stories.html" class="btn btn-sm btn-outline-aura">
+              <i class="bi bi-trophy text-warning me-1"></i> Success Stories
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <!-- DISTINCT IMAGE: Page 4 (Professional immigration legal counsel and client sealing representation agreement with official visa dossiers) -->
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80" 
+                 alt="Licensed immigration legal counsel and client finalizing global visa representation agreement with verified application dossiers" 
+                 class="hero-featured-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Comprehensive Visa Solutions Grid -->
+  <section class="section-space-alt" id="services-grid">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Programs Offered</span>
+        <h2 class="section-heading">Our Specialized Visa Categories</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Explore legal immigration pathways tailored to your qualifications, investment capacity, or family situation.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Skilled Worker PR -->
+        <div class="col-md-6 col-lg-4" data-filter-group="services" data-category="pr">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=80" alt="Federal Skilled Worker Express Entry technical applicant" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-aura badge-aura-primary">Permanent Residency</span>
+                <span class="text-muted small">6-10 Months</span>
+              </div>
+              <h4 class="fs-5 fw-bold mb-2 services-grid-title">Federal Skilled Worker & Express Entry</h4>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Direct permanent residency for qualified professionals. Complete CRS optimization, ECA credentials evaluation, and provincial nominations (PNP).
+              </p>
+              <a href="service-details.html?service=express-entry" class="btn btn-sm btn-primary-aura mt-auto">Service Details <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Australia GSM -->
+        <div class="col-md-6 col-lg-4" data-filter-group="services" data-category="pr">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?w=600&auto=format&fit=crop&q=80" alt="Australia GSM Visa" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-aura badge-aura-success">Subclass 189 / 190</span>
+                <span class="text-muted small">8-12 Months</span>
+              </div>
+              <h4 class="fs-5 fw-bold mb-2 services-grid-title">Australia General Skilled Migration</h4>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Points-tested permanent residency. Comprehensive skills assessment via ACS, Engineers Australia, VETASSESS, and state sponsorships.
+              </p>
+              <a href="service-details.html?service=australia-gsm" class="btn btn-sm btn-primary-aura mt-auto">Service Details <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- UK Skilled Worker -->
+        <div class="col-md-6 col-lg-4" data-filter-group="services" data-category="work">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&auto=format&fit=crop&q=80" alt="UK Skilled Worker corporate sponsor meeting" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-aura badge-aura-warning">Work Permit</span>
+                <span class="text-muted small">3-6 Weeks</span>
+              </div>
+              <h4 class="fs-5 fw-bold mb-2 services-grid-title">UK Skilled Worker & Sponsor Licensure</h4>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Guidance on Certificate of Sponsorship (CoS), salary thresholds, Home Office compliance, and fast-track Settlement (ILR) pathways.
+              </p>
+              <a href="service-details.html?service=uk-skilled-worker" class="btn btn-sm btn-primary-aura mt-auto">Service Details <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Golden Visa & Investor -->
+        <div class="col-md-6 col-lg-4" data-filter-group="services" data-category="business">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&auto=format&fit=crop&q=80" alt="Golden Visa & Investor" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-aura badge-aura-danger">High Net Worth</span>
+                <span class="text-muted small">2-5 Months</span>
+              </div>
+              <h4 class="fs-5 fw-bold mb-2 services-grid-title">Investor Golden Visas & Citizenship</h4>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Acquire residency or citizenship by investment in Portugal, Greece, Malta, UAE, and Spain. Complete escrow and real estate legal support.
+              </p>
+              <a href="service-details.html?service=golden-visa" class="btn btn-sm btn-primary-aura mt-auto">Service Details <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Visa -->
+        <div class="col-md-6 col-lg-4" data-filter-group="services" data-category="work">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&auto=format&fit=crop&q=80" alt="International students studying together in university campus library" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-aura badge-aura-success">Education</span>
+                <span class="text-muted small">4-8 Weeks</span>
+              </div>
+              <h4 class="fs-5 fw-bold mb-2 services-grid-title">International Student Permits</h4>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Direct admissions and study permits for 850+ colleges and universities across Canada, UK, Australia, and the US with post-study work rights.
+              </p>
+              <a href="service-details.html?service=student-permits" class="btn btn-sm btn-primary-aura mt-auto">Service Details <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Family Sponsorship -->
+        <div class="col-md-6 col-lg-4" data-filter-group="services" data-category="pr">
+          <div class="card-auravisa">
+            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&auto=format&fit=crop&q=80" alt="Happy multi-generational family celebrating spousal and parent reunification" class="card-img-top-cover">
+            <div class="card-body-padded">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-aura badge-aura-primary">Family Class</span>
+                <span class="text-muted small">8-12 Months</span>
+              </div>
+              <h4 class="fs-5 fw-bold mb-2 services-grid-title">Spousal & Parent Sponsorship</h4>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Reunite with your spouse, common-law partner, dependent children, or parents with Super Visas and permanent residency sponsorships.
+              </p>
+              <a href="service-details.html?service=family-sponsorship" class="btn btn-sm btn-primary-aura mt-auto">Service Details <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Document Verification & Legal Attestation Services -->
+  <section class="section-space" id="legal-attestation">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-subtitle">Compliance Assured</span>
+          <h2 class="section-heading mb-3">Certified Document Verification & Notarization</h2>
+          <p class="text-muted mb-4">
+            Over 60% of consular rejections stem from procedural document discrepancies, faulty translations, or unverified credentials. Our in-house legal team ensures your portfolio is bulletproof.
+          </p>
+          <div class="row g-3">
+            <div class="col-sm-6 d-flex">
+              <div class="attestation-card">
+                <h6><i class="bi bi-check2-circle text-primary"></i> <span>Certified Translations</span></h6>
+                <small>Court-certified sworn translations across 30+ global languages.</small>
+              </div>
+            </div>
+            <div class="col-sm-6 d-flex">
+              <div class="attestation-card">
+                <h6><i class="bi bi-check2-circle text-primary"></i> <span>Hague Apostille</span></h6>
+                <small>Embassy legalizations and official Apostille authentication.</small>
+              </div>
+            </div>
+            <div class="col-sm-6 d-flex">
+              <div class="attestation-card">
+                <h6><i class="bi bi-check2-circle text-primary"></i> <span>ECA & Skills Dossier</span></h6>
+                <small>WES, ICAS, IQAS, ACS, and Engineers Australia filing assistance.</small>
+              </div>
+            </div>
+            <div class="col-sm-6 d-flex">
+              <div class="attestation-card">
+                <h6><i class="bi bi-check2-circle text-primary"></i> <span>Police Clearance & Medical</span></h6>
+                <small>Panel physician coordination & FBI / RCMP background checks.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 p-lg-5 bg-surface rounded-4 shadow border">
+            <h4 class="fw-bold mb-3">Request Document Audit</h4>
+            <p class="small text-muted mb-4">Upload or summarize your documents for a preliminary compliance review by our registered paralegals.</p>
+            <form class="needs-validation-aura" novalidate>
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="Jane Doe" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="jane@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Target Immigration Country</label>
+                <select class="form-select" required>
+                  <option value="" selected disabled>Select Destination...</option>
+                  <option value="canada">Canada</option>
+                  <option value="australia">Australia</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="eu">European Union</option>
+                </select>
+              </div>
+              <button class="btn btn-primary-aura w-100" type="submit">Submit for Legal Review</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Post-Landing & Relocation Concierge Support -->
+  <section class="section-space-alt" id="relocation-support">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Beyond the Visa</span>
+        <h2 class="section-heading">Post-Landing Settlement Concierge</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Our commitment doesn't end when your visa is stamped. We ensure your family transitions seamlessly into your new home country.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-airplane-engines text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-2">Airport Reception</h5>
+            <p class="text-muted small mb-0">Private airport pickup, luggage assistance, and initial transportation to your temporary furnished apartment.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-bank text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-2">Banking & Credit Setup</h5>
+            <p class="text-muted small mb-0">Priority bank account opening, debit card issuance, and international credit score transfer assistance.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-person-vcard text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-2">Social Security / SIN</h5>
+            <p class="text-muted small mb-0">Direct appointments for National Insurance, Canadian SIN, or Australian TFN number registration.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-hospital text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-2">Healthcare & Schooling</h5>
+            <p class="text-muted small mb-0">Provincial healthcare (OHIP/Medicare) enrollment and local public/private school registration for children.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- SECTION 5: Essential Navigation Hub — Country Guides, Eligibility Checker & Success Stories -->
+  <section class="section-space-alt" id="immigration-pathways-hub">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Gateway to Relocation</span>
+        <h2 class="section-heading">Plan Your Journey with Confidence</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          Empower your immigration strategy with our sovereign destination policies, instant points evaluation calculator, and authentic client approvals.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Hook Card 1: Country Guide -->
+        <div class="col-lg-4">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&auto=format&fit=crop&q=80" 
+                   alt="Commercial airliner wing in golden sunset over international destinations" 
+                   class="card-img-top-cover" style="height: 220px; object-fit: cover;">
+              <span class="badge bg-primary position-absolute top-0 start-0 m-3 px-3 py-2">45 Sovereign Destinations</span>
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-globe-americas text-primary fs-5"></i>
+                <h4 class="fs-5 fw-bold mb-0">Destination Country Guide</h4>
+              </div>
+              <p class="text-muted small mb-4 flex-grow-1">
+                Explore in-depth immigration policies, annual visa quotas, median cost of living, average salaries, and job opportunities across Canada, Australia, the UK, Germany, and more.
+              </p>
+              <a href="country-guide.html" class="btn btn-outline-aura w-100 mt-auto justify-content-between">
+                <span>Explore Country Guide</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hook Card 2: Eligibility Checker -->
+        <div class="col-lg-4">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&auto=format&fit=crop&q=80" 
+                   alt="Points eligibility evaluation dashboard and metrics chart" 
+                   class="card-img-top-cover" style="height: 220px; object-fit: cover;">
+              <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2">Free Self-Assessment</span>
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-calculator text-success fs-5"></i>
+                <h4 class="fs-5 fw-bold mb-0">Points Eligibility Checker</h4>
+              </div>
+              <p class="text-muted small mb-4 flex-grow-1">
+                Calculate your official immigration points in under 2 minutes. Benchmark your age, qualification, experience, and English proficiency against Canadian CRS and Australian GSM cutoffs.
+              </p>
+              <a href="eligibility-checker.html" class="btn btn-outline-aura w-100 mt-auto justify-content-between">
+                <span>Check Your Eligibility</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hook Card 3: Success Stories -->
+        <div class="col-lg-4">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&auto=format&fit=crop&q=80" 
+                   alt="Successful client case studies and permanent residency celebrations" 
+                   class="card-img-top-cover" style="height: 220px; object-fit: cover;">
+              <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2">18,500+ Visas Approved</span>
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-trophy text-warning fs-5"></i>
+                <h4 class="fs-5 fw-bold mb-0">Client Success Stories</h4>
+              </div>
+              <p class="text-muted small mb-4 flex-grow-1">
+                Read authentic testimonials, case study timelines, and approval letters from skilled professionals, entrepreneurs, and students who achieved their dreams through AuraVisa.
+              </p>
+              <a href="success-stories.html" class="btn btn-outline-aura w-100 mt-auto justify-content-between">
+                <span>View Success Stories</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: Book a 1-on-1 Legal Assessment CTA -->
+  <section class="section-space" id="services-cta">
+    <div class="container">
+      <div class="p-5 bg-primary text-white rounded-4 shadow-lg text-center" style="background: linear-gradient(135deg, #0b1b3d 0%, #1e56a0 100%);">
+        <h2 class="display-6 fw-bold mb-3 text-white">Ready to Map Your Global Future?</h2>
+        <p class="lead text-white-50 mx-auto mb-4" style="max-width: 650px;">
+          Speak with a licensed immigration counsel to evaluate your qualifications and formulate an airtight application roadmap.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="contact.html" class="btn btn-accent-aura px-4 py-3 fs-6">Schedule Private Consultation</a>
+          <a href="pricing.html" class="btn btn-outline-light px-4 py-3 fs-6">Explore Pricing Packages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-auravisa">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="brand-logo mb-3" href="index.html">
+            <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+            <span>Aura<span class="text-warning">Visa</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            AuraVisa is a globally registered immigration consultancy providing end-to-end relocation, permanent residency, work permits, and university placement with licensed attorneys worldwide.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Students)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Visa Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="country-guide.html">Country Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Immigration</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="service-details.html?service=express-entry">Express Entry</a></li>
+            <li><a href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+            <li><a href="eligibility-checker.html">CRS Calculator</a></li>
+            <li><a href="success-stories.html">Case Studies</a></li>
+            <li><a href="blog.html">Migration News</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5>Immigration Policy Alerts</h5>
+          <p class="text-muted small">Subscribe to weekly visa draws, cutoff changes, and immigration law updates directly from our registered counsel.</p>
+          <form class="needs-validation-aura d-flex gap-2" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-accent-aura px-3" type="submit">Join</button>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="bi bi-shield-check me-1 text-success"></i> Strict Zero-Spam Policy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AuraVisa Global Migration Advisory Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="404.html">Privacy Policy</a>
+          <a href="coming-soon.html">Terms of Engagement</a>
+          <a href="maintenance.html">Compliance Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

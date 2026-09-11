@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraVisa 2026 Portal Launch - Coming Soon</title>
+  <meta name="description" content="Preview our next-generation AI-powered immigration assessment portal, automated consular document verification, and expanded Asian & European hubs.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: New Global Portal Launch Countdown Hero -->
+  <section class="hero-wrapper" id="coming-soon-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill"><i class="bi bi-rocket-takeoff text-warning"></i> Major Release Underway</div>
+          <h1 class="display-4 fw-extrabold mb-3">The Future of Legal Immigration is Almost Here</h1>
+          <p class="lead text-muted mb-4">
+            We are engineering a ground-breaking platform featuring real-time biometric verification, direct embassy API synchronization, and automated CRS optimization.
+          </p>
+          <div class="d-flex gap-3 mb-4 text-center">
+            <div class="p-3 bg-surface border rounded-3" style="min-width: 80px;">
+              <span class="fs-2 fw-bold text-primary">45</span>
+              <small class="text-muted d-block">Days</small>
+            </div>
+            <div class="p-3 bg-surface border rounded-3" style="min-width: 80px;">
+              <span class="fs-2 fw-bold text-primary">14</span>
+              <small class="text-muted d-block">Hours</small>
+            </div>
+            <div class="p-3 bg-surface border rounded-3" style="min-width: 80px;">
+              <span class="fs-2 fw-bold text-primary">32</span>
+              <small class="text-muted d-block">Mins</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <!-- DISTINCT IMAGE: Page 35 (Futuristic architecture & horizon sunrise) -->
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&auto=format&fit=crop&q=80" 
+                 alt="Futuristic architectural airport terminal overlooking sunrise on horizon" 
+                 class="hero-featured-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Upcoming Migration Tools & AI Assessment Sneak Peek -->
+  <section class="section-space-alt" id="tools-preview">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Feature Preview</span>
+        <h2 class="section-heading">What's Coming in AuraVisa v5.0</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-cpu text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-2">Automated Duty Mapping</h5>
+            <p class="text-muted small mb-0">AI-powered semantic cross-referencing between your resume duties and Canadian NOC 2021 / Australian ANZSCO job codes.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-patch-check text-success fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-2">Instant ECA Equivalency Pre-Check</h5>
+            <p class="text-muted small mb-0">Instant degree equivalency lookup across 12,000 international universities verified against WES benchmarks.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 text-center">
+            <i class="bi bi-broadcast text-warning fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-2">Direct Embassy Draw Webhooks</h5>
+            <p class="text-muted small mb-0">Sub-second push notifications to your mobile phone when provincial nominations or federal cutoffs match your profile.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Early Access VIP Beta Registration Form -->
+  <section class="section-space" id="early-access">
+    <div class="container">
+      <div class="p-4 p-lg-5 bg-surface rounded-4 border shadow text-center mx-auto" style="max-width: 700px;">
+        <span class="section-subtitle">Get Early Access</span>
+        <h3 class="fw-bold mb-2">Join the Private VIP Beta Pool</h3>
+        <p class="text-muted small mb-4">Be the first to test our automated CRS simulator and receive a complimentary 30-minute consultation with senior legal counsel.</p>
+
+        <form class="needs-validation-aura" novalidate>
+          <div class="row g-2 mb-3">
+            <div class="col-sm-7">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="col-sm-5">
+              <button class="btn btn-primary-aura w-100" type="submit">Join Early Access</button>
+            </div>
+          </div>
+        </form>
+        <small class="text-muted"><i class="bi bi-shield-check text-success me-1"></i> Strictly confidential. Zero promotional spam.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Preview of New Visa Program Integrations -->
+  <section class="section-space-alt" id="new-programs">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Jurisdiction Expansion</span>
+        <h2 class="section-heading">New Destinations Launching with v5.0</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-auravisa p-4">
+            <span class="badge-aura badge-aura-primary mb-2 align-self-start">Japan HSP</span>
+            <h5 class="fw-bold mb-2">Japan Highly Skilled Professional (HSP)</h5>
+            <p class="text-muted small mb-0">1-year fast-track permanent residency pathway for tech founders, researchers, and engineers in Tokyo and Osaka.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-auravisa p-4">
+            <span class="badge-aura badge-aura-success mb-2 align-self-start">Singapore Tech.Pass</span>
+            <h5 class="fw-bold mb-2">Singapore ONE Pass & Tech.Pass</h5>
+            <p class="text-muted small mb-0">5-year flexible work authorization for global tech leadership and high-earning innovators in Southeast Asia.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-auravisa p-4">
+            <span class="badge-aura badge-aura-warning mb-2 align-self-start">UAE 10-Year</span>
+            <h5 class="fw-bold mb-2">Dubai 10-Year Golden Visa</h5>
+            <p class="text-muted small mb-0">Long-term residency for investors, entrepreneurs, and specialized talents with 100% foreign business ownership.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Global Offices Roadmap & Timeline -->
+  <section class="section-space" id="office-expansion">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Chambers Growth</span>
+        <h2 class="section-heading">2026 Global Chambers Expansion Roadmap</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 text-center">
+            <h5 class="fw-bold mb-1">Tokyo, Japan</h5>
+            <small class="text-muted d-block mb-2">Roppongi Hills &bull; Q3 2026</small>
+            <p class="small text-muted mb-0">East Asia headquarters supporting corporate talent transfers and HSP visas.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 text-center">
+            <h5 class="fw-bold mb-1">Singapore</h5>
+            <small class="text-muted d-block mb-2">Marina Bay Financial Centre &bull; Q4 2026</small>
+            <p class="small text-muted mb-0">Regional hub for ASEAN tech entrepreneurs and overseas university students.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 text-center">
+            <h5 class="fw-bold mb-1">Frankfurt, Germany</h5>
+            <small class="text-muted d-block mb-2">Mainzer Landstraße &bull; Q4 2026</small>
+            <p class="small text-muted mb-0">European Union continental chambers specializing in Chancenkarte and EU Blue Cards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-auravisa">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="brand-logo mb-3" href="index.html">
+            <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+            <span>Aura<span class="text-warning">Visa</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            AuraVisa is a globally registered immigration consultancy providing end-to-end relocation, permanent residency, work permits, and university placement with licensed attorneys worldwide.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Students)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Visa Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="country-guide.html">Country Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Immigration</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="service-details.html?service=express-entry">Express Entry</a></li>
+            <li><a href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+            <li><a href="eligibility-checker.html">CRS Calculator</a></li>
+            <li><a href="success-stories.html">Case Studies</a></li>
+            <li><a href="blog.html">Migration News</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5>Immigration Policy Alerts</h5>
+          <p class="text-muted small">Subscribe to weekly visa draws, cutoff changes, and immigration law updates directly from our registered counsel.</p>
+          <form class="needs-validation-aura d-flex gap-2" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-accent-aura px-3" type="submit">Join</button>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="bi bi-shield-check me-1 text-success"></i> Strict Zero-Spam Policy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AuraVisa Global Migration Advisory Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="404.html">Privacy Policy</a>
+          <a href="coming-soon.html">Terms of Engagement</a>
+          <a href="maintenance.html">Compliance Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

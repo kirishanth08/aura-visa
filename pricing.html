@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Retainer Plans - AuraVisa</title>
+  <meta name="description" content="Transparent, milestone-based immigration legal fees with zero hidden costs. Compare our basic evaluation, standard filing, and full legal representation packages.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: Transparent Consultation & Retainer Pricing Hero -->
+  <section class="hero-wrapper" id="pricing-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill"><i class="bi bi-wallet2 text-warning"></i> Clear & Predictable Legal Fees</div>
+          <h1 class="display-4 fw-extrabold mb-3">Transparent Immigration Legal Retainers</h1>
+          <p class="lead text-muted mb-4">
+            We believe in honest, upfront pricing with zero surprises. Choose between basic profile vetting, standard filing assistance, or full premium legal counsel with stage-gated milestone payments.
+          </p>
+          <div class="d-flex align-items-center gap-4 text-muted small">
+            <div><i class="bi bi-check2-circle text-success me-1"></i> Milestone-Based Installments</div>
+            <div><i class="bi bi-shield-check text-primary me-1"></i> Fiduciary Retainer Protection</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <!-- DISTINCT IMAGE: Page 6 (Financial planning and legal fee consultation) -->
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop&q=80" alt="Licensed immigration attorney and client reviewing legal fee structure and retainer agreement" class="hero-featured-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Tiered Packages -->
+  <section class="section-space-alt" id="pricing-packages">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Our Retainer Plans</span>
+        <h2 class="section-heading">Choose the Representation Tier That Fits You</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          All packages include licensed attorney representation and access to our encrypted document portal.
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Basic Evaluation -->
+        <div class="col-lg-4">
+          <div class="card-auravisa p-4">
+            <h5 class="fw-bold mb-1">Eligibility Audit</h5>
+            <p class="text-muted small mb-4">For applicants needing expert vetting before filing independently.</p>
+            <div class="mb-4">
+              <span class="pricing-amount">$349</span>
+              <span class="text-muted">/ one-time</span>
+            </div>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-4 flex-grow-1">
+              <li><i class="bi bi-check2 text-success me-2"></i> Comprehensive CRS / GSM points audit</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Written legal eligibility opinion letter</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> 45-minute video call with licensed counsel</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Recommended PNP / state stream matrix</li>
+              <li class="text-muted"><i class="bi bi-x text-danger me-2"></i> Government portal representation</li>
+              <li class="text-muted"><i class="bi bi-x text-danger me-2"></i> Document notarization & translation</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-aura w-100">Get Evaluated</a>
+          </div>
+        </div>
+
+        <!-- Standard Representation (Featured) -->
+        <div class="col-lg-4">
+          <div class="card-auravisa p-4 pricing-card-featured">
+            <span class="pricing-ribbon">POPULAR</span>
+            <h5 class="fw-bold mb-1">Standard Representation</h5>
+            <p class="text-muted small mb-4">Complete legal filing from pool entry to visa grant.</p>
+            <div class="mb-4">
+              <span class="pricing-amount">$1,850</span>
+              <span class="text-muted">/ in 3 installments</span>
+            </div>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-4 flex-grow-1">
+              <li><i class="bi bi-check2 text-success me-2"></i> <strong>Everything in Eligibility Audit</strong></li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Full IRCC / MARA legal representation</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Creation & maintenance of Express Entry pool</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Work experience letter drafting & vetting</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Submission of post-ITA e-APR dossier</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Client portal access with live status alerts</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary-aura w-100">Select Standard</a>
+          </div>
+        </div>
+
+        <!-- Premium VIP Legal Counsel -->
+        <div class="col-lg-4">
+          <div class="card-auravisa p-4">
+            <h5 class="fw-bold mb-1">VIP Legal Concierge</h5>
+            <p class="text-muted small mb-4">White-glove service including spouse, kids & settlement.</p>
+            <div class="mb-4">
+              <span class="pricing-amount">$2,950</span>
+              <span class="text-muted">/ in 4 installments</span>
+            </div>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-4 flex-grow-1">
+              <li><i class="bi bi-check2 text-success me-2"></i> <strong>Everything in Standard</strong></li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Senior Bar Counsel / KC direct supervision</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Free inclusion of spouse & dependent kids</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Unlimited certified translations (up to 20 pgs)</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Post-landing concierge (SIN, healthcare, banking)</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Priority 24/7 dedicated WhatsApp hotline</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-aura w-100">Select VIP Concierge</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Comprehensive Package Feature Comparison Matrix -->
+  <section class="section-space" id="pricing-matrix">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Side-by-Side</span>
+        <h2 class="section-heading">Detailed Feature Comparison Matrix</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Review the precise scope of legal services included under each retainer level.
+        </p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-auravisa">
+          <thead>
+            <tr>
+              <th style="width: 40%;">Service Deliverable</th>
+              <th class="text-center" style="width: 20%;">Eligibility Audit</th>
+              <th class="text-center" style="width: 20%;">Standard Legal</th>
+              <th class="text-center" style="width: 20%;">VIP Concierge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Comprehensive Profile & Points Audit</td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Official Government Portal Filing</td>
+              <td class="text-center"><i class="bi bi-dash text-muted"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Licensed Counsel Representation (IMM 5476)</td>
+              <td class="text-center"><i class="bi bi-dash text-muted"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Work Experience Duty Mapping (NOC/ANZSCO)</td>
+              <td class="text-center"><i class="bi bi-dash text-muted"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Spouse and Child Dependents Included</td>
+              <td class="text-center"><i class="bi bi-dash text-muted"></i></td>
+              <td class="text-center"><small>+$300/dep</small></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i> Free</td>
+            </tr>
+            <tr>
+              <td>Post-Landing Relocation Concierge</td>
+              <td class="text-center"><i class="bi bi-dash text-muted"></i></td>
+              <td class="text-center"><i class="bi bi-dash text-muted"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Milestone Payment Process & Zero-Hidden-Fees Guarantee -->
+  <section class="section-space-alt" id="payment-process">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-subtitle">Risk Mitigation</span>
+          <h2 class="section-heading mb-3">Pay as You Progress Through Each Government Stage</h2>
+          <p class="text-muted mb-4">
+            We never demand full legal fees upfront. Retainers are divided across logical milestones tied to tangible results in your immigration journey.
+          </p>
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex gap-3">
+              <div class="fs-4 text-primary"><i class="bi bi-1-circle-fill"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Stage 1: Retainer Signing (30%)</h6>
+                <small class="text-muted">Commences credential assessment, language benchmarking, and portfolio preparation.</small>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="fs-4 text-primary"><i class="bi bi-2-circle-fill"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Stage 2: Official Pool Entry (35%)</h6>
+                <small class="text-muted">Paid when your profile is officially submitted and verified in the government pool.</small>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="fs-4 text-primary"><i class="bi bi-3-circle-fill"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Stage 3: Invitation to Apply & Final Filing (35%)</h6>
+                <small class="text-muted">Due only when your government invitation (ITA) is secured and e-APR is prepared.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 p-lg-5 bg-surface rounded-4 shadow-sm border text-center">
+            <div class="bg-success-subtle text-success p-3 rounded-circle mx-auto mb-3" style="width: 72px; height: 72px; font-size: 2rem;">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h4 class="fw-bold mb-2">Zero Hidden Fees Guarantee</h4>
+            <p class="text-muted small mb-4">
+              All consultation contracts explicitly itemize legal representation fees versus statutory government fees. We never bill for postage, internal photocopies, or file storage.
+            </p>
+            <a href="contact.html" class="btn btn-primary-aura">Download Sample Retainer Contract</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Pricing & Retainer Agreement FAQs -->
+  <section class="section-space" id="pricing-faq">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Got Questions?</span>
+        <h2 class="section-heading">Frequently Asked Questions on Fees & Payments</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="pricingAccordion">
+            <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                  Are statutory government filing fees included in the retainer?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#pricingAccordion">
+                <div class="accordion-body text-muted small">
+                  No. Government fees (such as IRCC processing fees, biometrics, or MARA lodgement fees) are levied directly by national immigration departments and must be paid to the respective treasuries. Our retainers cover complete legal counsel, dossier preparation, and official attorney representation.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                  What happens if immigration regulations change during my process?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#pricingAccordion">
+                <div class="accordion-body text-muted small">
+                  Under our Standard and VIP representation agreements, any regulatory updates, category redraws, or NOC revisions are handled at zero additional cost. Your case officer automatically adapts your submission to match new criteria.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                  Can I deduct the cost of the Eligibility Audit if I upgrade to Standard?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#pricingAccordion">
+                <div class="accordion-body text-muted small">
+                  Yes, 100%! If you proceed with Standard or VIP Representation within 30 days of receiving your written Eligibility Audit, the full $349 audit fee is credited directly toward your representation agreement balance.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-auravisa">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="brand-logo mb-3" href="index.html">
+            <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+            <span>Aura<span class="text-warning">Visa</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            AuraVisa is a globally registered immigration consultancy providing end-to-end relocation, permanent residency, work permits, and university placement with licensed attorneys worldwide.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Students)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Visa Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="country-guide.html">Country Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Immigration</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="service-details.html?service=express-entry">Express Entry</a></li>
+            <li><a href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+            <li><a href="eligibility-checker.html">CRS Calculator</a></li>
+            <li><a href="success-stories.html">Case Studies</a></li>
+            <li><a href="blog.html">Migration News</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5>Immigration Policy Alerts</h5>
+          <p class="text-muted small">Subscribe to weekly visa draws, cutoff changes, and immigration law updates directly from our registered counsel.</p>
+          <form class="needs-validation-aura d-flex gap-2" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-accent-aura px-3" type="submit">Join</button>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="bi bi-shield-check me-1 text-success"></i> Strict Zero-Spam Policy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AuraVisa Global Migration Advisory Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="404.html">Privacy Policy</a>
+          <a href="coming-soon.html">Terms of Engagement</a>
+          <a href="maintenance.html">Compliance Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

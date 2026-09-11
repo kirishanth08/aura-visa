@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Eligibility & Points Calculator - AuraVisa</title>
+  <meta name="description" content="Calculate your immigration points for Canada Express Entry, Australia GSM, and UK Skilled Worker visas with our instant assessment tool.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: Assessment Hero & Step Overview -->
+  <section class="hero-wrapper" id="calculator-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill"><i class="bi bi-lightning-charge text-warning"></i> Instant Scoring Engine</div>
+          <h1 class="display-4 fw-extrabold mb-3">Immigration Points & Qualification Calculator</h1>
+          <p class="lead text-muted mb-4">
+            Evaluate your candidacy for Canadian Federal Skilled Worker (FSW 67-point grid) and Australian General Skilled Migration (GSM 65-point benchmark) in under 2 minutes.
+          </p>
+          <div class="d-flex align-items-center gap-4 text-muted small">
+            <div><i class="bi bi-shield-check text-success me-1"></i> 100% Free & Confidential</div>
+            <div><i class="bi bi-sliders text-primary me-1"></i> Real-Time Point Simulation</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <!-- DISTINCT IMAGE: Page 8 (Professional analyzing assessment data on digital tablet) -->
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop&q=80" alt="Registered immigration counselor reviewing candidate CRS points and qualification paperwork" class="hero-featured-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Multi-Step Interactive Points Calculator -->
+  <section class="section-space-alt" id="interactive-calculator">
+    <div class="container">
+      <div class="p-4 p-lg-5 bg-surface rounded-4 shadow border">
+        <div class="text-center mb-5">
+          <span class="section-subtitle">Self Assessment</span>
+          <h2 class="fs-2 fw-bold">Select Your Credentials to Compute Points</h2>
+        </div>
+
+        <form id="pointsCalculatorForm">
+          <div class="row g-4">
+            <!-- Age Factor -->
+            <div class="col-md-6 col-lg-3">
+              <label class="form-label" for="calcAge">Age Bracket</label>
+              <select class="form-select" id="calcAge">
+                <option value="12" selected>18 - 35 Years (+12 Pts)</option>
+                <option value="11">36 Years (+11 Pts)</option>
+                <option value="10">37 Years (+10 Pts)</option>
+                <option value="9">38 Years (+9 Pts)</option>
+                <option value="8">39 Years (+8 Pts)</option>
+                <option value="5">40 - 44 Years (+5 Pts)</option>
+                <option value="0">45+ Years (0 Pts)</option>
+              </select>
+            </div>
+
+            <!-- Education Factor -->
+            <div class="col-md-6 col-lg-3">
+              <label class="form-label" for="calcEdu">Highest Qualification</label>
+              <select class="form-select" id="calcEdu">
+                <option value="25" selected>Master's / Ph.D. (+25 Pts)</option>
+                <option value="22">Double Degrees / Post-Grad (+22 Pts)</option>
+                <option value="21">Bachelor's Degree (3+ Yrs) (+21 Pts)</option>
+                <option value="19">2-Year Diploma (+19 Pts)</option>
+                <option value="15">Secondary High School (+15 Pts)</option>
+              </select>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="col-md-6 col-lg-3">
+              <label class="form-label" for="calcExp">Skilled Work Experience</label>
+              <select class="form-select" id="calcExp">
+                <option value="15" selected>6+ Years Experience (+15 Pts)</option>
+                <option value="13">4 - 5 Years Experience (+13 Pts)</option>
+                <option value="11">2 - 3 Years Experience (+11 Pts)</option>
+                <option value="9">1 Year Experience (+9 Pts)</option>
+                <option value="0">Less than 1 Year (0 Pts)</option>
+              </select>
+            </div>
+
+            <!-- Language Proficiency -->
+            <div class="col-md-6 col-lg-3">
+              <label class="form-label" for="calcLang">Language (IELTS / CLB)</label>
+              <select class="form-select" id="calcLang">
+                <option value="24" selected>CLB 9+ / IELTS 8777 (+24 Pts)</option>
+                <option value="20">CLB 8 / IELTS 7.5 (+20 Pts)</option>
+                <option value="16">CLB 7 / IELTS 6.0 (+16 Pts)</option>
+                <option value="0">Below CLB 7 (0 Pts)</option>
+              </select>
+            </div>
+
+            <!-- Adaptability Switch -->
+            <div class="col-12 mt-4">
+              <div class="form-check form-switch p-3 bg-light rounded-3">
+                <input class="form-check-input ms-0 me-3" type="checkbox" id="calcAdapt" checked>
+                <label class="form-check-label fw-bold" for="calcAdapt">
+                  Bonus Adaptability Factors (+10 Points: Valid Job Offer, Past Canadian/Australian Study, or Blood Relative in Destination Country)
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Real-Time Score Calculation & Readiness Scorecard -->
+  <section class="section-space" id="scorecard-section">
+    <div class="container">
+      <div class="p-4 p-lg-5 bg-surface rounded-4 shadow border text-center mx-auto" style="max-width: 800px;">
+        <span class="section-subtitle">Real-Time Evaluation</span>
+        <h3 class="fw-bold mb-3">Your Calculated Immigration Points</h3>
+
+        <div class="display-2 fw-extrabold text-primary mb-2" id="calculatedScore">86</div>
+        <div class="fs-6 text-muted mb-4">Points out of 100 Baseline (Pass mark: 67 for Canada / 65 for Australia)</div>
+
+        <div class="progress mb-4" style="height: 14px;">
+          <div id="scoreProgressBar" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 86%;" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <div>
+          <span id="qualificationStatus" class="badge-aura badge-aura-success fs-6 py-2 px-3">High Eligibility (Qualified)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Matched Visa Programs & Recommended Country Options -->
+  <section class="section-space-alt" id="matched-programs">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-subtitle">Tailored Opportunities</span>
+        <h2 class="section-heading">Programs Matching Your Current Score</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 h-100">
+            <span class="badge-aura badge-aura-success mb-2 align-self-start">Optimal Match</span>
+            <h5 class="fw-bold mb-2">Canada Express Entry (FSW)</h5>
+            <p class="text-muted small mb-3">With your score above 67, you meet the legal statutory requirements to enter the Express Entry federal pool immediately.</p>
+            <a href="service-details.html" class="btn btn-sm btn-outline-aura mt-auto">View Steps</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 h-100">
+            <span class="badge-aura badge-aura-primary mb-2 align-self-start">High Chance</span>
+            <h5 class="fw-bold mb-2">Australia GSM (Subclass 189)</h5>
+            <p class="text-muted small mb-3">Your credentials exceed the 65-point benchmark. A positive skills assessment through ACS or Engineers Australia will position you for draw selection.</p>
+            <a href="service-details.html" class="btn btn-sm btn-outline-aura mt-auto">View Steps</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-auravisa p-4 h-100">
+            <span class="badge-aura badge-aura-warning mb-2 align-self-start">Alternative Route</span>
+            <h5 class="fw-bold mb-2">Germany Opportunity Card</h5>
+            <p class="text-muted small mb-3">Your degree and experience satisfy Germany's 6-point requirement for the 1-year job search residency visa.</p>
+            <a href="country-guide.html" class="btn btn-sm btn-outline-aura mt-auto">View Steps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Schedule Verification with Registered Agent CTA -->
+  <section class="section-space" id="calculator-cta">
+    <div class="container">
+      <div class="p-5 bg-surface border rounded-4 shadow-sm text-center mx-auto" style="max-width: 850px;">
+        <span class="section-subtitle">Official Verification</span>
+        <h2 class="fs-2 fw-bold mb-3">Lock in Your Eligibility with Official Representation</h2>
+        <p class="text-muted mb-4">
+          Online calculators provide an indicative simulation. Minor calculation variances in your NOC duties or test bands can alter your rank. Have a certified immigration attorney audit your full file.
+        </p>
+        <a href="contact.html" class="btn btn-primary-aura px-4 py-2">Book Legal Verification Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-auravisa">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="brand-logo mb-3" href="index.html">
+            <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+            <span>Aura<span class="text-warning">Visa</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            AuraVisa is a globally registered immigration consultancy providing end-to-end relocation, permanent residency, work permits, and university placement with licensed attorneys worldwide.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Students)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Visa Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="country-guide.html">Country Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5>Immigration</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="service-details.html?service=express-entry">Express Entry</a></li>
+            <li><a href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+            <li><a href="eligibility-checker.html">CRS Calculator</a></li>
+            <li><a href="success-stories.html">Case Studies</a></li>
+            <li><a href="blog.html">Migration News</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5>Immigration Policy Alerts</h5>
+          <p class="text-muted small">Subscribe to weekly visa draws, cutoff changes, and immigration law updates directly from our registered counsel.</p>
+          <form class="needs-validation-aura d-flex gap-2" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-accent-aura px-3" type="submit">Join</button>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="bi bi-shield-check me-1 text-success"></i> Strict Zero-Spam Policy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AuraVisa Global Migration Advisory Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="404.html">Privacy Policy</a>
+          <a href="coming-soon.html">Terms of Engagement</a>
+          <a href="maintenance.html">Compliance Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

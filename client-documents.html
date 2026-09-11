@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Vault & Verification - AuraVisa Portal</title>
+  <meta name="description" content="Secure encrypted repository for uploading passports, ECA certificates, IELTS transcripts, and employment reference letters.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar py-3">
+      <div class="px-3 mb-3">
+        <small class="text-muted fw-bold text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.5px;">Navigation</small>
+      </div>
+      <a href="client-dashboard.html" class="sidebar-nav-item">
+        <i class="bi bi-speedometer2"></i> Overview
+      </a>
+      <a href="client-application-details.html" class="sidebar-nav-item">
+        <i class="bi bi-folder2-open"></i> Application File
+      </a>
+      <a href="client-documents.html" class="sidebar-nav-item active">
+        <i class="bi bi-file-earmark-arrow-up"></i> Document Vault
+      </a>
+      <a href="client-appointments.html" class="sidebar-nav-item">
+        <i class="bi bi-calendar-event"></i> Consultations
+      </a>
+      <a href="client-payments.html" class="sidebar-nav-item">
+        <i class="bi bi-credit-card"></i> Invoices & Retainers
+      </a>
+      <a href="client-profile.html" class="sidebar-nav-item">
+        <i class="bi bi-person-gear"></i> Profile Settings
+      </a>
+    </aside>
+
+    <main class="dashboard-main">
+      <!-- SECTION 1: Document Repository Overview & Verification Score -->
+      <section class="mb-4" id="vault-overview">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <div class="row align-items-center g-4">
+            <div class="col-12">
+              <span class="badge-aura badge-aura-success mb-2">Verification Score: 85%</span>
+              <h2 class="fs-3 fw-bold mb-2">Encrypted Document Repository</h2>
+              <p class="text-muted small mb-3">
+                All records uploaded here are reviewed by registered paralegals within 24 business hours to ensure full compliance with official IRCC consular standards.
+              </p>
+              <div class="progress mb-2" style="height: 10px;">
+                <div class="progress-bar bg-success" style="width: 85%;"></div>
+              </div>
+              <small class="text-muted">8 Approved &bull; 2 Pending Upload &bull; 0 Rejected</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: Required Document Checklist by Category -->
+      <section class="mb-4" id="document-checklist">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-3">Mandatory Checklist Categories</h5>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <div class="p-3 bg-light rounded-3 text-center">
+                <i class="bi bi-person-badge fs-2 text-primary mb-2"></i>
+                <h6 class="fw-bold mb-1">Identity & Civil</h6>
+                <span class="badge bg-success">3 of 3 Verified</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="p-3 bg-light rounded-3 text-center">
+                <i class="bi bi-mortarboard fs-2 text-primary mb-2"></i>
+                <h6 class="fw-bold mb-1">Education & Language</h6>
+                <span class="badge bg-success">2 of 2 Verified</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="p-3 bg-light rounded-3 text-center">
+                <i class="bi bi-briefcase fs-2 text-primary mb-2"></i>
+                <h6 class="fw-bold mb-1">Employment History</h6>
+                <span class="badge bg-success">2 of 2 Verified</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="p-3 bg-light rounded-3 text-center">
+                <i class="bi bi-heart-pulse fs-2 text-danger mb-2"></i>
+                <h6 class="fw-bold mb-1">Medical & Police</h6>
+                <span class="badge bg-warning text-dark">1 of 3 Pending</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Drag-and-Drop Document Upload & Validation Area -->
+      <section class="mb-4" id="upload-zone">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-3">Upload New Application Document</h5>
+          <form class="needs-validation-aura" novalidate>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Document Category</label>
+                <select class="form-select" required>
+                  <option value="" selected disabled>Select Category...</option>
+                  <option value="medical">Upfront Medical Exam Report (e-Medical)</option>
+                  <option value="bank">6-Month Stamped Bank Statement</option>
+                  <option value="police">Additional Police Clearance</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Applicant Associated</label>
+                <select class="form-select" required>
+                  <option value="principal" selected>Sarah Chen (Principal)</option>
+                  <option value="spouse">David Chen (Spouse)</option>
+                  <option value="child">Maya Chen (Dependent)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="p-4 border border-2 border-dashed rounded-3 text-center bg-light mb-3">
+              <i class="bi bi-cloud-arrow-up fs-1 text-secondary mb-2"></i>
+              <h6>Drag and drop PDF files here, or browse from computer</h6>
+              <small class="text-muted d-block mb-3">Accepted formats: PDF, JPG, PNG (Max file size: 15MB)</small>
+              <input type="file" class="form-control d-inline-block w-auto" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary-aura">
+              <i class="bi bi-upload me-1"></i> Upload & Submit for Legal Audit
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- SECTION 4: Verified Document Vault Table with Expiry Alerts -->
+      <section class="mb-4" id="verified-vault">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-3">Current Active Dossier Documents</h5>
+          <div class="table-responsive">
+            <table class="table table-auravisa">
+              <thead>
+                <tr>
+                  <th>Document Title</th>
+                  <th>Applicant</th>
+                  <th>Upload Date</th>
+                  <th>Expiry Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>International Passport (Bio Page)</strong></td>
+                  <td>Sarah Chen</td>
+                  <td>Jan 05, 2026</td>
+                  <td>Aug 14, 2031</td>
+                  <td><span class="badge-aura badge-aura-success">Verified</span></td>
+                  <td><a href="#" class="btn btn-sm btn-outline-aura"><i class="bi bi-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td><strong>WES Educational Credential Report</strong></td>
+                  <td>Sarah Chen</td>
+                  <td>Jan 12, 2026</td>
+                  <td>Jan 12, 2031</td>
+                  <td><span class="badge-aura badge-aura-success">Verified</span></td>
+                  <td><a href="#" class="btn btn-sm btn-outline-aura"><i class="bi bi-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td><strong>IELTS General Test Score Report</strong></td>
+                  <td>Sarah Chen</td>
+                  <td>Jan 20, 2026</td>
+                  <td>Jan 20, 2028</td>
+                  <td><span class="badge-aura badge-aura-success">Verified</span></td>
+                  <td><a href="#" class="btn btn-sm btn-outline-aura"><i class="bi bi-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td><strong>Police Clearance Certificate (Singapore)</strong></td>
+                  <td>Sarah Chen</td>
+                  <td>Mar 08, 2026</td>
+                  <td>Mar 08, 2027</td>
+                  <td><span class="badge-aura badge-aura-success">Verified</span></td>
+                  <td><a href="#" class="btn btn-sm btn-outline-aura"><i class="bi bi-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td><strong>Upfront Medical Examination</strong></td>
+                  <td>Sarah Chen</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td><span class="badge-aura badge-aura-warning">Pending</span></td>
+                  <td><button class="btn btn-sm btn-outline-secondary" disabled><i class="bi bi-clock"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: Certified Translation & Legal Notary Request Form -->
+      <section id="translation-request">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <h5 class="fw-bold mb-2">Need Sworn Legal Translations or Notarization?</h5>
+              <p class="text-muted small mb-0">
+                Any civil or academic records in a language other than English or French must be accompanied by an official certified translation and affidavit under Canadian law. Request in-house attestation here.
+              </p>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+              <button class="btn btn-outline-aura" data-bs-toggle="modal" data-bs-target="#notaryModal">
+                <i class="bi bi-translate me-1"></i> Request Certified Translation Service
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Notary Request Modal -->
+  <div class="modal fade" id="notaryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Request Sworn Translation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-muted mb-3">Our court-certified linguists provide authorized affidavits accepted across IRCC, MARA, and UKVI.</p>
+          <div class="mb-3">
+            <label class="form-label">Source Language</label>
+            <input type="text" class="form-control" placeholder="e.g. Spanish, Mandarin, Arabic">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Document Description</label>
+            <input type="text" class="form-control" placeholder="e.g. Marriage Certificate, Birth Certificate">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary-aura btn-sm" onclick="showToast('Translation request submitted to language desk.', 'success')" data-bs-dismiss="modal">Submit Request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

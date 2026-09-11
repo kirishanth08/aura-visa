@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policy CMS & Editorial Studio - AuraVisa Admin</title>
+  <meta name="description" content="Publish immigration policy updates, manage draw analyses, and configure SEO meta tags for AuraVisa's global research publication.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar py-3">
+      <div class="px-3 mb-2">
+        <small class="text-muted fw-bold text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.5px;">Administration</small>
+      </div>
+      <a href="admin-dashboard.html" class="sidebar-nav-item"><i class="bi bi-speedometer2"></i> Dashboard</a>
+      <a href="admin-users.html" class="sidebar-nav-item"><i class="bi bi-people"></i> Users & Clients</a>
+      <a href="admin-applications.html" class="sidebar-nav-item"><i class="bi bi-file-earmark-text"></i> Applications</a>
+      <a href="admin-services.html" class="sidebar-nav-item"><i class="bi bi-briefcase"></i> Services Catalog</a>
+      <a href="admin-countries.html" class="sidebar-nav-item"><i class="bi bi-geo-alt"></i> Countries & Quotas</a>
+      <a href="admin-documents.html" class="sidebar-nav-item"><i class="bi bi-folder-check"></i> Verification Queue</a>
+      <a href="admin-appointments.html" class="sidebar-nav-item"><i class="bi bi-calendar-check"></i> Consultations</a>
+      <a href="admin-payments.html" class="sidebar-nav-item"><i class="bi bi-cash-stack"></i> Finance & Invoices</a>
+      <a href="admin-messages.html" class="sidebar-nav-item"><i class="bi bi-chat-dots"></i> Client Inquiries</a>
+      <a href="admin-blog.html" class="sidebar-nav-item active"><i class="bi bi-journal-richtext"></i> Policy News CMS</a>
+      <a href="admin-analytics.html" class="sidebar-nav-item"><i class="bi bi-graph-up-arrow"></i> BI Analytics</a>
+      <a href="admin-settings.html" class="sidebar-nav-item"><i class="bi bi-gear"></i> System Settings</a>
+    </aside>
+
+    <main class="dashboard-main">
+      <!-- SECTION 1: Content Publishing & Article Metrics Banner -->
+      <section class="mb-4" id="cms-banner">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <div class="row align-items-center g-4">
+            <div class="col-12">
+              <span class="badge-aura badge-aura-success mb-2">Editorial Authority</span>
+              <h2 class="fs-3 fw-bold mb-2">Legal Policy CMS & Publications</h2>
+              <p class="text-muted small mb-3">
+                Publish fact-checked legal commentary, draw results, and statutory whitepapers directly to the public knowledge hub.
+              </p>
+              <div class="row g-2 text-center small text-muted">
+                <div class="col-sm-4 p-2 bg-light rounded-3">Total Published: <strong class="text-main">42 Articles</strong></div>
+                <div class="col-sm-4 p-2 bg-light rounded-3">Monthly Readers: <strong class="text-success">84,200</strong></div>
+                <div class="col-sm-4 p-2 bg-light rounded-3">Leads Generated: <strong class="text-primary">1,120</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: Published & Draft Articles Management Table -->
+      <section class="mb-4" id="articles-table">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-3">Published Articles & Policy Bulletins</h5>
+          <div class="table-responsive">
+            <table class="table table-auravisa">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Author</th>
+                  <th>Views</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Canada Category-Based Express Entry Shifts</strong></td>
+                  <td>Canada PR</td>
+                  <td>Jonathan Vance, KC</td>
+                  <td>14,280</td>
+                  <td><span class="badge-aura badge-aura-success">Published</span></td>
+                  <td><a href="blog-details.html" class="btn btn-sm btn-outline-aura">View Live</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Australia Subclass 189 Invitation Analysis</strong></td>
+                  <td>Australia GSM</td>
+                  <td>Liam O'Connor, RMA</td>
+                  <td>8,940</td>
+                  <td><span class="badge-aura badge-aura-success">Published</span></td>
+                  <td><a href="blog-details.html" class="btn btn-sm btn-outline-aura">View Live</a></td>
+                </tr>
+                <tr>
+                  <td><strong>UK Skilled Worker Salary Threshold Revisions</strong></td>
+                  <td>UK Immigration</td>
+                  <td>Victoria Stirling, LLB</td>
+                  <td>—</td>
+                  <td><span class="badge-aura badge-aura-warning">Draft</span></td>
+                  <td><button class="btn btn-sm btn-primary-aura">Edit</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Article Editor & SEO Meta Tag Studio -->
+      <section class="mb-4" id="editor-studio">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-3">Create New Legal Policy Article</h5>
+          <form class="needs-validation-aura" novalidate>
+            <div class="row g-3 mb-3">
+              <div class="col-md-8">
+                <label class="form-label">Article Headline</label>
+                <input type="text" class="form-control" placeholder="e.g. Ontario PNP Tech Draw: CRS Cutoff Drops to 415" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Category</label>
+                <select class="form-select" required>
+                  <option value="canada" selected>Canada Express Entry / PNP</option>
+                  <option value="australia">Australia GSM</option>
+                  <option value="uk">UK Visas</option>
+                  <option value="golden">Golden Visas</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Author</label>
+                <select class="form-select" required>
+                  <option selected>Jonathan Vance, KC</option>
+                  <option>Victoria Stirling, LLB</option>
+                  <option>Liam O'Connor, RMA</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">SEO Meta Description</label>
+                <input type="text" class="form-control" placeholder="150 characters summarizing the statutory draw impact..." required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Article Body Narrative (Markdown / HTML)</label>
+              <textarea class="form-control" rows="5" placeholder="Write comprehensive statutory analysis..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary-aura">Publish Article to Global Blog</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- SECTION 4: Category & Policy Tag Manager -->
+      <section class="mb-4" id="tag-manager">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-2">Manage Topic Tags</h5>
+          <div class="d-flex flex-wrap gap-2 pt-2">
+            <span class="badge bg-secondary p-2">#ExpressEntry</span>
+            <span class="badge bg-secondary p-2">#SkillSelect</span>
+            <span class="badge bg-secondary p-2">#OntarioPNP</span>
+            <span class="badge bg-secondary p-2">#GoldenVisa</span>
+            <span class="badge bg-secondary p-2">#STEMImmigration</span>
+            <button class="btn btn-sm btn-outline-aura py-0 px-2">+ Add Tag</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: Article Viewership, Shares & Lead Analytics -->
+      <section id="cms-analytics">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-2">Editorial Traffic Attribution</h5>
+          <p class="small text-muted mb-0">
+            Articles authored by registered attorneys currently drive <strong>46% of all inbound qualified consultation bookings</strong>.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

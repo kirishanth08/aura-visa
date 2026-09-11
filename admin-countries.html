@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Quotas & Consular Policy - AuraVisa Admin</title>
+  <meta name="description" content="Manage destination countries, annual economic quota caps, embassy consular contacts, and immigration rule configurations.">
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('auravisa-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+      const savedDir = localStorage.getItem('auravisa-dir');
+      if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-auravisa">
+      <div class="container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+          <span>Aura<span class="text-warning">Visa</span></span>
+        </a>
+
+        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
+        <div class="d-flex align-items-center gap-2 d-xl-none">
+          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
+            <span class="rtl-status-badge">RTL</span>
+          </button>
+          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Links & Action Buttons Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu border-0 shadow-lg">
+                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="client-dashboard.html">User Dashboard</a></li>
+                  <li><a class="dropdown-item" href="admin-dashboard.html">Admin Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+                <span class="rtl-status-badge">RTL</span>
+              </button>
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+              </button>
+              <a href="login.html" class="btn btn-sm btn-outline-aura">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Login
+              </a>
+              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar py-3">
+      <div class="px-3 mb-2">
+        <small class="text-muted fw-bold text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.5px;">Administration</small>
+      </div>
+      <a href="admin-dashboard.html" class="sidebar-nav-item"><i class="bi bi-speedometer2"></i> Dashboard</a>
+      <a href="admin-users.html" class="sidebar-nav-item"><i class="bi bi-people"></i> Users & Clients</a>
+      <a href="admin-applications.html" class="sidebar-nav-item"><i class="bi bi-file-earmark-text"></i> Applications</a>
+      <a href="admin-services.html" class="sidebar-nav-item"><i class="bi bi-briefcase"></i> Services Catalog</a>
+      <a href="admin-countries.html" class="sidebar-nav-item active"><i class="bi bi-geo-alt"></i> Countries & Quotas</a>
+      <a href="admin-documents.html" class="sidebar-nav-item"><i class="bi bi-folder-check"></i> Verification Queue</a>
+      <a href="admin-appointments.html" class="sidebar-nav-item"><i class="bi bi-calendar-check"></i> Consultations</a>
+      <a href="admin-payments.html" class="sidebar-nav-item"><i class="bi bi-cash-stack"></i> Finance & Invoices</a>
+      <a href="admin-messages.html" class="sidebar-nav-item"><i class="bi bi-chat-dots"></i> Client Inquiries</a>
+      <a href="admin-blog.html" class="sidebar-nav-item"><i class="bi bi-journal-richtext"></i> Policy News CMS</a>
+      <a href="admin-analytics.html" class="sidebar-nav-item"><i class="bi bi-graph-up-arrow"></i> BI Analytics</a>
+      <a href="admin-settings.html" class="sidebar-nav-item"><i class="bi bi-gear"></i> System Settings</a>
+    </aside>
+
+    <main class="dashboard-main">
+      <!-- SECTION 1: Global Destinations Metric Banner -->
+      <section class="mb-4" id="countries-banner">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <div class="row align-items-center g-4">
+            <div class="col-12">
+              <span class="badge-aura badge-aura-success mb-2">Sovereign Registry</span>
+              <h2 class="fs-3 fw-bold mb-2">Destination Policies & Annual Quota Caps</h2>
+              <p class="text-muted small mb-3">
+                Real-time synchronization of immigration caps, draw frequencies, and official government pass thresholds.
+              </p>
+              <div class="d-flex gap-4 small text-muted">
+                <div>Total Sovereign Hubs: <strong>45 Nations</strong></div>
+                <div>Annual Global Target: <strong>1.85M Visas</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: Country Visa Quotas & Active Programs Table -->
+      <section class="mb-4" id="quotas-table">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-3">Active Jurisdiction Quota Allocations (2026)</h5>
+          <div class="table-responsive">
+            <table class="table table-auravisa">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Immigration Authority</th>
+                  <th>Annual Allocation</th>
+                  <th>Current General Cutoff</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Canada</strong></td>
+                  <td>IRCC (Immigration, Refugees and Citizenship Canada)</td>
+                  <td>485,000 PR Targets</td>
+                  <td>CRS 488 (General) / 420 (STEM)</td>
+                  <td><span class="badge-aura badge-aura-success">Open &bull; Bi-Weekly Draws</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Australia</strong></td>
+                  <td>Department of Home Affairs</td>
+                  <td>185,000 Permanent Program</td>
+                  <td>65 Points Benchmark (SkillSelect)</td>
+                  <td><span class="badge-aura badge-aura-success">Open &bull; Monthly Rounds</span></td>
+                </tr>
+                <tr>
+                  <td><strong>United Kingdom</strong></td>
+                  <td>UKVI / Home Office</td>
+                  <td>Demand Driven (Sponsorship)</td>
+                  <td>70 Points Baseline</td>
+                  <td><span class="badge-aura badge-aura-success">Continuous Processing</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Germany</strong></td>
+                  <td>Federal Foreign Office (BAMF)</td>
+                  <td>Chancenkarte & Blue Card</td>
+                  <td>6 Points / Salary Threshold</td>
+                  <td><span class="badge-aura badge-aura-success">Continuous Processing</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Add / Modify Country Policy & CRS Points Editor -->
+      <section class="mb-4" id="country-editor">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-3">Add or Edit Destination Policy</h5>
+          <form class="needs-validation-aura" novalidate>
+            <div class="row g-3 mb-3">
+              <div class="col-md-4">
+                <label class="form-label">Country Name</label>
+                <input type="text" class="form-control" placeholder="e.g. New Zealand" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Official Immigration Authority</label>
+                <input type="text" class="form-control" placeholder="e.g. Immigration New Zealand (INZ)" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Points Benchmark</label>
+                <input type="text" class="form-control" placeholder="e.g. 6 Points SMC" required>
+              </div>
+            </div>
+            <button class="btn btn-primary-aura" type="submit">Update Country Data</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- SECTION 4: Embassy & Consular Contact Repository -->
+      <section class="mb-4" id="embassy-contacts">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-3">Key Diplomatic Missions & Processing Centers</h5>
+          <div class="row g-3 small text-muted">
+            <div class="col-md-6">
+              <div class="p-3 bg-light rounded-3">
+                <strong class="text-main">High Commission of Canada (UK/Europe)</strong>
+                <div>Canada House, Trafalgar Square, London SW1Y 5BJ</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-light rounded-3">
+                <strong class="text-main">Australian High Commission (Americas)</strong>
+                <div>1601 Massachusetts Ave NW, Washington, DC 20036</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: Migration Policy Changes & Alert Broadcast Tool -->
+      <section id="policy-broadcast">
+        <div class="p-4 bg-surface rounded-4 border shadow-sm">
+          <h5 class="fw-bold mb-2">Emergency Regulatory Broadcast</h5>
+          <p class="small text-muted mb-3">Broadcast statutory fee adjustments or NOC reallocation alerts to all registered client accounts targeting specific countries.</p>
+          <button class="btn btn-outline-aura btn-sm" onclick="showToast('Policy alert composer opened.', 'info')">
+            <i class="bi bi-broadcast me-1"></i> Compose Countrywide Policy Alert
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
