@@ -1,0 +1,9 @@
+# Local development server & testing scripts
+dev-server.js
+server.js
+scripts/
+audit.js
+verify_images.js
+verify_integrity.js
+check_all_images.js
+*.log

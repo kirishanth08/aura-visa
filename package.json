@@ -1,0 +1,20 @@
+{
+  "name": "auravisa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AuraVisa - Global Immigration & Visa Consultancy",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "test": "node verify_integrity.js",
+    "audit": "node audit.js"
+  },
+  "keywords": [
+    "immigration",
+    "visa",
+    "consultancy",
+    "html5",
+    "bootstrap5"
+  ],
+  "author": "kirishanth08",
+  "license": "ISC"
+}
