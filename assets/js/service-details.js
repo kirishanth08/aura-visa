@@ -353,7 +353,6 @@
       feeTitle: 'Official Family Sponsorship Government Fee Schedule',
       feeDesc: 'Statutory fees payable directly to the sovereign immigration department.',
       feeHeaders: ['Fee Category', 'Applicant Covered', 'Government Fee', 'Refundability Status'],
-      feeRows: [
         ['Sponsorship Assessment Fee', 'Primary Sponsor', '$75 CAD', 'Non-refundable once processing starts'],
         ['Principal Applicant PR Processing Fee', 'Sponsored Spouse / Parent', '$490 CAD', 'Non-refundable statutory charge'],
         ['Right of Permanent Residence Fee (RPRF)', 'Sponsored Adult', '$575 CAD', '100% Refundable if visa refused'],
@@ -363,11 +362,82 @@
       bookingTitle: 'Schedule a Family Sponsorship Legal Strategy Review',
       bookingDesc: 'Our certified immigration attorneys assemble airtight relationship proof portfolios, eliminate consular red flags, and secure fast-track spousal work authorization.',
       bookingStreamVal: 'Spousal, Common-Law & Parent Family Sponsorship'
+    },
+
+    'germany-opportunity-card': {
+      navTitle: 'Germany Opportunity Card',
+      docTitle: 'Germany Opportunity Card (Chancenkarte) & Study Pathways | AuraVisa',
+      heroPill: '<i class="bi bi-award text-warning me-1"></i> Germany Points-Based Residence & Study Stream',
+      title: 'Germany Opportunity Card (Chancenkarte) & University Pathways',
+      lead: "Relocate to Europe's economic powerhouse with the points-based Opportunity Card for skilled professionals or enroll in tuition-free university degree programs with direct pathways to the EU Blue Card.",
+      timeBadge: '<i class="bi bi-clock text-primary me-1"></i> 2-4 Months Processing',
+      dependentsBadge: '<i class="bi bi-person-check text-success me-1"></i> Spousal Work Authorization Included',
+      heroImg: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=1200&auto=format&fit=crop&q=80',
+      heroImgAlt: 'Germany Opportunity Card residency permit and German academic university admissions dossier',
+      formulaSubtitle: 'Chancenkarte 6-Point Formula',
+      formulaTitle: 'How the German Opportunity Card Points System Evaluates Candidates',
+      formulaDesc: 'Applicants need a minimum of 6 points across recognized qualifications, professional experience, German/English language skills, age, and ties to Germany.',
+      formulaCards: [
+        { badge: 'badge-aura-primary', badgeText: 'Max 4 Points', title: 'Recognized Qualifications', desc: 'Degrees or vocational diplomas recognized by ZAB / Anabin satisfy core criteria.' },
+        { badge: 'badge-aura-success', badgeText: 'Max 3 Points', title: 'Work Experience', desc: '5+ years experience in your field awards 3 points; 2 years awards 2 points.' },
+        { badge: 'badge-aura-warning', badgeText: 'Max 3 Points', title: 'Language Skills', desc: 'German B2 level earns 3 points; B1 earns 2 points; English C1 earns 1 point.' },
+        { badge: 'badge-aura-danger', badgeText: 'Max 2 Points', title: 'Age & In-Demand Field', desc: 'Applicants under 35 receive 2 points; under 40 receive 1 point; STEM fields receive bonuses.' }
+      ],
+      docList: [
+        { icon: 'bi-file-earmark-check-fill text-primary', title: 'ZAB / Anabin University Recognition', desc: 'Statement of Comparability verifying foreign degree equivalence to German standards.' },
+        { icon: 'bi-translate text-success', title: 'Goethe / TestDaF / IELTS Language Certificate', desc: 'Official language test certificate confirming German (A1-B2) or English (B2-C1).' },
+        { icon: 'bi-briefcase-fill text-warning', title: 'Blocked Account / Proof of Financial Solvency', desc: 'Proof of €1,027/month via German blocked account (Sperrkonto) or formal declaration.' },
+        { icon: 'bi-shield-check text-danger', title: 'Incoming Travel & Expatriate Health Insurance', desc: 'Compliant German health coverage meeting consular visa issuance guidelines.' }
+      ],
+      fundsTitle: 'German Solvency Benchmark (2026)',
+      fundsDesc: 'Statutory living funds requirement mandated by German Federal Foreign Office (Auswärtiges Amt):',
+      fundsHeaders: ['Visa Category', 'Required Monthly Amount', 'Annual Blocked Total', 'Notes'],
+      fundsRows: [
+        ['Opportunity Card (Chancenkarte)', '€1,027 EUR / month', '€12,324 EUR (1 Year)', 'Blocked account or employment contract'],
+        ['University Student Visa', '€934 EUR / month', '€11,208 EUR (1 Year)', 'Zero tuition fees at state universities'],
+        ['EU Blue Card', 'Salary Threshold', '€45,300 EUR/yr (€41k for STEM)', 'No blocked account required']
+      ],
+      fundsNote: 'Holders of Opportunity Card can work part-time up to 20 hours per week immediately upon arrival.',
+      roadmapTitle: '6-Stage German Immigration Roadmap',
+      roadmapDesc: 'From qualification equivalence to your German residence permit and EU Blue Card.',
+      roadmapSteps: [
+        { step: '1', title: 'ZAB Audit', desc: 'Foreign degree recognition verification.' },
+        { step: '2', title: 'Language Test', desc: 'English or German benchmarking.' },
+        { step: '3', title: 'Blocked Account', desc: 'Establish Sperrkonto living funds.' },
+        { step: '4', title: 'Embassy Filing', desc: 'Submit consular visa appointment dossier.' },
+        { step: '5', title: 'Visa Stamping', desc: 'National D-Visa issued in passport.' },
+        { step: '6', title: 'Ausländerbehörde', desc: 'Register address & receive residence card.' }
+      ],
+      feeTitle: 'Official German Embassy Statutory Fee Schedule',
+      feeDesc: 'Consular processing fees paid directly at the German diplomatic mission.',
+      feeHeaders: ['Fee Item', 'Applicant Covered', 'Statutory Fee', 'Refundability'],
+      feeRows: [
+        ['National D-Visa Application Fee', 'Adult Applicant', '€75 EUR', 'Non-refundable consular fee'],
+        ['Minor Child Visa Fee', 'Under 18', '€37.50 EUR', 'Non-refundable consular fee'],
+        ['Residence Permit Issuance (Onshore)', 'Per Adult', '€100 EUR', 'Paid at immigration office in Germany'],
+        ['ZAB Statement of Comparability', 'Per Degree', '€208 EUR', 'Paid to Central Office for Foreign Education']
+      ],
+      bookingTitle: 'Consult with an Accredited German Immigration Counsel',
+      bookingDesc: 'Our advisors calculate your Chancenkarte points, handle ZAB degree recognition, and secure admissions to zero-tuition German universities.',
+      bookingStreamVal: 'Germany Opportunity Card (Chancenkarte) & University Pathways'
     }
   };
 
+  const serviceAliases = {
+    'canada': 'express-entry',
+    'ca': 'express-entry',
+    'uk': 'uk-skilled-worker',
+    'united-kingdom': 'uk-skilled-worker',
+    'aus': 'australia-gsm',
+    'australia': 'australia-gsm',
+    'au': 'australia-gsm',
+    'germany': 'germany-opportunity-card',
+    'de': 'germany-opportunity-card'
+  };
+
   function renderService(serviceKey) {
-    const data = servicesData[serviceKey] || servicesData['express-entry'];
+    const key = serviceAliases[serviceKey] || serviceKey;
+    const data = servicesData[key] || servicesData['express-entry'];
 
     // Update Document Title
     if (data.docTitle) {
@@ -519,7 +589,7 @@
 
     // Update Active Pill Buttons
     document.querySelectorAll('.service-pill-btn').forEach(btn => {
-      if (btn.getAttribute('data-service') === serviceKey) {
+      if (btn.getAttribute('data-service') === key) {
         btn.classList.add('active');
       } else {
         btn.classList.remove('active');
@@ -533,7 +603,8 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    let currentService = getQueryParam('service') || 'express-entry';
+    let rawParam = getQueryParam('service') || getQueryParam('country') || 'express-entry';
+    let currentService = serviceAliases[rawParam] || rawParam;
     if (!servicesData[currentService]) {
       currentService = 'express-entry';
     }
@@ -546,17 +617,19 @@
       btn.addEventListener('click', function(e) {
         e.preventDefault();
         const selected = this.getAttribute('data-service');
-        if (selected && servicesData[selected]) {
-          renderService(selected);
-          const newUrl = window.location.pathname + '?service=' + selected;
-          window.history.pushState({ service: selected }, '', newUrl);
+        const resolved = serviceAliases[selected] || selected;
+        if (resolved && servicesData[resolved]) {
+          renderService(resolved);
+          const newUrl = window.location.pathname + '?service=' + resolved;
+          window.history.pushState({ service: resolved }, '', newUrl);
         }
       });
     });
 
     // Handle back / forward browser navigation
     window.addEventListener('popstate', function() {
-      const stateService = getQueryParam('service') || 'express-entry';
+      const stateParam = getQueryParam('service') || getQueryParam('country') || 'express-entry';
+      const stateService = serviceAliases[stateParam] || stateParam;
       renderService(stateService);
     });
   });

@@ -181,8 +181,9 @@
         alertBox.className = 'alert d-none py-2 px-3 small mb-3';
         alertBox.innerHTML = '';
 
-        if (!email) {
-          showAlert('Please enter your email address.', 'danger');
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!email || !emailRegex.test(email)) {
+          showAlert('Please enter a valid email address with a domain extension (e.g. name@domain.com).', 'danger');
           emailInput.focus();
           return;
         }

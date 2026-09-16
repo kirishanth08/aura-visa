@@ -566,14 +566,27 @@ header.sticky-top {
 }
 
 /* ==========================================
-   Mobile Offcanvas Drawer Architecture (< 1200px)
+   Mobile & Tablet Drawer Architecture (< 992px)
    ========================================== */
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
+  .navbar-auravisa .d-flex.align-items-center.gap-2.d-lg-none,
   .navbar-auravisa .d-flex.align-items-center.gap-2.d-xl-none {
     flex-shrink: 0 !important;
     display: flex !important;
     align-items: center !important;
-    gap: 0.4rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .navbar-auravisa .rtl-toggle-btn,
+  .navbar-auravisa .theme-toggle-btn {
+    height: 38px !important;
+    min-height: 38px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 0.65rem !important;
+    vertical-align: middle !important;
+    border-radius: 8px !important;
   }
 
   .navbar-auravisa .navbar-toggler,
@@ -581,8 +594,10 @@ header.sticky-top {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 42px !important;
+    width: 38px !important;
     height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
     padding: 0 !important;
     border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
     border-radius: 8px !important;
@@ -591,6 +606,8 @@ header.sticky-top {
     cursor: pointer !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
     transition: all var(--transition-fast) !important;
+    vertical-align: middle !important;
+    margin: 0 !important;
   }
 
   .navbar-auravisa .navbar-toggler:hover,
@@ -608,7 +625,7 @@ header.sticky-top {
     color: var(--text-main) !important;
     border-left: 1px solid var(--border-color);
     max-width: 85vw !important;
-    width: 320px !important;
+    width: 340px !important;
     z-index: 1060 !important;
   }
 
@@ -648,37 +665,55 @@ header.sticky-top {
     -webkit-overflow-scrolling: touch !important;
   }
 
-  /* Offcanvas Navigation Links */
+  /* Drawer Search Styling */
+  .offcanvas-search-wrap {
+    padding: 0.5rem 0 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+  }
+
+  .offcanvas-search-wrap .form-control {
+    background-color: var(--bg-alt);
+    border-color: var(--border-color);
+    color: var(--text-main);
+    border-radius: var(--radius-md);
+  }
+
+  .offcanvas-search-wrap .form-control:focus {
+    background-color: var(--bg-surface);
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.15);
+    color: var(--text-main);
+  }
+
+  /* Offcanvas Nav Items - Vertical Stack with Clear Tap Targets */
   .offcanvas .navbar-nav {
-    gap: 0.35rem !important;
-    width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: stretch !important;
+    width: 100% !important;
+    gap: 0.25rem !important;
+    margin-bottom: 1rem !important;
   }
 
-  .offcanvas .navbar-nav .nav-item {
+  .offcanvas .nav-item {
     width: 100% !important;
   }
 
-  .offcanvas .navbar-nav .nav-link {
+  .offcanvas .nav-link {
     color: var(--text-main) !important;
-    font-size: 1.02rem !important;
+    font-size: 1.05rem !important;
     font-weight: 600 !important;
     padding: 0.75rem 1rem !important;
     border-radius: var(--radius-md) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    background-color: transparent !important;
     transition: all var(--transition-fast) !important;
-    text-decoration: none !important;
-    width: 100% !important;
   }
 
-  .offcanvas .navbar-nav .nav-link:hover,
-  .offcanvas .navbar-nav .nav-link:focus,
-  .offcanvas .navbar-nav .nav-link.active {
+  .offcanvas .nav-link:hover,
+  .offcanvas .nav-link:focus,
+  .offcanvas .nav-link.active {
     background-color: var(--secondary-subtle) !important;
     color: var(--secondary) !important;
   }
@@ -754,11 +789,13 @@ header.sticky-top {
 }
 
 /* ==========================================
-   Desktop Navigation Architecture (>= 1200px)
+   Desktop Navigation Architecture (>= 992px)
    Pristine Horizontal Layout & Action Bar
    ========================================== */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
+  .navbar-auravisa .d-lg-none,
   .navbar-auravisa .d-xl-none,
+  .navbar-auravisa .d-flex.align-items-center.gap-2.d-lg-none,
   .navbar-auravisa .d-flex.align-items-center.gap-2.d-xl-none {
     display: none !important;
   }
@@ -768,7 +805,23 @@ header.sticky-top {
     display: none !important;
   }
 
+  /* Fluid container for navbar on all desktop viewports so 1000px+ never breaks */
+  .navbar-auravisa > .container,
+  .navbar-auravisa .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: clamp(0.75rem, 2vw, 2.5rem) !important;
+    padding-right: clamp(0.75rem, 2vw, 2.5rem) !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .navbar-auravisa .brand-logo {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
   /* Responsive Offcanvas Container on Desktop becomes Inline Navbar */
+  .navbar-expand-lg .offcanvas,
   .navbar-expand-xl .offcanvas,
   .navbar-auravisa .offcanvas {
     position: static !important;
@@ -791,13 +844,17 @@ header.sticky-top {
     align-items: center !important;
     justify-content: space-between !important;
     box-shadow: none !important;
+    flex-wrap: nowrap !important;
   }
 
+  .navbar-expand-lg .offcanvas-header,
   .navbar-expand-xl .offcanvas-header,
-  .navbar-auravisa .offcanvas-header {
+  .navbar-auravisa .offcanvas-header,
+  .offcanvas-search-wrap {
     display: none !important;
   }
 
+  .navbar-expand-lg .offcanvas-body,
   .navbar-expand-xl .offcanvas-body,
   .navbar-auravisa .offcanvas-body {
     display: flex !important;
@@ -808,9 +865,11 @@ header.sticky-top {
     width: 100% !important;
     padding: 0 !important;
     overflow: visible !important;
+    flex-wrap: nowrap !important;
   }
 
   /* Centered Main Nav Items on Desktop */
+  .navbar-expand-lg .navbar-nav,
   .navbar-expand-xl .navbar-nav,
   .navbar-auravisa .navbar-nav,
   .navbar-auravisa .offcanvas .navbar-nav {
@@ -822,13 +881,18 @@ header.sticky-top {
     margin-right: auto !important;
     width: auto !important;
     gap: 0.25rem !important;
+    flex-wrap: nowrap !important;
+    flex-shrink: 0 !important;
   }
 
+  .navbar-expand-lg .navbar-nav .nav-item,
   .navbar-expand-xl .navbar-nav .nav-item,
   .navbar-auravisa .offcanvas .navbar-nav .nav-item {
     width: auto !important;
+    flex-shrink: 0 !important;
   }
 
+  .navbar-expand-lg .navbar-nav .nav-link,
   .navbar-expand-xl .navbar-nav .nav-link,
   .navbar-auravisa .nav-link,
   .navbar-auravisa .offcanvas .navbar-nav .nav-link {
@@ -842,8 +906,12 @@ header.sticky-top {
     color: #f1f5f9 !important;
     background-color: transparent !important;
     text-decoration: none !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
   }
 
+  .navbar-expand-lg .navbar-nav .nav-link:hover,
+  .navbar-expand-lg .navbar-nav .nav-link.active,
   .navbar-expand-xl .navbar-nav .nav-link:hover,
   .navbar-expand-xl .navbar-nav .nav-link.active,
   .navbar-auravisa .nav-link:hover,
@@ -855,6 +923,7 @@ header.sticky-top {
   }
 
   /* Desktop Submenu Dropdown Styling */
+  .navbar-expand-lg .dropdown-menu,
   .navbar-expand-xl .dropdown-menu,
   .navbar-auravisa .offcanvas .dropdown-menu {
     position: absolute !important;
@@ -888,7 +957,8 @@ header.sticky-top {
   /* Desktop Right Action Buttons (RTL, Theme, Login, Sign Up) */
   .navbar-expand-xl .offcanvas-body .d-flex.align-items-center.gap-2,
   .navbar-auravisa .offcanvas-body .d-flex.align-items-center.gap-2.mt-3,
-  .navbar-auravisa .offcanvas-body .d-flex.align-items-center.gap-2 {
+  .navbar-auravisa .offcanvas-body .d-flex.align-items-center.gap-2,
+  .navbar-auravisa .offcanvas-body .d-flex.align-items-center.gap-2.flex-wrap {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
@@ -898,6 +968,7 @@ header.sticky-top {
     width: auto !important;
     gap: 0.5rem !important;
     flex-wrap: nowrap !important;
+    flex-shrink: 0 !important;
   }
 
   .navbar-auravisa .offcanvas-body .d-flex.align-items-center.gap-2 a.btn:not(.d-none),
@@ -908,6 +979,8 @@ header.sticky-top {
     justify-content: center !important;
     padding: 0.35rem 0.85rem !important;
     font-size: 0.875rem !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
   }
 
   .navbar-auravisa .offcanvas-body .d-flex.align-items-center.gap-2 a.btn.d-none,
@@ -920,10 +993,14 @@ header.sticky-top {
   }
 
   .navbar-auravisa .rtl-toggle-btn.d-xl-inline-flex,
-  .navbar-auravisa .theme-toggle-btn.d-xl-inline-flex {
+  .navbar-auravisa .theme-toggle-btn.d-xl-inline-flex,
+  .navbar-auravisa .rtl-toggle-btn.d-lg-inline-flex,
+  .navbar-auravisa .theme-toggle-btn.d-lg-inline-flex {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
   }
 }
 
@@ -1236,9 +1313,13 @@ header.sticky-top {
 }
 
 .card-img-top-cover {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 100% !important;
+  height: 200px !important;
+  min-height: 200px !important;
+  max-height: 200px !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+  display: block !important;
   transition: transform var(--transition-smooth);
 }
 
@@ -1251,6 +1332,53 @@ header.sticky-top {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+/* Regulatory Compliance Accreditations Alignment */
+.regulatory-card {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.regulatory-org-title {
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.regulatory-badge-wrap {
+  margin-top: auto !important;
+  padding-top: 0.75rem;
+}
+
+/* Office Location Cards Alignment */
+.office-card {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.office-title {
+  min-height: 2.75rem;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.office-address {
+  flex-grow: 1 !important;
+  margin-bottom: 1rem;
+}
+
+.office-contact {
+  margin-top: auto !important;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
 }
 
 /* Stats Counter Section */
@@ -1338,7 +1466,7 @@ header.sticky-top {
 }
 
 /* Country Cards */
-.country-badge-flag {
+.flag-icon-custom {
   width: 32px;
   height: 22px;
   border-radius: 3px;
@@ -1376,10 +1504,101 @@ header.sticky-top {
   font-weight: 800;
   font-family: var(--font-heading);
   color: var(--primary);
+  line-height: 1;
 }
 
 [data-bs-theme="dark"] .pricing-amount {
   color: #ffffff;
+}
+
+.pricing-installment-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--secondary-subtle);
+  color: var(--secondary);
+  border: 1px solid rgba(30, 86, 160, 0.2);
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+[data-bs-theme="dark"] .pricing-installment-badge {
+  background-color: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.pricing-feature-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+.pricing-feature-list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.65rem !important;
+  text-align: left !important;
+  font-size: 0.88rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.45;
+}
+
+.pricing-feature-list li i {
+  flex-shrink: 0 !important;
+  margin-top: 0.15rem;
+}
+
+[dir="rtl"] .pricing-feature-list li {
+  text-align: right !important;
+}
+
+/* Admin Passcode Security Gatekeeper Overlay */
+.admin-auth-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(9, 13, 22, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.admin-auth-card {
+  max-width: 440px;
+  width: 100%;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  padding: 2.25rem;
+  text-align: center;
+  animation: adminAuthPop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes adminAuthPop {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.admin-auth-shield {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(30, 86, 160, 0.2) 0%, rgba(212, 175, 55, 0.2) 100%);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  border: 2px solid rgba(212, 175, 55, 0.3);
 }
 
 /* Tables */
@@ -1875,8 +2094,92 @@ select.form-select option {
   }
 }
 
+/* Tablet Landscape, Portable Laptops & Compact Desktop (992px - 1250px) */
+@media (min-width: 992px) and (max-width: 1250px) {
+  .navbar-auravisa {
+    padding: 0.4rem 0 !important;
+  }
+
+  .navbar-auravisa > .container,
+  .navbar-auravisa .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: clamp(0.5rem, 1.5vw, 1.25rem) !important;
+    padding-right: clamp(0.5rem, 1.5vw, 1.25rem) !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .navbar-auravisa .brand-logo {
+    font-size: 1.12rem !important;
+    gap: 0.4rem !important;
+    margin-right: 0.35rem !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .navbar-auravisa .brand-logo .brand-badge {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.95rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .navbar-auravisa .navbar-nav,
+  .navbar-auravisa .offcanvas .navbar-nav {
+    gap: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex-shrink: 0 !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .navbar-auravisa .offcanvas .navbar-nav .nav-link,
+  .navbar-auravisa .navbar-nav .nav-link {
+    font-size: 0.81rem !important;
+    padding: 0.28rem 0.38rem !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .navbar-auravisa .offcanvas-body .d-flex.align-items-center.gap-2,
+  .navbar-auravisa .offcanvas-body .d-flex.align-items-center.gap-2.flex-wrap {
+    gap: 0.3rem !important;
+    flex-shrink: 0 !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .navbar-auravisa .offcanvas-body .d-flex.align-items-center.gap-2 a.btn:not(.d-none),
+  .navbar-auravisa .btn-sm {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.77rem !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .navbar-auravisa .rtl-toggle-btn,
+  .navbar-auravisa .theme-toggle-btn {
+    padding: 0.2rem 0.4rem !important;
+    font-size: 0.75rem !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    width: auto !important;
+    min-width: 30px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
 /* Tablet & Mobile Screens (< 768px) */
 @media (max-width: 767.98px) {
+  /* Prevent horizontal bleed from large Bootstrap gutters */
+  .row.g-5, .row.gx-5 {
+    --bs-gutter-x: 1.25rem !important;
+    --bs-gutter-y: 1.5rem !important;
+  }
+  .row.g-4, .row.gx-4 {
+    --bs-gutter-x: 1rem !important;
+    --bs-gutter-y: 1.25rem !important;
+  }
+
   /* Prevent auto-zoom in mobile browsers on input focus */
   input.form-control,
   select.form-select,
@@ -1886,7 +2189,22 @@ select.form-select option {
 
   /* Spacing & Heroes */
   .hero-wrapper {
-    padding: 2.75rem 0 2rem !important;
+    padding: 2.25rem 0 1.75rem !important;
+  }
+  .hero-wrapper h1.display-4,
+  .hero-wrapper h1 {
+    font-size: clamp(1.65rem, 6vw, 2.4rem) !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+  .hero-pill {
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: left !important;
+    font-size: 0.78rem !important;
+    padding: 0.3rem 0.7rem !important;
+    line-height: 1.35 !important;
+    display: inline-flex !important;
   }
   .hero-featured-img {
     height: auto !important;
@@ -1894,10 +2212,23 @@ select.form-select option {
     margin-top: 1.5rem !important;
   }
   .section-space, .section-space-alt {
-    padding: 2.75rem 0 !important;
+    padding: 2.5rem 0 !important;
   }
   .section-title-wrap {
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  /* Stats Counter Mobile Fluid Scaling */
+  .stat-card {
+    padding: 1.25rem 0.75rem !important;
+  }
+  .stat-number {
+    font-size: clamp(1.4rem, 6vw, 2.1rem) !important;
+    line-height: 1.15 !important;
+  }
+  .stat-label {
+    font-size: 0.78rem !important;
+    line-height: 1.3 !important;
   }
 
   /* Cards */
@@ -1906,6 +2237,11 @@ select.form-select option {
   }
   .card-img-top-cover {
     height: 180px !important;
+  }
+  .office-title,
+  .office-address,
+  .regulatory-org-title {
+    min-height: auto !important;
   }
 
   /* Dashboard Adjustments on Mobile */
@@ -1935,9 +2271,12 @@ select.form-select option {
 
   /* Tables Touch Optimization */
   .table-responsive {
-    -webkit-overflow-scrolling: touch;
-    border-radius: var(--radius-md);
-    margin-bottom: 1rem;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: var(--radius-md) !important;
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    display: block !important;
   }
   .table-auravisa th,
   .table-auravisa td {
@@ -1948,7 +2287,7 @@ select.form-select option {
 
   /* Global Footer Mobile Stacking */
   .footer-auravisa {
-    padding: 3rem 0 1.5rem !important;
+    padding: 2.75rem 0 1.5rem !important;
   }
   .footer-auravisa .footer-bottom {
     flex-direction: column !important;
@@ -1964,34 +2303,52 @@ select.form-select option {
 
 /* Compact Mobile Devices (< 576px) */
 @media (max-width: 575.98px) {
+  /* Gutter tightening for small screens */
+  .row.g-5, .row.gx-5,
+  .row.g-4, .row.gx-4,
+  .row.g-3, .row.gx-3 {
+    --bs-gutter-x: 0.75rem !important;
+    --bs-gutter-y: 1rem !important;
+  }
+
   .navbar-auravisa {
     padding: 0.5rem 0 !important;
   }
   .brand-logo {
-    font-size: 1.2rem !important;
-    gap: 0.5rem !important;
+    font-size: 1.15rem !important;
+    gap: 0.45rem !important;
+    min-width: 0 !important;
   }
   .brand-logo span {
-    font-size: 1.2rem !important;
+    font-size: 1.15rem !important;
   }
   .brand-badge {
-    width: 34px !important;
-    height: 34px !important;
-    font-size: 1.05rem !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1rem !important;
     border-radius: 6px !important;
+    flex-shrink: 0 !important;
+  }
+  .navbar-auravisa .d-flex.align-items-center.gap-2.d-lg-none {
+    gap: 0.35rem !important;
+    flex-shrink: 0 !important;
   }
   .navbar-auravisa .rtl-toggle-btn,
   .navbar-auravisa .theme-toggle-btn {
-    padding: 0.25rem 0.5rem !important;
-    font-size: 0.8rem !important;
-    min-height: 34px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0.2rem 0.45rem !important;
+    font-size: 0.78rem !important;
+    min-height: 34px !important;
+    height: 34px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
   }
   .navbar-auravisa .navbar-toggler {
-    width: 38px !important;
+    width: 36px !important;
     height: 34px !important;
+    min-width: 36px !important;
+    min-height: 34px !important;
     padding: 0 !important;
     border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
     border-radius: 6px !important;
@@ -1999,35 +2356,43 @@ select.form-select option {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    flex-shrink: 0 !important;
   }
   .navbar-auravisa .navbar-toggler-icon {
-    width: 22px !important;
-    height: 22px !important;
+    width: 20px !important;
+    height: 20px !important;
   }
 
+  .card-img-top-cover {
+    height: 160px !important;
+    min-height: 160px !important;
+    max-height: 160px !important;
+  }
 
   /* Standalone Auth Pages on Small Screens */
   .auth-page-wrapper {
-    padding: 4.5rem 1rem 2rem !important;
+    padding: 3.5rem 0.75rem 2rem !important;
   }
   .auth-card {
-    padding: 1.75rem 1.25rem !important;
+    padding: 1.5rem 1rem !important;
     border-radius: var(--radius-lg) !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .auth-top-controls {
-    top: 1rem !important;
-    right: 1rem !important;
+    top: 0.75rem !important;
+    right: 0.75rem !important;
     gap: 0.35rem !important;
   }
   [dir="rtl"] .auth-top-controls {
     right: auto !important;
-    left: 1rem !important;
+    left: 0.75rem !important;
   }
   .auth-brand-header {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.25rem !important;
   }
   .auth-brand-header .brand-logo {
-    font-size: 1.35rem !important;
+    font-size: 1.25rem !important;
   }
 
   /* Modals on Mobile */
@@ -2042,28 +2407,46 @@ select.form-select option {
   .btn-primary-aura,
   .btn-accent-aura,
   .btn-outline-aura {
-    padding: 0.5rem 1rem;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  .hero-stats-strip .border-start {
+    border-left: none !important;
+    padding-left: 0 !important;
   }
 }
 
 /* Ultra-compact / Foldable Phones (<= 380px) */
 @media (max-width: 380px) {
   .brand-logo {
-    font-size: 1.1rem !important;
-    gap: 0.4rem !important;
+    font-size: 1.05rem !important;
+    gap: 0.35rem !important;
   }
   .brand-logo span {
-    font-size: 1.1rem !important;
+    font-size: 1.05rem !important;
   }
   .brand-badge {
-    width: 30px !important;
-    height: 30px !important;
-    font-size: 0.95rem !important;
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 0.88rem !important;
   }
   .navbar-auravisa .rtl-toggle-btn,
   .navbar-auravisa .theme-toggle-btn {
-    padding: 0.2rem 0.4rem !important;
-    font-size: 0.75rem !important;
+    padding: 0.15rem 0.35rem !important;
+    font-size: 0.72rem !important;
+    min-height: 30px !important;
+    height: 30px !important;
+  }
+  .navbar-auravisa .navbar-toggler {
+    width: 32px !important;
+    height: 30px !important;
+    min-width: 32px !important;
+    min-height: 30px !important;
+  }
+  .navbar-auravisa .navbar-toggler-icon {
+    width: 18px !important;
+    height: 18px !important;
   }
 }
 

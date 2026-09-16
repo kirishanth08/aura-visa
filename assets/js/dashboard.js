@@ -5,12 +5,129 @@
 
 (function() {
   document.addEventListener('DOMContentLoaded', () => {
+    initAdminAuthProtection();
     initDashboardSearchAndFilters();
     initDashboardRowActions();
     initDashboardModals();
     initDashboardButtons();
     initConsultationAndReplyHandlers();
   });
+
+  /**
+   * 0. Admin Passcode Security Gatekeeper
+   * Enforces master password verification on all admin-*.html operations consoles
+   */
+  function initAdminAuthProtection() {
+    const isLocalAdminPage = window.location.pathname.toLowerCase().includes('admin-');
+    if (!isLocalAdminPage) return;
+
+    const isAdminAuthenticated = sessionStorage.getItem('auravisa_admin_authenticated') === 'true';
+
+    // If not authenticated, hide content and show passcode challenge
+    if (!isAdminAuthenticated) {
+      document.body.style.overflow = 'hidden';
+      
+      const overlay = document.createElement('div');
+      overlay.id = 'adminAuthOverlay';
+      overlay.className = 'admin-auth-overlay';
+      overlay.innerHTML = `
+        <div class="admin-auth-card">
+          <div class="admin-auth-shield">
+            <i class="bi bi-shield-lock-fill"></i>
+          </div>
+          <h3 class="fs-4 fw-bold mb-1">Admin Security Console</h3>
+          <p class="text-muted small mb-4">Restricted legal operations console. Please enter the master administrative passcode to proceed.</p>
+          
+          <form id="adminPasscodeForm" class="mb-3">
+            <div class="mb-3 text-start">
+              <label class="form-label small fw-semibold text-muted" for="adminPasscodeInput">Administrative Passcode</label>
+              <div class="input-group">
+                <span class="input-group-text bg-alt border-end-0"><i class="bi bi-key text-muted"></i></span>
+                <input type="password" id="adminPasscodeInput" class="form-control border-start-0 border-end-0" placeholder="Enter admin passcode" required autofocus autocomplete="current-password">
+                <button class="btn btn-outline-secondary border-start-0 bg-transparent" type="button" id="toggleAdminPassBtn">
+                  <i class="bi bi-eye text-muted" id="toggleAdminPassIcon"></i>
+                </button>
+              </div>
+              <div id="adminPassError" class="text-danger small mt-2 d-none">
+                <i class="bi bi-exclamation-circle-fill me-1"></i> Incorrect passcode. (Default: <code>admin123</code>)
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary-aura w-100 py-2 fw-semibold mb-2">
+              <i class="bi bi-unlock-fill me-1"></i> Authenticate & Unlock
+            </button>
+            <a href="index.html" class="btn btn-sm btn-outline-aura w-100">
+              <i class="bi bi-arrow-left me-1"></i> Return to Public Site
+            </a>
+          </form>
+
+          <div class="p-2 bg-alt rounded small text-muted border mt-3" style="font-size: 0.8rem;">
+            <i class="bi bi-info-circle text-primary me-1"></i> Authorized Passcode: <strong>admin123</strong>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(overlay);
+
+      const passInput = document.getElementById('adminPasscodeInput');
+      const passForm = document.getElementById('adminPasscodeForm');
+      const errorMsg = document.getElementById('adminPassError');
+      const toggleBtn = document.getElementById('toggleAdminPassBtn');
+      const toggleIcon = document.getElementById('toggleAdminPassIcon');
+
+      if (toggleBtn && passInput) {
+        toggleBtn.addEventListener('click', () => {
+          if (passInput.type === 'password') {
+            passInput.type = 'text';
+            toggleIcon.className = 'bi bi-eye-slash text-warning';
+          } else {
+            passInput.type = 'password';
+            toggleIcon.className = 'bi bi-eye text-muted';
+          }
+        });
+      }
+
+      if (passForm) {
+        passForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const entered = (passInput.value || '').trim();
+
+          // Accepted authorized passcodes
+          if (entered === 'admin123' || entered === 'auravisa2026' || entered === 'admin') {
+            sessionStorage.setItem('auravisa_admin_authenticated', 'true');
+            overlay.remove();
+            document.body.style.removeProperty('overflow');
+            if (typeof showToast === 'function') {
+              showToast('Admin access granted. Welcome to Case Management Console.', 'success');
+            }
+          } else {
+            errorMsg.classList.remove('d-none');
+            passInput.classList.add('is-invalid');
+            passInput.value = '';
+            passInput.focus();
+          }
+        });
+      }
+    }
+
+    addAdminLockControl();
+  }
+
+  function addAdminLockControl() {
+    const adminActionArea = document.querySelector('.navbar-auravisa .d-flex.align-items-center.gap-2:not(.d-xl-none):not(.d-lg-none)');
+    if (adminActionArea && !document.getElementById('adminLockBtn')) {
+      const lockBtn = document.createElement('button');
+      lockBtn.id = 'adminLockBtn';
+      lockBtn.className = 'btn btn-sm btn-outline-danger ms-1';
+      lockBtn.innerHTML = '<i class="bi bi-lock-fill me-1"></i>Lock Admin';
+      lockBtn.title = 'Lock Admin Console & Terminate Session';
+      lockBtn.addEventListener('click', () => {
+        sessionStorage.removeItem('auravisa_admin_authenticated');
+        window.location.href = 'index.html';
+      });
+      adminActionArea.prepend(lockBtn);
+    }
+  }
 
   /**
    * 1. Live Real-time Table Search and Filter System

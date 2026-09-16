@@ -34,7 +34,7 @@
 
   <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-xl navbar-auravisa">
+    <nav class="navbar navbar-expand-lg navbar-auravisa">
       <div class="container">
         <a class="brand-logo" href="index.html">
           <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
@@ -42,7 +42,7 @@
         </a>
 
         <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
-        <div class="d-flex align-items-center gap-2 d-xl-none">
+        <div class="d-flex align-items-center gap-2 d-lg-none">
           <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
             <span class="rtl-status-badge">RTL</span>
           </button>
@@ -63,8 +63,17 @@
             <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <!-- Centered Main Nav Items: Text Only -->
-            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+            
+            <!-- Mobile In-Drawer Live Search for Sections and Visas -->
+            <div class="offcanvas-search-wrap">
+              <div class="input-group">
+                <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" id="offcanvasSearchInput" class="form-control border-start-0" placeholder="Search sections, visas & pages...">
+              </div>
+              <div id="offcanvasSearchResults" class="mt-2 d-none"></div>
+            </div>
+<!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-lg-center justify-content-center gap-lg-1">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
                 <ul class="dropdown-menu shadow border-0">
@@ -105,11 +114,11 @@
             </ul>
 
             <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
-            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
-              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL / LTR orientation">
                 <span class="rtl-status-badge">RTL</span>
               </button>
-              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
                 <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
               </button>
               <a href="login.html" class="btn btn-sm btn-outline-aura">
@@ -187,12 +196,12 @@
             <div class="progress-bar bg-primary" role="progressbar" style="width: 68%;" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <div class="row g-2 text-center small text-muted">
-            <div class="col-2 text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 1. ECA</div>
-            <div class="col-2 text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 2. IELTS</div>
-            <div class="col-2 text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 3. Pool Entry</div>
-            <div class="col-2 text-primary fw-bold"><i class="bi bi-record-circle-fill"></i> 4. Post-ITA</div>
-            <div class="col-2 text-muted">5. Biometrics</div>
-            <div class="col-2 text-muted">6. CoPR Grant</div>
+            <div class="col-4 col-md-2 text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 1. ECA</div>
+            <div class="col-4 col-md-2 text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 2. IELTS</div>
+            <div class="col-4 col-md-2 text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 3. Pool Entry</div>
+            <div class="col-4 col-md-2 text-primary fw-bold"><i class="bi bi-record-circle-fill"></i> 4. Post-ITA</div>
+            <div class="col-4 col-md-2 text-muted">5. Biometrics</div>
+            <div class="col-4 col-md-2 text-muted">6. CoPR Grant</div>
           </div>
         </div>
       </section>
@@ -205,19 +214,19 @@
             <span class="small text-muted">Deadline: March 28, 2026 (18 Days Left)</span>
           </div>
           <div class="list-group list-group-flush">
-            <div class="list-group-item d-flex justify-content-between align-items-center px-0 py-3 bg-transparent">
+            <div class="list-group-item d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 px-0 py-3 bg-transparent">
               <div>
                 <h6 class="fw-bold mb-1">Upfront Medical Exam Report (e-Medical)</h6>
                 <small class="text-muted">Issued by an official IRCC-approved panel physician.</small>
               </div>
-              <a href="client-documents.html" class="btn btn-sm btn-primary-aura">Upload PDF</a>
+              <a href="client-documents.html" class="btn btn-sm btn-primary-aura text-nowrap">Upload PDF</a>
             </div>
-            <div class="list-group-item d-flex justify-content-between align-items-center px-0 py-3 bg-transparent">
+            <div class="list-group-item d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 px-0 py-3 bg-transparent">
               <div>
                 <h6 class="fw-bold mb-1">Updated 6-Month Liquid Proof of Funds Letter</h6>
                 <small class="text-muted">Official stamped bank balance certificate showing minimum $18,288 CAD.</small>
               </div>
-              <a href="client-documents.html" class="btn btn-sm btn-primary-aura">Upload PDF</a>
+              <a href="client-documents.html" class="btn btn-sm btn-primary-aura text-nowrap">Upload PDF</a>
             </div>
           </div>
         </div>

@@ -34,7 +34,7 @@
 
   <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-xl navbar-auravisa">
+    <nav class="navbar navbar-expand-lg navbar-auravisa">
       <div class="container">
         <a class="brand-logo" href="index.html">
           <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
@@ -42,7 +42,7 @@
         </a>
 
         <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
-        <div class="d-flex align-items-center gap-2 d-xl-none">
+        <div class="d-flex align-items-center gap-2 d-lg-none">
           <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
             <span class="rtl-status-badge">RTL</span>
           </button>
@@ -63,8 +63,17 @@
             <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
+            <!-- Mobile In-Drawer Live Search for Sections and Visas -->
+            <div class="offcanvas-search-wrap">
+              <div class="input-group">
+                <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" id="offcanvasSearchInput" class="form-control border-start-0" placeholder="Search sections, visas & pages...">
+              </div>
+              <div id="offcanvasSearchResults" class="mt-2 d-none"></div>
+            </div>
+
             <!-- Centered Main Nav Items: Text Only -->
-            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+            <ul class="navbar-nav mx-auto align-items-lg-center justify-content-center gap-lg-1">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
                 <ul class="dropdown-menu shadow border-0">
@@ -87,7 +96,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pricing.html">Pricing</a>
+                <a class="nav-link active" href="pricing.html">Pricing</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
@@ -105,11 +114,11 @@
             </ul>
 
             <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
-            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
-              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL / LTR orientation">
                 <span class="rtl-status-badge">RTL</span>
               </button>
-              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
                 <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
               </button>
               <a href="login.html" class="btn btn-sm btn-outline-aura">
@@ -164,65 +173,80 @@
       <div class="row g-4 align-items-stretch">
         <!-- Basic Evaluation -->
         <div class="col-lg-4">
-          <div class="card-auravisa p-4">
-            <h5 class="fw-bold mb-1">Eligibility Audit</h5>
-            <p class="text-muted small mb-4">For applicants needing expert vetting before filing independently.</p>
-            <div class="mb-4">
-              <span class="pricing-amount">$349</span>
-              <span class="text-muted">/ one-time</span>
+          <div class="card-auravisa p-4 h-100 d-flex flex-column text-start">
+            <h5 class="fw-bold mb-1 text-start">Eligibility Audit</h5>
+            <p class="text-muted small mb-3 text-start">For applicants needing expert vetting before filing independently.</p>
+            <div class="mb-3 text-start">
+              <div class="d-flex align-items-baseline gap-2">
+                <span class="pricing-amount">$349</span>
+                <span class="text-muted small">one-time audit fee</span>
+              </div>
+              <div class="pricing-installment-badge">
+                <i class="bi bi-credit-card me-1"></i> 100% credited toward full retainer
+              </div>
             </div>
-            <ul class="list-unstyled small d-flex flex-column gap-2 mb-4 flex-grow-1">
-              <li><i class="bi bi-check2 text-success me-2"></i> Comprehensive CRS / GSM points audit</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Written legal eligibility opinion letter</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> 45-minute video call with licensed counsel</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Recommended PNP / state stream matrix</li>
-              <li class="text-muted"><i class="bi bi-x text-danger me-2"></i> Government portal representation</li>
-              <li class="text-muted"><i class="bi bi-x text-danger me-2"></i> Document notarization & translation</li>
+            <ul class="pricing-feature-list mb-4 flex-grow-1">
+              <li><i class="bi bi-check2 text-success"></i> <span>Comprehensive CRS / GSM points audit</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Written legal eligibility opinion letter</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>45-minute video call with licensed counsel</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Recommended PNP / state stream matrix</span></li>
+              <li class="text-muted"><i class="bi bi-x text-danger"></i> <span>Government portal representation</span></li>
+              <li class="text-muted"><i class="bi bi-x text-danger"></i> <span>Document notarization & translation</span></li>
             </ul>
-            <a href="contact.html" class="btn btn-outline-aura w-100">Get Evaluated</a>
+            <a href="contact.html" class="btn btn-outline-aura w-100 mt-auto">Get Evaluated</a>
           </div>
         </div>
 
         <!-- Standard Representation (Featured) -->
         <div class="col-lg-4">
-          <div class="card-auravisa p-4 pricing-card-featured">
+          <div class="card-auravisa p-4 pricing-card-featured h-100 d-flex flex-column text-start">
             <span class="pricing-ribbon">POPULAR</span>
-            <h5 class="fw-bold mb-1">Standard Representation</h5>
-            <p class="text-muted small mb-4">Complete legal filing from pool entry to visa grant.</p>
-            <div class="mb-4">
-              <span class="pricing-amount">$1,850</span>
-              <span class="text-muted">/ in 3 installments</span>
+            <h5 class="fw-bold mb-1 text-start">Standard Representation</h5>
+            <p class="text-muted small mb-3 text-start">Complete legal filing from pool entry to visa grant.</p>
+            <div class="mb-3 text-start">
+              <div class="d-flex align-items-baseline gap-2">
+                <span class="pricing-amount">$1,850</span>
+                <span class="text-muted small">total retainer</span>
+              </div>
+              <div class="pricing-installment-badge">
+                <i class="bi bi-calendar-check me-1"></i> Flexible 3 Milestone Installments (30% / 35% / 35%)
+              </div>
             </div>
-            <ul class="list-unstyled small d-flex flex-column gap-2 mb-4 flex-grow-1">
-              <li><i class="bi bi-check2 text-success me-2"></i> <strong>Everything in Eligibility Audit</strong></li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Full IRCC / MARA legal representation</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Creation & maintenance of Express Entry pool</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Work experience letter drafting & vetting</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Submission of post-ITA e-APR dossier</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Client portal access with live status alerts</li>
+            <ul class="pricing-feature-list mb-4 flex-grow-1">
+              <li><i class="bi bi-check2 text-success"></i> <span><strong>Everything in Eligibility Audit</strong></span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Full IRCC / MARA legal representation</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Creation & maintenance of Express Entry pool</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Work experience letter drafting & vetting</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Submission of post-ITA e-APR dossier</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Client portal access with live status alerts</span></li>
             </ul>
-            <a href="contact.html" class="btn btn-primary-aura w-100">Select Standard</a>
+            <a href="contact.html" class="btn btn-primary-aura w-100 mt-auto">Select Standard</a>
           </div>
         </div>
 
         <!-- Premium VIP Legal Counsel -->
         <div class="col-lg-4">
-          <div class="card-auravisa p-4">
-            <h5 class="fw-bold mb-1">VIP Legal Concierge</h5>
-            <p class="text-muted small mb-4">White-glove service including spouse, kids & settlement.</p>
-            <div class="mb-4">
-              <span class="pricing-amount">$2,950</span>
-              <span class="text-muted">/ in 4 installments</span>
+          <div class="card-auravisa p-4 h-100 d-flex flex-column text-start">
+            <h5 class="fw-bold mb-1 text-start">VIP Legal Concierge</h5>
+            <p class="text-muted small mb-3 text-start">White-glove service including spouse, kids & settlement.</p>
+            <div class="mb-3 text-start">
+              <div class="d-flex align-items-baseline gap-2">
+                <span class="pricing-amount">$2,950</span>
+                <span class="text-muted small">total concierge retainer</span>
+              </div>
+              <div class="pricing-installment-badge">
+                <i class="bi bi-calendar-check me-1"></i> Flexible 4 Milestone Installments
+              </div>
             </div>
-            <ul class="list-unstyled small d-flex flex-column gap-2 mb-4 flex-grow-1">
-              <li><i class="bi bi-check2 text-success me-2"></i> <strong>Everything in Standard</strong></li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Senior Bar Counsel / KC direct supervision</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Free inclusion of spouse & dependent kids</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Unlimited certified translations (up to 20 pgs)</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Post-landing concierge (SIN, healthcare, banking)</li>
-              <li><i class="bi bi-check2 text-success me-2"></i> Priority 24/7 dedicated WhatsApp hotline</li>
+            <ul class="pricing-feature-list mb-4 flex-grow-1">
+              <li><i class="bi bi-check2 text-success"></i> <span><strong>Everything in Standard</strong></span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Senior Bar Counsel / KC direct supervision</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Free inclusion of spouse & dependent kids</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Unlimited certified translations (up to 20 pgs)</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Post-landing concierge (SIN, healthcare, banking)</span></li>
+              <li><i class="bi bi-check2 text-success"></i> <span>Priority 24/7 dedicated WhatsApp hotline</span></li>
             </ul>
-            <a href="contact.html" class="btn btn-outline-aura w-100">Select VIP Concierge</a>
+            <a href="contact.html" class="btn btn-outline-aura w-100 mt-auto">Select VIP Concierge</a>
           </div>
         </div>
       </div>

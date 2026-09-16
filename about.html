@@ -34,7 +34,7 @@
 
   <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-xl navbar-auravisa">
+    <nav class="navbar navbar-expand-lg navbar-auravisa">
       <div class="container">
         <a class="brand-logo" href="index.html">
           <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
@@ -42,7 +42,7 @@
         </a>
 
         <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
-        <div class="d-flex align-items-center gap-2 d-xl-none">
+        <div class="d-flex align-items-center gap-2 d-lg-none">
           <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
             <span class="rtl-status-badge">RTL</span>
           </button>
@@ -63,8 +63,17 @@
             <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
+            <!-- Mobile In-Drawer Live Search for Sections and Visas -->
+            <div class="offcanvas-search-wrap">
+              <div class="input-group">
+                <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" id="offcanvasSearchInput" class="form-control border-start-0" placeholder="Search sections, visas & pages...">
+              </div>
+              <div id="offcanvasSearchResults" class="mt-2 d-none"></div>
+            </div>
+
             <!-- Centered Main Nav Items: Text Only -->
-            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+            <ul class="navbar-nav mx-auto align-items-lg-center justify-content-center gap-lg-1">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
                 <ul class="dropdown-menu shadow border-0">
@@ -73,7 +82,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link active" href="about.html">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
@@ -105,11 +114,11 @@
             </ul>
 
             <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
-            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
-              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL / LTR orientation">
                 <span class="rtl-status-badge">RTL</span>
               </button>
-              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
                 <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
               </button>
               <a href="login.html" class="btn btn-sm btn-outline-aura">
@@ -165,7 +174,7 @@
           <p class="text-muted">
             Today, our firm represents clients across 45 countries. We have shepherded software engineers, medical doctors, academic researchers, and whole families through complex Express Entry draws, Australian SkillSelect pools, and UK sponsor licenses with uncompromising attention to statutory detail.
           </p>
-          <div class="d-flex gap-4 pt-2">
+          <div class="d-flex gap-3 gap-sm-4 pt-2 flex-wrap hero-stats-strip">
             <div>
               <h3 class="fw-bold text-primary mb-0">18.5k+</h3>
               <small class="text-muted">Passports Stamped</small>
@@ -281,35 +290,43 @@
 
       <div class="row g-4 justify-content-center">
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa p-4 text-center">
+          <div class="card-auravisa regulatory-card p-4">
             <i class="bi bi-award fs-1 text-primary mb-2"></i>
             <h5 class="fw-bold mb-1">CICC (Canada)</h5>
-            <small class="text-muted d-block mb-2">College of Immigration and Citizenship Consultants</small>
-            <span class="badge-aura badge-aura-success mx-auto">Reg: #R519284</span>
+            <div class="regulatory-org-title text-muted small">College of Immigration and Citizenship Consultants</div>
+            <div class="regulatory-badge-wrap mt-auto">
+              <span class="badge-aura badge-aura-success">Reg: #R519284</span>
+            </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa p-4 text-center">
+          <div class="card-auravisa regulatory-card p-4">
             <i class="bi bi-patch-check fs-1 text-primary mb-2"></i>
             <h5 class="fw-bold mb-1">MARA (Australia)</h5>
-            <small class="text-muted d-block mb-2">Migration Agents Registration Authority</small>
-            <span class="badge-aura badge-aura-primary mx-auto">Reg: #1804921</span>
+            <div class="regulatory-org-title text-muted small">Migration Agents Registration Authority</div>
+            <div class="regulatory-badge-wrap mt-auto">
+              <span class="badge-aura badge-aura-primary">Reg: #1804921</span>
+            </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa p-4 text-center">
+          <div class="card-auravisa regulatory-card p-4">
             <i class="bi bi-file-earmark-check fs-1 text-primary mb-2"></i>
             <h5 class="fw-bold mb-1">OISC (UK)</h5>
-            <small class="text-muted d-block mb-2">Office of the Immigration Services Commissioner</small>
-            <span class="badge-aura badge-aura-warning mx-auto">Reg: #F20180011</span>
+            <div class="regulatory-org-title text-muted small">Office of the Immigration Services Commissioner</div>
+            <div class="regulatory-badge-wrap mt-auto">
+              <span class="badge-aura badge-aura-warning">Reg: #F20180011</span>
+            </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa p-4 text-center">
+          <div class="card-auravisa regulatory-card p-4">
             <i class="bi bi-globe fs-1 text-primary mb-2"></i>
             <h5 class="fw-bold mb-1">EIA (Europe)</h5>
-            <small class="text-muted d-block mb-2">European Immigration Alliance Accredited</small>
-            <span class="badge-aura badge-aura-success mx-auto">Verified Member</span>
+            <div class="regulatory-org-title text-muted small">European Immigration Alliance Accredited</div>
+            <div class="regulatory-badge-wrap mt-auto">
+              <span class="badge-aura badge-aura-success">Reg: #EU-2021-9481</span>
+            </div>
           </div>
         </div>
       </div>

@@ -65,7 +65,7 @@
 
   <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-xl navbar-auravisa">
+    <nav class="navbar navbar-expand-lg navbar-auravisa">
       <div class="container">
         <a class="brand-logo" href="index.html">
           <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
@@ -73,7 +73,7 @@
         </a>
 
         <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
-        <div class="d-flex align-items-center gap-2 d-xl-none">
+        <div class="d-flex align-items-center gap-2 d-lg-none">
           <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
             <span class="rtl-status-badge">RTL</span>
           </button>
@@ -94,8 +94,17 @@
             <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <!-- Centered Main Nav Items: Text Only -->
-            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+            
+            <!-- Mobile In-Drawer Live Search for Sections and Visas -->
+            <div class="offcanvas-search-wrap">
+              <div class="input-group">
+                <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" id="offcanvasSearchInput" class="form-control border-start-0" placeholder="Search sections, visas & pages...">
+              </div>
+              <div id="offcanvasSearchResults" class="mt-2 d-none"></div>
+            </div>
+<!-- Centered Main Nav Items: Text Only -->
+            <ul class="navbar-nav mx-auto align-items-lg-center justify-content-center gap-lg-1">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
                 <ul class="dropdown-menu shadow border-0">
@@ -136,11 +145,11 @@
             </ul>
 
             <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
-            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
-              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL / LTR orientation">
                 <span class="rtl-status-badge">RTL</span>
               </button>
-              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
                 <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
               </button>
               <a href="login.html" class="btn btn-sm btn-outline-aura">

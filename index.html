@@ -36,9 +36,9 @@
 </head>
 <body>
 
-  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
+  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All Pages) -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-xl navbar-auravisa">
+    <nav class="navbar navbar-expand-lg navbar-auravisa">
       <div class="container">
         <a class="brand-logo" href="index.html">
           <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
@@ -46,7 +46,7 @@
         </a>
 
         <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
-        <div class="d-flex align-items-center gap-2 d-xl-none">
+        <div class="d-flex align-items-center gap-2 d-lg-none">
           <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
             <span class="rtl-status-badge">RTL</span>
           </button>
@@ -67,8 +67,17 @@
             <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
+            <!-- Mobile In-Drawer Live Search for Sections and Visas -->
+            <div class="offcanvas-search-wrap">
+              <div class="input-group">
+                <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" id="offcanvasSearchInput" class="form-control border-start-0" placeholder="Search sections, visas & pages...">
+              </div>
+              <div id="offcanvasSearchResults" class="mt-2 d-none"></div>
+            </div>
+
             <!-- Centered Main Nav Items: Text Only -->
-            <ul class="navbar-nav mx-auto align-items-xl-center justify-content-center gap-xl-1">
+            <ul class="navbar-nav mx-auto align-items-lg-center justify-content-center gap-lg-1">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
                 <ul class="dropdown-menu shadow border-0">
@@ -83,8 +92,10 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
                 <ul class="dropdown-menu border-0 shadow-lg">
                   <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=express-entry">Canada Express Entry</a></li>
                   <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
                   <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
+                  <li><a class="dropdown-item" href="service-details.html?service=germany-opportunity-card">Germany Opportunity Card</a></li>
                   <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
                   <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
                   <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
@@ -109,11 +120,11 @@
             </ul>
 
             <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
-            <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
-              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle RTL / LTR orientation">
+            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 flex-wrap">
+              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL / LTR orientation">
                 <span class="rtl-status-badge">RTL</span>
               </button>
-              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-xl-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
+              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
                 <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
               </button>
               <a href="login.html" class="btn btn-sm btn-outline-aura">
@@ -144,35 +155,35 @@
           
           <div class="p-3 bg-surface rounded-4 shadow-sm border mb-4">
             <form class="row g-2 align-items-center" action="eligibility-checker.html" method="get">
-              <div class="col-md-5">
+              <div class="col-12 col-sm-6 col-md-5">
                 <label class="visually-hidden" for="destinationSelect">Destination</label>
-                <select class="form-select border-0 bg-light" id="destinationSelect">
-                  <option selected>Select Destination...</option>
-                  <option value="canada">Canada (Express Entry / PNP)</option>
-                  <option value="australia">Australia (Subclass 189/190)</option>
-                  <option value="uk">United Kingdom (Skilled Worker)</option>
-                  <option value="germany">Germany (Chancenkarte / Blue Card)</option>
+                <select class="form-select border-0 bg-light py-2" id="destinationSelect">
+                  <option selected disabled>Select Destination...</option>
+                  <option value="canada">Canada (Express Entry)</option>
+                  <option value="australia">Australia (GSM 189/190)</option>
+                  <option value="uk">UK (Skilled Worker)</option>
+                  <option value="germany">Germany (Chancenkarte)</option>
                 </select>
               </div>
-              <div class="col-md-4">
+              <div class="col-12 col-sm-6 col-md-4">
                 <label class="visually-hidden" for="visaTypeSelect">Visa Type</label>
-                <select class="form-select border-0 bg-light" id="visaTypeSelect">
-                  <option selected>Visa Category...</option>
-                  <option value="skilled">Skilled Permanent Residency</option>
-                  <option value="student">Student / Higher Education</option>
-                  <option value="investor">Business & Golden Visa</option>
-                  <option value="family">Spouse & Family Sponsorship</option>
+                <select class="form-select border-0 bg-light py-2" id="visaTypeSelect">
+                  <option selected disabled>Visa Category...</option>
+                  <option value="skilled">Skilled Migration</option>
+                  <option value="student">Student / Education</option>
+                  <option value="investor">Golden Visa</option>
+                  <option value="family">Family Sponsor</option>
                 </select>
               </div>
-              <div class="col-md-3">
-                <button type="submit" class="btn btn-primary-aura w-100">
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-primary-aura w-100 py-2 text-nowrap d-flex align-items-center justify-content-center">
                   <i class="bi bi-search me-1"></i> Evaluate
                 </button>
               </div>
             </form>
           </div>
 
-          <div class="d-flex align-items-center gap-4 text-muted small">
+          <div class="d-flex align-items-center gap-4 text-muted small flex-wrap">
             <div><i class="bi bi-shield-fill-check text-success me-1"></i> 99.4% Approval Rate</div>
             <div><i class="bi bi-clock-history text-secondary me-1"></i> Fast-Track Filing</div>
             <div><i class="bi bi-star-fill text-warning me-1"></i> 4.9/5 Rating (3,200+ Reviews)</div>
@@ -288,16 +299,16 @@
         </a>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 align-items-stretch">
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa">
+          <div class="card-auravisa h-100 d-flex flex-column">
             <img src="https://images.unsplash.com/photo-1490623970972-ae8bb3da443e?w=600&auto=format&fit=crop&q=80" alt="Canada Vancouver waterfront skyline and Pacific harbor destination" class="card-img-top-cover">
-            <div class="card-body-padded">
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h4 class="fs-5 fw-bold mb-0">Canada</h4>
                 <span class="badge bg-danger text-white">Top Pick</span>
               </div>
-              <p class="text-muted small mb-3">
+              <p class="text-muted small mb-3 flex-grow-1">
                 Express Entry, Provincial Nominee Programs (PNP), and Atlantic Immigration program with pathways to citizenship in 3 years.
               </p>
               <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">
@@ -309,14 +320,14 @@
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa">
+          <div class="card-auravisa h-100 d-flex flex-column">
             <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&auto=format&fit=crop&q=80" alt="Australia Melbourne urban architecture and cultural hub" class="card-img-top-cover">
-            <div class="card-body-padded">
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h4 class="fs-5 fw-bold mb-0">Australia</h4>
                 <span class="badge bg-primary text-white">High Wages</span>
               </div>
-              <p class="text-muted small mb-3">
+              <p class="text-muted small mb-3 flex-grow-1">
                 General Skilled Migration (Subclass 189/190/491) offering world-class healthcare, high living standards, and sunshine.
               </p>
               <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">
@@ -328,14 +339,14 @@
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa">
-            <img src="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?w=600&auto=format&fit=crop&q=80" alt="United Kingdom London Tower Bridge over Thames" class="card-img-top-crop card-img-top-cover">
-            <div class="card-body-padded">
+          <div class="card-auravisa h-100 d-flex flex-column">
+            <img src="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?w=600&auto=format&fit=crop&q=80" alt="United Kingdom London Tower Bridge over Thames" class="card-img-top-cover">
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h4 class="fs-5 fw-bold mb-0">United Kingdom</h4>
                 <span class="badge bg-info text-dark">Global Hub</span>
               </div>
-              <p class="text-muted small mb-3">
+              <p class="text-muted small mb-3 flex-grow-1">
                 Skilled Worker visas, Global Talent pathways, and graduate work visas leading straight to Indefinite Leave to Remain (ILR).
               </p>
               <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">
@@ -347,14 +358,14 @@
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa">
+          <div class="card-auravisa h-100 d-flex flex-column">
             <img src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=600&auto=format&fit=crop&q=80" alt="Germany Frankfurt historic Roemerberg square and financial district" class="card-img-top-cover">
-            <div class="card-body-padded">
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h4 class="fs-5 fw-bold mb-0">Germany</h4>
                 <span class="badge bg-warning text-dark">EU Blue Card</span>
               </div>
-              <p class="text-muted small mb-3">
+              <p class="text-muted small mb-3 flex-grow-1">
                 The brand-new Opportunity Card (Chancenkarte) and EU Blue Card enabling skilled engineers and tech talent to work easily.
               </p>
               <div class="border-top pt-2 mt-auto d-flex justify-content-between small text-muted">

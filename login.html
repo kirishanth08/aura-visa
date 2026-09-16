@@ -153,10 +153,18 @@
         passwordInput.classList.remove('is-invalid');
         alertBox.className = 'alert d-none py-2 px-3 small mb-3';
 
-        if (!email || !password) {
-          showAlert('Please enter both your email address and password.', 'danger');
-          if (!email) emailInput.focus();
-          else passwordInput.focus();
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!email || !emailRegex.test(email)) {
+          showAlert('Please enter a valid email address with a domain extension (e.g. name@domain.com).', 'danger');
+          emailInput.classList.add('is-invalid');
+          emailInput.focus();
+          return;
+        }
+
+        if (!password) {
+          showAlert('Please enter your password.', 'danger');
+          passwordInput.classList.add('is-invalid');
+          passwordInput.focus();
           return;
         }
 

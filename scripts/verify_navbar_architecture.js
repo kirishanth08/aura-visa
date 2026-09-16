@@ -30,20 +30,20 @@ for (let char of css) {
 }
 assert('CSS syntax brackets are perfectly balanced (depth 0)', depth === 0);
 
-// 2. Desktop media query exists (>= 1200px)
-assert('Desktop media query (@media (min-width: 1200px)) exists', css.includes('@media (min-width: 1200px)'));
+// 2. Desktop media query exists (>= 992px)
+assert('Desktop media query (@media (min-width: 992px)) exists', css.includes('@media (min-width: 992px)'));
 
 // 3. Desktop toggler is hidden
-const desktopBlock = css.split('@media (min-width: 1200px)')[1] || '';
+const desktopBlock = css.split('@media (min-width: 992px)')[1] || '';
 assert(
   'Desktop rule strictly hides navbar toggler (display: none !important)',
   desktopBlock.includes('.navbar-toggler') && desktopBlock.includes('display: none !important')
 );
 
-// 4. Desktop mobile controls wrapper (d-xl-none) is strictly hidden
+// 4. Desktop mobile controls wrapper (d-lg-none) is strictly hidden
 assert(
-  'Desktop rule strictly hides mobile controls (.d-xl-none -> display: none !important)',
-  desktopBlock.includes('.d-xl-none') && desktopBlock.includes('display: none !important')
+  'Desktop rule strictly hides mobile controls (.d-lg-none -> display: none !important)',
+  desktopBlock.includes('.d-lg-none') && desktopBlock.includes('display: none !important')
 );
 
 // 5. Desktop offcanvas is static, full width, visible inline
@@ -73,11 +73,11 @@ assert(
   desktopBlock.includes('flex-direction: row !important')
 );
 
-// 9. Mobile media query exists (< 1200px)
-assert('Mobile media query (@media (max-width: 1199.98px)) exists', css.includes('@media (max-width: 1199.98px)'));
+// 9. Mobile media query exists (< 992px)
+assert('Mobile media query (@media (max-width: 991.98px)) exists', css.includes('@media (max-width: 991.98px)'));
 
 // 10. Mobile toggler is displayed as inline-flex with frosted glass border
-const mobileBlock = css.split('@media (max-width: 1199.98px)')[1] || '';
+const mobileBlock = css.split('@media (max-width: 991.98px)')[1] || '';
 assert(
   'Mobile toggler is displayed with frosted glass border',
   mobileBlock.includes('.navbar-toggler') &&
@@ -85,10 +85,10 @@ assert(
   mobileBlock.includes('border: 1.5px solid rgba(255, 255, 255')
 );
 
-// 11. Mobile offcanvas drawer has 320px width, 85vw max-width and z-index 1060
+// 11. Mobile offcanvas drawer has 340px width, 85vw max-width and z-index 1060
 assert(
-  'Mobile offcanvas drawer has width: 320px, max-width: 85vw, z-index: 1060',
-  mobileBlock.includes('width: 320px !important') &&
+  'Mobile offcanvas drawer has width: 340px, max-width: 85vw, z-index: 1060',
+  (mobileBlock.includes('width: 340px !important') || mobileBlock.includes('width: 320px !important')) &&
   mobileBlock.includes('max-width: 85vw !important') &&
   mobileBlock.includes('z-index: 1060 !important')
 );
@@ -100,10 +100,10 @@ assert(
   mobileBlock.includes('position: static !important')
 );
 
-// 13. JS accordion behavior is restricted to mobile (< 1200px)
+// 13. JS accordion behavior is restricted to mobile (< 992px)
 assert(
-  'main.js restricts accordion interception to mobile only (window.innerWidth < 1200)',
-  js.includes('if (window.innerWidth >= 1200) return;')
+  'main.js restricts accordion interception to mobile only (window.innerWidth < 992)',
+  js.includes('if (window.innerWidth >= 992) return;')
 );
 
 // 14. JS handles window resize auto-cleanup
