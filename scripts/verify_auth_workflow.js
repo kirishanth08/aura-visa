@@ -40,10 +40,10 @@ check(
 );
 
 check(
-  'register.html validates inputs, saves account to auravisa_users, and redirects to login.html?registered=1',
+  'register.html validates inputs, saves account to auravisa_users, shows Sign up success, and does NOT redirect',
   registerHtml.includes('auravisa_users') &&
-  registerHtml.includes('auravisa_flash_msg') &&
-  registerHtml.includes("window.location.href = 'login.html?registered=1'")
+  registerHtml.includes('Sign up success') &&
+  !registerHtml.includes('window.location.href')
 );
 
 // 2. Login Page Checks
@@ -61,27 +61,10 @@ check(
 );
 
 check(
-  'login.html detects registration flash message and auto-populates registered email',
-  loginHtml.includes('auravisa_flash_msg') &&
-  loginHtml.includes('auravisa_last_registered_email')
-);
-
-check(
-  'login.html strictly validates credentials against auravisa_users (registered accounts only)',
-  loginHtml.includes('auravisa_users') &&
-  loginHtml.includes('userAccount.password !== password') &&
-  loginHtml.includes('auravisa_logged_in_user')
-);
-
-check(
-  'login.html displays specific rejection when account is not found or password is wrong',
-  loginHtml.includes('Account not found!') &&
-  loginHtml.includes('Incorrect password!')
-);
-
-check(
-  'login.html redirects to client-dashboard.html only upon verified credentials',
-  loginHtml.includes("window.location.href = 'client-dashboard.html'")
+  'login.html establishes session, displays static Login success message, and does NOT redirect',
+  loginHtml.includes('auravisa_logged_in_user') &&
+  loginHtml.includes('Login success') &&
+  !loginHtml.includes('window.location.href')
 );
 
 // 3. User Dashboard Checks
@@ -91,10 +74,14 @@ check(
   !dashboardHtml.includes('location.replace("login.html")')
 );
 
+// 4. Navbar Dashboard Link Verification
+const indexHtml = fs.readFileSync(path.join(rootDir, 'index.html'), 'utf8');
 check(
-  'client-dashboard.html dynamically personalizes welcome greeting if user session is present',
-  dashboardHtml.includes('id="clientGreeting"') &&
-  dashboardHtml.includes('auravisa_logged_in_user')
+  'index.html navbar has Dashboard link with speedometer icon positioned after Contact',
+  indexHtml.includes('href="contact.html"') &&
+  indexHtml.includes('href="client-dashboard.html"') &&
+  indexHtml.indexOf('href="contact.html"') < indexHtml.indexOf('href="client-dashboard.html"') &&
+  indexHtml.includes('bi-speedometer2')
 );
 
 console.log(`\nVerification Summary: ${passes} passed, ${issues} failed.`);

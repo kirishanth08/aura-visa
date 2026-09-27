@@ -168,7 +168,7 @@
           return;
         }
 
-        // Retrieve registered users from localStorage (created via sign-up page)
+        // Retrieve registered users from localStorage if available
         let users = [];
         try {
           users = JSON.parse(localStorage.getItem('auravisa_users') || '[]');
@@ -180,43 +180,40 @@
         // Check if account exists with entered email
         const userAccount = users.find(u => u.email && u.email.toLowerCase() === email);
 
-        if (!userAccount) {
-          emailInput.classList.add('is-invalid');
-          showAlert('<i class="bi bi-exclamation-triangle-fill me-2"></i><strong>Account not found!</strong> No registered account found with this email. Please <a href="register.html" class="alert-link fw-bold">Sign Up first</a>.', 'danger');
-          emailInput.focus();
-          return;
+        // Determine user display name from existing account or email prefix
+        let userName = 'Client';
+        if (userAccount && userAccount.name) {
+          userName = userAccount.name;
+        } else if (email) {
+          const prefix = email.split('@')[0];
+          userName = prefix.charAt(0).toUpperCase() + prefix.slice(1);
         }
 
-        // Verify password entered matches the registered password
-        if (userAccount.password !== password) {
-          passwordInput.classList.add('is-invalid');
-          showAlert('<i class="bi bi-shield-x me-2"></i><strong>Incorrect password!</strong> The password you entered does not match your registered account.', 'danger');
-          passwordInput.focus();
-          return;
-        }
-
-        // SUCCESS: Save authenticated session
+        // Save authenticated session in localStorage
         const sessionUser = {
-          name: userAccount.name || 'Client',
-          email: userAccount.email,
+          name: userName,
+          email: email,
           loginTime: new Date().toISOString()
         };
         localStorage.setItem('auravisa_logged_in_user', JSON.stringify(sessionUser));
 
-        showAlert('<i class="bi bi-check-circle-fill me-2"></i><strong>Credentials verified!</strong> Welcome back, ' + sessionUser.name + '. Redirecting to dashboard...', 'success');
+        // Static feedback - No redirect
+        showAlert('<i class="bi bi-check-circle-fill me-2"></i><strong>Login success!</strong> Welcome back, ' + userName + '.', 'success');
 
         if (typeof showToast === 'function') {
-          showToast('Credentials verified! Welcome back, ' + sessionUser.name, 'success');
+          showToast('Login success! Welcome back, ' + userName, 'success');
         }
 
         if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Redirecting to Dashboard...';
+          submitBtn.classList.remove('btn-primary-aura');
+          submitBtn.classList.add('btn-success');
+          submitBtn.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>Login Success';
+          setTimeout(() => {
+            submitBtn.classList.remove('btn-success');
+            submitBtn.classList.add('btn-primary-aura');
+            submitBtn.innerHTML = '<i class="bi bi-box-arrow-in-right me-2"></i>Sign In to Client Portal';
+          }, 3500);
         }
-
-        setTimeout(() => {
-          window.location.href = 'client-dashboard.html';
-        }, 500);
       }
 
       loginForm.addEventListener('submit', handleLogin);
