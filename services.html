@@ -109,7 +109,7 @@
               </li>
             </ul>
 
-            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Primary CTA -->
             <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 flex-wrap">
               <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL / LTR orientation">
                 <span class="rtl-status-badge">RTL</span>
@@ -120,8 +120,8 @@
               <a href="login.html" class="btn btn-sm btn-outline-aura">
                 <i class="bi bi-box-arrow-in-right me-1"></i>Login
               </a>
-              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
-                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              <a href="contact.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-calendar-check me-1"></i>Book Consultation
               </a>
             </div>
           </div>
@@ -140,11 +140,13 @@
           <p class="lead text-muted mb-4">
             We provide full legal representation from initial eligibility auditing and document attestation to consular hearings and permanent residency confirmation.
           </p>
-          <div class="d-flex flex-wrap gap-2">
-            <button class="btn btn-primary-aura active" data-filter-target="services" data-filter-value="all">All Services</button>
-            <button class="btn btn-outline-aura" data-filter-target="services" data-filter-value="pr">Permanent Residency</button>
-            <button class="btn btn-outline-aura" data-filter-target="services" data-filter-value="work">Work Permits</button>
-            <button class="btn btn-outline-aura" data-filter-target="services" data-filter-value="business">Investor & Golden Visa</button>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#services-grid" class="btn btn-primary-aura">
+              <i class="bi bi-grid-fill me-1"></i> Explore All Services
+            </a>
+            <a href="eligibility-checker.html" class="btn btn-outline-aura">
+              <i class="bi bi-calculator me-1"></i> Check Eligibility
+            </a>
           </div>
           <div class="mt-4 pt-3 border-top d-flex flex-wrap align-items-center gap-2">
             <small class="text-muted fw-bold text-uppercase me-2" style="font-size: 0.75rem; letter-spacing: 0.5px;">Explore Next Steps:</small>
@@ -177,9 +179,17 @@
       <div class="text-center section-title-wrap">
         <span class="section-subtitle">Programs Offered</span>
         <h2 class="section-heading">Our Specialized Visa Categories</h2>
-        <p class="text-muted mx-auto" style="max-width: 600px;">
+        <p class="text-muted mx-auto mb-4" style="max-width: 600px;">
           Explore legal immigration pathways tailored to your qualifications, investment capacity, or family situation.
         </p>
+        
+        <!-- Category Filter Tabs -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-2">
+          <button class="btn btn-sm btn-primary-aura active" data-filter-target="services" data-filter-value="all">All Services</button>
+          <button class="btn btn-sm btn-outline-aura" data-filter-target="services" data-filter-value="pr">Permanent Residency</button>
+          <button class="btn btn-sm btn-outline-aura" data-filter-target="services" data-filter-value="work">Work Permits</button>
+          <button class="btn btn-sm btn-outline-aura" data-filter-target="services" data-filter-value="business">Investor & Golden Visa</button>
+        </div>
       </div>
 
       <div class="row g-4">

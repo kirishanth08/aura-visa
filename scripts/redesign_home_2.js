@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+const fs = require('fs');
+
+const home2Html = `<!DOCTYPE html>
 <html lang="en" data-bs-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -371,10 +373,12 @@
           </div>
         </div>
       </div>
-      <hr class="my-5 opacity-25">
+    </div>
+  </section>
 
-      <!-- Post-Study Work Permit & PR Conversion Matrix Sub-Section -->
-      <div id="pswp-pr-matrix">
+  <!-- NEW SECTION 4: Post-Study Work Permit & PR Conversion Matrix (Distinct Layout & Content) -->
+  <section class="section-space-alt" id="pswp-pr-matrix">
+    <div class="container">
       <div class="text-center section-title-wrap">
         <span class="section-subtitle">Career & Permanent Settlement</span>
         <h2 class="section-heading">Post-Study Work Permit (PSWP) to PR Comparison Matrix</h2>
@@ -462,7 +466,6 @@
             </tr>
           </tbody>
         </table>
-      </div>
       </div>
     </div>
   </section>
@@ -751,4 +754,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync('home-2.html', home2Html, 'utf8');
+console.log('Successfully wrote redesigned home-2.html!');

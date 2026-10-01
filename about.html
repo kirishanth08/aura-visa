@@ -109,7 +109,7 @@
               </li>
             </ul>
 
-            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
+            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Primary CTA -->
             <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 flex-wrap">
               <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL / LTR orientation">
                 <span class="rtl-status-badge">RTL</span>
@@ -120,8 +120,8 @@
               <a href="login.html" class="btn btn-sm btn-outline-aura">
                 <i class="bi bi-box-arrow-in-right me-1"></i>Login
               </a>
-              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
-                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
+              <a href="contact.html" class="btn btn-sm btn-primary-aura text-white">
+                <i class="bi bi-calendar-check me-1"></i>Book Consultation
               </a>
             </div>
           </div>
@@ -223,50 +223,87 @@
         <span class="section-subtitle">Core Philosophy</span>
         <h2 class="section-heading">Our Three Foundational Pillars</h2>
         <p class="text-muted mx-auto" style="max-width: 650px;">
-          Immigration is not merely paperwork; it is the trajectory of human lives. We hold ourselves to the highest global legal ethics.
+          Immigration is not merely paperwork; it is the trajectory of human lives. We hold ourselves to uncompromising global legal ethics and client fiduciary duty.
         </p>
       </div>
 
       <div class="row g-4">
+        <!-- Pillar 1 -->
         <div class="col-md-4">
-          <div class="card-auravisa p-4 text-center">
-            <div class="bg-primary-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
-                <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
-                <path d="M7 21h10"/>
-                <path d="M12 3v18"/>
-                <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
-              </svg>
+          <div class="card-auravisa pillar-card h-100 d-flex flex-column overflow-hidden">
+            <div class="pillar-icon-header">
+              <div class="pillar-icon-symbol bg-primary-subtle text-primary border border-primary-subtle">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
             </div>
-            <h4 class="fs-5 fw-bold mb-2">Honest Case Assessment</h4>
-            <p class="text-muted small mb-0">
-              We never take on a file we cannot win. If your background lacks qualifications for a specific destination, we advise honest improvements rather than taking retainers.
-            </p>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <span class="badge-aura badge-aura-primary mb-2 align-self-start">Integrity First</span>
+              <h4 class="fs-5 fw-bold mb-2">Honest Case Assessment</h4>
+              <p class="text-muted small mb-3 flex-grow-1">
+                We maintain a strict ethical vetting standard: we never accept retainers for applications we cannot win. If an applicant falls short of CRS cutoffs or language benchmarks, we formulate a concrete qualification roadmap before accepting fees.
+              </p>
+              <div class="border-top pt-2 mt-auto small text-muted">
+                <i class="bi bi-shield-check text-success me-1"></i> Pre-assessment score audit included
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Pillar 2 -->
         <div class="col-md-4">
-          <div class="card-auravisa p-4 text-center">
-            <div class="bg-success-subtle text-success rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px; font-size: 1.5rem;">
-              <i class="bi bi-shield-shaded"></i>
+          <div class="card-auravisa pillar-card h-100 d-flex flex-column overflow-hidden">
+            <div class="pillar-icon-header">
+              <div class="pillar-icon-symbol bg-success-subtle text-success border border-success-subtle">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="m15 15-3-3"></path>
+                  <path d="M12 8v1"></path>
+                  <path d="M12 15v1"></path>
+                  <path d="M8 12h1"></path>
+                  <path d="M15 12h1"></path>
+                </svg>
+              </div>
             </div>
-            <h4 class="fs-5 fw-bold mb-2">Fiduciary Transparency</h4>
-            <p class="text-muted small mb-0">
-              Every dollar paid is logged into trust accounts tied to concrete application milestones. Zero hidden administrative surcharges or sudden fee increases.
-            </p>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <span class="badge-aura badge-aura-success mb-2 align-self-start">Consumer Protection</span>
+              <h4 class="fs-5 fw-bold mb-2">Fiduciary Trust & Escrow</h4>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Every dollar paid is maintained in segregated, regulated statutory trust accounts tied to concrete filing milestones. Funds are only released upon verifiable evidence of governmental submission with official filing receipts.
+              </p>
+              <div class="border-top pt-2 mt-auto small text-muted">
+                <i class="bi bi-lock-fill text-primary me-1"></i> $1M Professional Indemnity Coverage
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Pillar 3 -->
         <div class="col-md-4">
-          <div class="card-auravisa p-4 text-center">
-            <div class="bg-warning-subtle text-warning rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px; font-size: 1.5rem;">
-              <i class="bi bi-headset"></i>
+          <div class="card-auravisa pillar-card h-100 d-flex flex-column overflow-hidden">
+            <div class="pillar-icon-header">
+              <div class="pillar-icon-symbol bg-warning-subtle text-warning border border-warning-subtle">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
             </div>
-            <h4 class="fs-5 fw-bold mb-2">Empathetic Client Advocacy</h4>
-            <p class="text-muted small mb-0">
-              Direct access to your designated licensed case attorney. We provide proactive updates on policy changes, draw trends, and procedural inquiries.
-            </p>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <span class="badge-aura badge-aura-warning mb-2 align-self-start">Direct Counsel</span>
+              <h4 class="fs-5 fw-bold mb-2">Empathetic Legal Advocacy</h4>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Clients receive direct access to designated licensed attorneys, not unaccredited third-party brokers. We provide real-time policy alerts, procedural fairness representation, and tailored consular interview preparation.
+              </p>
+              <div class="border-top pt-2 mt-auto small text-muted">
+                <i class="bi bi-person-check-fill text-warning me-1"></i> 1-on-1 Senior Counsel Assigned
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -277,51 +314,168 @@
   <section class="section-space-alt" id="about-accreditations">
     <div class="container">
       <div class="text-center section-title-wrap">
-        <span class="section-subtitle">Regulatory Compliance</span>
+        <span class="section-subtitle">Official Regulatory Standing</span>
         <h2 class="section-heading">Globally Certified & Regulated Practitioners</h2>
-        <p class="text-muted mx-auto" style="max-width: 600px;">
-          Our practice is overseen by official government regulatory authorities in Canada, Australia, the United Kingdom, and the European Union.
+        <p class="text-muted mx-auto" style="max-width: 680px;">
+          Our legal practice is officially licensed and strictly overseen by federal government regulatory authorities across Canada, Australia, the United Kingdom, and the European Union.
         </p>
       </div>
 
       <div class="row g-4 justify-content-center">
+        <!-- Canada CICC Card with High-Quality Image & Detailed Context -->
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa regulatory-card p-4">
-            <i class="bi bi-award fs-1 text-primary mb-2"></i>
-            <h5 class="fw-bold mb-1">CICC (Canada)</h5>
-            <div class="regulatory-org-title text-muted small">College of Immigration and Citizenship Consultants</div>
-            <div class="regulatory-badge-wrap mt-auto">
-              <span class="badge-aura badge-aura-success">Reg: #R519284</span>
+          <div class="card-auravisa h-100 d-flex flex-column overflow-hidden">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=600&auto=format&fit=crop&q=80" 
+                   alt="Canadian Parliament and Supreme Court Ottawa - CICC regulatory jurisdiction" 
+                   class="card-img-top-cover" style="height: 150px;">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2 text-white shadow-sm">Canada</span>
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <h5 class="fw-bold mb-0">CICC (Canada)</h5>
+                <span class="badge-aura badge-aura-success">License #R519284</span>
+              </div>
+              <div class="text-primary small fw-semibold mb-2">College of Immigration and Citizenship Consultants</div>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Chartered under the federal <em>CICC Act</em>. Authorized to represent applicants directly before IRCC, CBSA border officers, and the Immigration and Refugee Board (IRB) with full statutory standing.
+              </p>
+              <div class="p-2 bg-alt rounded-2 small text-muted mb-3" style="font-size: 0.78rem;">
+                <i class="bi bi-shield-lock-fill text-success me-1"></i> Backed by CICC Compensation Fund & $1M E&O liability insurance.
+              </div>
+              <a href="https://college-ic.ca" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-aura mt-auto w-100">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Verify CICC Standing
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- Australia MARA Card with High-Quality Image & Detailed Context -->
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa regulatory-card p-4">
-            <i class="bi bi-patch-check fs-1 text-primary mb-2"></i>
-            <h5 class="fw-bold mb-1">MARA (Australia)</h5>
-            <div class="regulatory-org-title text-muted small">Migration Agents Registration Authority</div>
-            <div class="regulatory-badge-wrap mt-auto">
-              <span class="badge-aura badge-aura-primary">Reg: #1804921</span>
+          <div class="card-auravisa h-100 d-flex flex-column overflow-hidden">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&auto=format&fit=crop&q=80" 
+                   alt="Sydney Australian Commonwealth Court and legal precinct - MARA authority" 
+                   class="card-img-top-cover" style="height: 150px;">
+              <span class="badge bg-primary position-absolute top-0 end-0 m-2 text-white shadow-sm">Australia</span>
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <h5 class="fw-bold mb-0">MARA (Australia)</h5>
+                <span class="badge-aura badge-aura-primary">MARN #1804921</span>
+              </div>
+              <div class="text-primary small fw-semibold mb-2">Migration Agents Registration Authority</div>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Regulated under the Australian <em>Migration Act 1958</em>. Officially certified to manage Subclass 189/190/491 visas, employer sponsorships, and Administrative Review Tribunal (ART) petitions.
+              </p>
+              <div class="p-2 bg-alt rounded-2 small text-muted mb-3" style="font-size: 0.78rem;">
+                <i class="bi bi-shield-lock-fill text-primary me-1"></i> Strict statutory compliance with the Commonwealth OMARA Code of Conduct.
+              </div>
+              <a href="https://www.mara.gov.au" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-aura mt-auto w-100">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Verify MARA Standing
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- UK OISC Card with High-Quality Image & Detailed Context -->
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa regulatory-card p-4">
-            <i class="bi bi-file-earmark-check fs-1 text-primary mb-2"></i>
-            <h5 class="fw-bold mb-1">OISC (UK)</h5>
-            <div class="regulatory-org-title text-muted small">Office of the Immigration Services Commissioner</div>
-            <div class="regulatory-badge-wrap mt-auto">
-              <span class="badge-aura badge-aura-warning">Reg: #F20180011</span>
+          <div class="card-auravisa h-100 d-flex flex-column overflow-hidden">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&auto=format&fit=crop&q=80" 
+                   alt="London Royal Courts of Justice and Westminster - OISC regulator" 
+                   class="card-img-top-cover" style="height: 150px;">
+              <span class="badge bg-info text-dark position-absolute top-0 end-0 m-2 shadow-sm">UK Home Office</span>
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <h5 class="fw-bold mb-0">OISC (UK)</h5>
+                <span class="badge-aura badge-aura-warning">Level 3 #F20180011</span>
+              </div>
+              <div class="text-primary small fw-semibold mb-2">Office of the Immigration Services Commissioner</div>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Designated at Level 3 (highest tier: Advocacy & Complex Appeals). Authorized to represent cases before the First-tier & Upper Tribunal, ILR settlement, and corporate Sponsor Licensing.
+              </p>
+              <div class="p-2 bg-alt rounded-2 small text-muted mb-3" style="font-size: 0.78rem;">
+                <i class="bi bi-shield-lock-fill text-warning me-1"></i> Audited annually under the UK Immigration and Asylum Act 1999 statutory framework.
+              </div>
+              <a href="https://www.gov.uk/oisc" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-aura mt-auto w-100">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Verify OISC Standing
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- Europe EIA Card with High-Quality Image & Detailed Context -->
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa regulatory-card p-4">
-            <i class="bi bi-globe fs-1 text-primary mb-2"></i>
-            <h5 class="fw-bold mb-1">EIA (Europe)</h5>
-            <div class="regulatory-org-title text-muted small">European Immigration Alliance Accredited</div>
-            <div class="regulatory-badge-wrap mt-auto">
-              <span class="badge-aura badge-aura-success">Reg: #EU-2021-9481</span>
+          <div class="card-auravisa h-100 d-flex flex-column overflow-hidden">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?w=600&auto=format&fit=crop&q=80" 
+                   alt="European Commission and EU Court of Justice headquarters - EIA accredited" 
+                   class="card-img-top-cover" style="height: 150px;">
+              <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-2 shadow-sm">European Union</span>
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <h5 class="fw-bold mb-0">EIA (Europe)</h5>
+                <span class="badge-aura badge-aura-success">Reg #EU-2021-9481</span>
+              </div>
+              <div class="text-primary small fw-semibold mb-2">European Immigration Alliance Accredited</div>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Certified practitioner network for the <em>EU Blue Card Directive (2021/1883)</em>, German Chancenkarte, and Golden Visa investor immigration pathways across Portugal, Spain, and Greece.
+              </p>
+              <div class="p-2 bg-alt rounded-2 small text-muted mb-3" style="font-size: 0.78rem;">
+                <i class="bi bi-shield-lock-fill text-success me-1"></i> Full adherence to EU General Data Protection Regulation (GDPR) client privacy.
+              </div>
+              <a href="service-details.html?service=golden-visa" class="btn btn-sm btn-outline-aura mt-auto w-100">
+                <i class="bi bi-check-circle me-1"></i> View Accreditations
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meaningful Supporting Content: Why Regulation Matters & Consumer Safeguards -->
+      <div class="mt-5 p-4 p-lg-5 bg-surface rounded-4 border shadow-sm">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="section-subtitle">Client Consumer Protection</span>
+            <h3 class="fs-4 fw-bold mb-3">Why Government Regulation Protects Your Future</h3>
+            <p class="text-muted mb-3">
+              Unregulated "ghost consultants" represent the single largest risk in international migration. Submitting an application through an unverified agency can result in automatic 5-year bans for statutory misrepresentation under Canadian IRPA and Australian Migration regulations.
+            </p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-shield-check text-success fs-5 mt-1"></i>
+                  <div>
+                    <strong class="d-block small text-main">Statutory Escrow Accounts</strong>
+                    <span class="text-muted" style="font-size: 0.8rem;">Retainers are held in bank trust accounts inspected by government regulators.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-award-fill text-warning fs-5 mt-1"></i>
+                  <div>
+                    <strong class="d-block small text-main">Direct Consular Authority</strong>
+                    <span class="text-muted" style="font-size: 0.8rem;">Official representation forms (IMM 5476, Form 956) recognized by immigration officers.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="p-4 bg-alt rounded-3 border">
+              <h5 class="fw-bold mb-3"><i class="bi bi-search me-2 text-primary"></i>Independent Registry Check</h5>
+              <p class="text-muted small mb-3">
+                Every AuraVisa lawyer holds an active, unblemished license. You can confirm our credentials directly on government portals:
+              </p>
+              <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+                <li><i class="bi bi-check2-circle text-success me-1"></i> <strong>Canada:</strong> college-ic.ca (Search #R519284)</li>
+                <li><i class="bi bi-check2-circle text-success me-1"></i> <strong>Australia:</strong> mara.gov.au (Search #1804921)</li>
+                <li><i class="bi bi-check2-circle text-success me-1"></i> <strong>UK:</strong> gov.uk/find-an-immigration-adviser</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -350,45 +504,61 @@
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa text-center">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Jonathan Vance, KC Managing Partner & Canadian Bar Counsel" class="card-img-top-cover" style="height: 240px; object-fit: cover; object-position: top center;">
-            <div class="card-body-padded">
-              <h5 class="fw-bold mb-1">Jonathan Vance, KC</h5>
-              <small class="text-secondary fw-semibold d-block mb-2">Managing Partner & Canadian Bar Counsel</small>
-              <p class="text-muted small mb-0">18 years specializing in Federal Court appeals and Provincial Nominee negotiations.</p>
+          <div class="card-auravisa text-center h-100 d-flex flex-column overflow-hidden">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Jonathan Vance, KC Managing Partner & Canadian Bar Counsel" class="team-advocate-img">
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="team-advocate-header mb-2">
+                <h5 class="fw-bold mb-1">Jonathan Vance, KC</h5>
+                <small class="text-secondary fw-semibold d-block">Managing Partner & Canadian Counsel</small>
+              </div>
+              <p class="text-muted small mb-0 mt-auto">18+ years leading Federal Court immigration appeals & PNP files.</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa text-center">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Victoria Stirling, LLB Head of UK & EU Immigration" class="card-img-top-cover" style="height: 240px; object-fit: cover; object-position: top center;">
-            <div class="card-body-padded">
-              <h5 class="fw-bold mb-1">Victoria Stirling, LLB</h5>
-              <small class="text-secondary fw-semibold d-block mb-2">Head of UK & EU Immigration</small>
-              <p class="text-muted small mb-0">Former Home Office legal auditor with expertise in Skilled Worker sponsor licensing.</p>
+          <div class="card-auravisa text-center h-100 d-flex flex-column overflow-hidden">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Victoria Stirling, LLB Head of UK & EU Immigration" class="team-advocate-img">
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="team-advocate-header mb-2">
+                <h5 class="fw-bold mb-1">Victoria Stirling, LLB</h5>
+                <small class="text-secondary fw-semibold d-block">Head of UK & EU Immigration</small>
+              </div>
+              <p class="text-muted small mb-0 mt-auto">Former Home Office legal auditor for UK Skilled Worker sponsorship.</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa text-center">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Liam O'Connor, RMA Principal Australian Migration Counsel" class="card-img-top-cover" style="height: 240px; object-fit: cover; object-position: top center;">
-            <div class="card-body-padded">
-              <h5 class="fw-bold mb-1">Liam O'Connor, RMA</h5>
-              <small class="text-secondary fw-semibold d-block mb-2">Principal Australian Migration Counsel</small>
-              <p class="text-muted small mb-0">MARA registered specialist in General Skilled Migration and regional employer sponsorship.</p>
+          <div class="card-auravisa text-center h-100 d-flex flex-column overflow-hidden">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Liam O'Connor, RMA Principal Australian Migration Counsel" class="team-advocate-img">
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="team-advocate-header mb-2">
+                <h5 class="fw-bold mb-1">Liam O'Connor, RMA</h5>
+                <small class="text-secondary fw-semibold d-block">Principal Australian Migration Counsel</small>
+              </div>
+              <p class="text-muted small mb-0 mt-auto">MARA accredited specialist in GSM visas & employer nominations.</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="card-auravisa text-center">
-            <img src="https://images.unsplash.com/photo-1573497019236-17f8177b81e8?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Dr. Fatima Al-Zahra Director of Middle East Operations" class="card-img-top-cover" style="height: 240px; object-fit: cover; object-position: top center;">
-            <div class="card-body-padded">
-              <h5 class="fw-bold mb-1">Dr. Fatima Al-Zahra</h5>
-              <small class="text-secondary fw-semibold d-block mb-2">Director of Middle East Operations</small>
-              <p class="text-muted small mb-0">Leads investor Golden Visas and family reunification programs across GCC and Europe.</p>
+          <div class="card-auravisa text-center h-100 d-flex flex-column overflow-hidden">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1573497019236-17f8177b81e8?w=600&auto=format&fit=crop&crop=faces&q=80" alt="Dr. Fatima Al-Zahra Director of Middle East Operations" class="team-advocate-img">
+            </div>
+            <div class="card-body-padded d-flex flex-column flex-grow-1">
+              <div class="team-advocate-header mb-2">
+                <h5 class="fw-bold mb-1">Dr. Fatima Al-Zahra</h5>
+                <small class="text-secondary fw-semibold d-block">Director of Middle East Operations</small>
+              </div>
+              <p class="text-muted small mb-0 mt-auto">Directs European Golden Visas and family reunification dossiers.</p>
             </div>
           </div>
         </div>

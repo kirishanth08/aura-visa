@@ -32,102 +32,105 @@
 </head>
 <body>
 
-  <!-- Main Header & Navbar (Sticky, Contained Layout, Centered Nav Links, Identical Across All 36 Pages) -->
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-auravisa">
-      <div class="container">
-        <a class="brand-logo" href="index.html">
-          <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
-          <span>Aura<span class="text-warning">Visa</span></span>
-        </a>
-
-        <!-- Mobile Controls (RTL, Theme & Menu Toggler) -->
-        <div class="d-flex align-items-center gap-2 d-lg-none">
-          <button class="btn btn-sm btn-outline-aura rtl-toggle-btn p-1 px-2" type="button" title="Toggle RTL / LTR orientation" aria-label="Toggle RTL">
-            <span class="rtl-status-badge">RTL</span>
-          </button>
-          <button class="btn btn-sm btn-outline-aura theme-toggle-btn p-1 px-2" type="button" title="Toggle Theme" aria-label="Toggle theme">
-            <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
-          </button>
-          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-
-        <!-- Navigation Links & Action Buttons Offcanvas -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
-              <span class="brand-badge me-2"><i class="bi bi-globe-americas"></i></span>AuraVisa
-            </h5>
-            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            
-            <!-- Mobile In-Drawer Live Search for Sections and Visas -->
-            <div class="offcanvas-search-wrap">
-              <div class="input-group">
-                <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-search text-muted"></i></span>
-                <input type="text" id="offcanvasSearchInput" class="form-control border-start-0" placeholder="Search sections, visas & pages...">
-              </div>
-              <div id="offcanvasSearchResults" class="mt-2 d-none"></div>
-            </div>
-<!-- Centered Main Nav Items: Text Only -->
-            <ul class="navbar-nav mx-auto align-items-lg-center justify-content-center gap-lg-1">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
-                <ul class="dropdown-menu shadow border-0">
-                  <li><a class="dropdown-item" href="index.html">Home 1 - Global Migration</a></li>
-                  <li><a class="dropdown-item" href="home-2.html">Home 2 - Study Abroad</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
-                <ul class="dropdown-menu border-0 shadow-lg">
-                  <li><a class="dropdown-item" href="services.html">All Visa Services</a></li>
-                  <li><a class="dropdown-item" href="service-details.html?service=australia-gsm">Australia GSM</a></li>
-                  <li><a class="dropdown-item" href="service-details.html?service=uk-skilled-worker">UK Skilled Worker</a></li>
-                  <li><a class="dropdown-item" href="service-details.html?service=golden-visa">Golden Visa & Investor</a></li>
-                  <li><a class="dropdown-item" href="service-details.html?service=student-permits">Student Permits</a></li>
-                  <li><a class="dropdown-item" href="service-details.html?service=family-sponsorship">Family Sponsorship</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pricing.html">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="client-dashboard.html" title="User Dashboard"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a>
-              </li>
-            </ul>
-
-            <!-- Navbar Action Buttons: RTL (Text Only), Dark Mode (Symbol Only), Login, Sign Up -->
-            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 flex-wrap">
-              <button class="btn btn-sm btn-outline-aura rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL / LTR orientation">
-                <span class="rtl-status-badge">RTL</span>
-              </button>
-              <button class="btn btn-sm btn-outline-aura theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Light / Dark theme" aria-label="Toggle theme">
-                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
-              </button>
-              <a href="login.html" class="btn btn-sm btn-outline-aura">
-                <i class="bi bi-box-arrow-in-right me-1"></i>Login
-              </a>
-              <a href="register.html" class="btn btn-sm btn-primary-aura text-white">
-                <i class="bi bi-person-plus-fill me-1"></i>Sign Up
-              </a>
-            </div>
-          </div>
-        </div>
+    <!-- Specialized Dashboard Header (Replaces Public Marketing Navbar) -->
+  <header class="dashboard-header sticky-top">
+    <div class="dashboard-header-brand">
+      <a class="brand-logo" href="index.html">
+        <span class="brand-badge"><i class="bi bi-globe-americas"></i></span>
+        <span>Aura<span class="text-warning">Visa</span></span>
+      </a>
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-1 rounded-pill small d-none d-md-inline-flex align-items-center gap-1">
+        <i class="bi bi-shield-check text-success"></i> Client Portal
+      </span>
+      <div class="dashboard-case-chip d-none d-lg-inline-flex">
+        <i class="bi bi-folder2 text-warning"></i>
+        <span>File: <strong>#AV-2026-8942</strong> (Canada FSW)</span>
       </div>
-    </nav>
+    </div>
+
+    <!-- Center Quick Status Pill on Desktop -->
+    <div class="d-none d-xl-flex align-items-center gap-2 px-3 py-1 bg-surface rounded-pill border small">
+      <span class="badge bg-success-subtle text-success p-1 px-2 rounded-pill"><i class="bi bi-check-circle-fill me-1"></i>Active Representation</span>
+      <span class="text-muted">Lead Attorney: <strong>Jonathan Vance, KC</strong></span>
+    </div>
+
+    <!-- Header Action Tools: Main Site Link, Notifications, Theme, User Profile -->
+    <div class="dashboard-header-actions">
+      <!-- Return to Main Site Button -->
+      <a href="index.html" class="btn btn-sm btn-outline-aura d-inline-flex align-items-center gap-1 px-2 py-1" title="Return to AuraVisa Main Website">
+        <i class="bi bi-globe me-1"></i><span class="d-none d-sm-inline">Main Website</span>
+      </a>
+
+      <!-- RTL Toggle -->
+      <button class="btn btn-sm btn-outline-aura rtl-toggle-btn px-2 py-1 d-none d-md-inline-flex" type="button" title="Toggle RTL orientation">
+        <span class="rtl-status-badge">RTL</span>
+      </button>
+
+      <!-- Theme Toggle -->
+      <button class="btn btn-sm btn-outline-aura theme-toggle-btn px-2 py-1" type="button" title="Toggle Light / Dark mode" aria-label="Toggle theme">
+        <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+      </button>
+
+      <!-- Notifications Bell Dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-sm btn-outline-aura px-2 py-1 position-relative" type="button" id="dashboardNotifDropdown" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+          <i class="bi bi-bell-fill"></i>
+          <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+            <span class="visually-hidden">New alerts</span>
+          </span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 py-2 mt-2" aria-labelledby="dashboardNotifDropdown" style="min-width: 290px;">
+          <li class="px-3 py-2 border-bottom d-flex justify-content-between align-items-center">
+            <span class="fw-bold small">Case Notifications</span>
+            <span class="badge bg-primary-subtle text-primary" style="font-size: 0.7rem;">2 New</span>
+          </li>
+          <li>
+            <a class="dropdown-item py-2 small d-flex gap-2 align-items-start" href="client-application-details.html">
+              <i class="bi bi-file-earmark-check text-success fs-6 mt-1"></i>
+              <div>
+                <div class="fw-semibold">ECA Assessment Verified</div>
+                <div class="text-muted" style="font-size: 0.75rem;">WES equivalency confirmed: Master's Degree</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item py-2 small d-flex gap-2 align-items-start" href="client-appointments.html">
+              <i class="bi bi-calendar-event text-primary fs-6 mt-1"></i>
+              <div>
+                <div class="fw-semibold">Counsel Video Call Booked</div>
+                <div class="text-muted" style="font-size: 0.75rem;">Oct 4 at 14:00 EST with Lead Counsel</div>
+              </div>
+            </a>
+          </li>
+          <li><hr class="dropdown-divider my-1"></li>
+          <li><a class="dropdown-item py-1 small text-center text-primary" href="client-application-details.html">View All File History</a></li>
+        </ul>
+      </div>
+
+      <!-- User Account Dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-sm btn-outline-aura d-flex align-items-center gap-2 dropdown-toggle px-2 py-1 shadow-none" type="button" id="dashboardUserDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="avatar-circle-sm bg-primary text-white" style="width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem; font-weight: 700;">SC</span>
+          <span class="small fw-semibold text-truncate d-none d-sm-inline-block text-white" style="max-width: 100px;">Sarah Chen</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 py-2 mt-2" aria-labelledby="dashboardUserDropdown" style="min-width: 230px;">
+          <li class="px-3 py-2 border-bottom">
+            <div class="fw-bold small text-truncate"><i class="bi bi-shield-check text-success me-1"></i>Sarah Chen</div>
+            <div class="text-muted text-truncate" style="font-size: 0.75rem;">sarah.chen@example.com</div>
+            <div class="badge bg-success-subtle text-success mt-1" style="font-size: 0.7rem;">Active Client • FSW Dossier</div>
+          </li>
+          <li><a class="dropdown-item py-2 small" href="client-dashboard.html"><i class="bi bi-speedometer2 me-2 text-primary"></i>Overview</a></li>
+          <li><a class="dropdown-item py-2 small" href="client-application-details.html"><i class="bi bi-folder2-open me-2 text-primary"></i>Application File</a></li>
+          <li><a class="dropdown-item py-2 small" href="client-documents.html"><i class="bi bi-file-earmark-arrow-up me-2 text-info"></i>Document Vault</a></li>
+          <li><a class="dropdown-item py-2 small" href="client-appointments.html"><i class="bi bi-calendar-event me-2 text-warning"></i>Consultations</a></li>
+          <li><a class="dropdown-item py-2 small" href="client-payments.html"><i class="bi bi-credit-card me-2 text-success"></i>Invoices & Retainers</a></li>
+          <li><a class="dropdown-item py-2 small" href="client-profile.html"><i class="bi bi-person-gear me-2 text-secondary"></i>Profile Settings</a></li>
+          <li><hr class="dropdown-divider my-1"></li>
+          <li><a class="dropdown-item py-2 small" href="index.html"><i class="bi bi-box-arrow-left me-2 text-secondary"></i>Back to Main Website</a></li>
+          <li><button class="dropdown-item py-2 small text-danger fw-semibold navbar-logout-btn" type="button"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</button></li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <!-- Dashboard Layout -->
