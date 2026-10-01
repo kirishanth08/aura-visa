@@ -3013,7 +3013,7 @@ select.form-select option {
    Advocates & Legal Counsel Cards
    ========================================== */
 .team-advocate-img {
-  height: 310px;
+  height: 340px;
   width: 100%;
   object-fit: cover;
   object-position: top center;
@@ -3025,15 +3025,75 @@ select.form-select option {
 }
 
 .team-advocate-header {
-  min-height: 52px;
+  min-height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.team-advocate-role {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.35;
+}
+
+.team-advocate-desc {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.4;
 }
 
 @media (max-width: 991.98px) {
   .team-advocate-img {
     height: 320px;
   }
-  .team-advocate-header {
+  .team-advocate-header,
+  .team-advocate-role,
+  .team-advocate-desc {
     min-height: auto;
   }
 }
+
+/* ==========================================
+   Regulatory Accreditations Cards Alignment
+   ========================================== */
+.accreditation-header {
+  min-height: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.accreditation-subtitle {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  line-height: 1.35;
+}
+
+.accreditation-desc {
+  min-height: 118px;
+  display: block;
+}
+
+.accreditation-note {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 991.98px) {
+  .accreditation-header,
+  .accreditation-subtitle,
+  .accreditation-desc,
+  .accreditation-note {
+    min-height: auto;
+  }
+}
+
 
