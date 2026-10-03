@@ -3096,4 +3096,691 @@ select.form-select option {
   }
 }
 
+/* ==========================================================================
+   Home 1: Welcoming & Interactive Enhancements
+   ========================================================================== */
+.welcoming-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: var(--accent);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+[data-bs-theme="dark"] .welcoming-hero-pill {
+  background: rgba(251, 191, 36, 0.15);
+  border-color: rgba(251, 191, 36, 0.3);
+  color: #fbbf24;
+}
+
+.goal-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.goal-chip-btn:hover,
+.goal-chip-btn.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(11, 27, 61, 0.18);
+}
+
+[data-bs-theme="dark"] .goal-chip-btn:hover,
+[data-bs-theme="dark"] .goal-chip-btn.active {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: #0b1b3d;
+}
+
+/* Interactive Readiness Scorecard */
+.interactive-scorecard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.score-circle-display {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, var(--primary-subtle) 0%, var(--bg-surface) 70%);
+  border: 4px solid var(--secondary);
+  box-shadow: 0 0 20px rgba(30, 86, 160, 0.15);
+  margin: 0 auto 1rem;
+  transition: transform var(--transition-base);
+}
+
+.score-circle-display .score-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primary);
+}
+
+[data-bs-theme="dark"] .score-circle-display .score-number {
+  color: var(--primary);
+}
+
+.score-circle-display .score-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Welcoming Lifestyle Cards */
+.lifestyle-card {
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  height: 100%;
+}
+
+.lifestyle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.lifestyle-card-img {
+  height: 210px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.lifestyle-card:hover .lifestyle-card-img {
+  transform: scale(1.04);
+}
+
+.lifestyle-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+  color: var(--text-muted);
+}
+
+/* Interactive Journey Stepper Node */
+.journey-node-card {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  height: 100%;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.journey-node-card:hover,
+.journey-node-card.active {
+  border-color: var(--secondary);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.journey-step-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  background: var(--secondary-subtle);
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.journey-node-card:hover .journey-step-badge,
+.journey-node-card.active .journey-step-badge {
+  background: var(--secondary);
+  color: #ffffff;
+}
+
+/* Concierge Arrival Tabs */
+.concierge-nav-pills .nav-link {
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.concierge-nav-pills .nav-link.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(11, 27, 61, 0.2);
+}
+
+[data-bs-theme="dark"] .concierge-nav-pills .nav-link.active {
+  background: var(--secondary);
+  color: #0b1b3d;
+}
+
+/* ==========================================================================
+   Home 2: Practical, Detailed & Service-Oriented Enhancements
+   ========================================================================== */
+.service-hero-stat-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service-jump-nav {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-jump-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.service-jump-link:hover {
+  background: var(--primary-subtle);
+  color: var(--primary);
+}
+
+/* Practical Service Cards */
+.practical-service-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.practical-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.practical-service-img {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.service-sla-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  background: rgba(4, 120, 87, 0.12);
+  color: var(--success);
+  border: 1px solid rgba(4, 120, 87, 0.25);
+}
+
+/* Service Comparison & Deliverables Matrix */
+.service-matrix-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.service-matrix-table th {
+  background: var(--bg-alt);
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.service-matrix-table td {
+  padding: 1rem 1.25rem;
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.service-matrix-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Interactive Statutory Fee Calculator */
+.statutory-fee-card {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.fee-breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--border-color);
+  font-size: 0.9rem;
+}
+
+.fee-breakdown-row.total-row {
+  border-top: 2px solid var(--primary);
+  border-bottom: none;
+  font-size: 1.15rem;
+  font-weight: 800;
+  padding-top: 1rem;
+}
+
+/* Interactive Document Audit Checklist */
+.doc-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.65rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.doc-checklist-item:hover {
+  background: var(--bg-surface);
+  border-color: var(--secondary);
+}
+
+.doc-checklist-item.checked {
+  background: rgba(4, 120, 87, 0.08);
+  border-color: rgba(4, 120, 87, 0.3);
+}
+
+.doc-checklist-item input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.15rem;
+  cursor: pointer;
+}
+
+.readiness-gauge-bar {
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--border-color);
+  overflow: hidden;
+}
+
+.readiness-gauge-progress {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, #10b981, #047857);
+  transition: width 0.4s ease;
+}
+
+/* ==========================================================================
+   Uniform Alignment System: Testimonials, Lifestyle Cards, & Service Cards
+   ========================================================================== */
+
+/* 1. Testimonial Profile Alignment & Image */
+.testimonial-quote-box {
+  min-height: 108px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote-box p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.testimonial-profile-wrap {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 66px;
+}
+
+.testimonial-avatar-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(var(--primary-rgb), 0.15);
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonial-profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.testimonial-profile-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+  line-height: 1.25;
+  color: var(--text-main);
+}
+
+.testimonial-profile-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.lifestyle-card .card-body-padded {
+  padding: 1.25rem;
+}
+
+.lifestyle-card-header {
+  min-height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.65rem;
+}
+
+.lifestyle-country-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: var(--text-main);
+}
+
+.lifestyle-card-header .badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.lifestyle-card-desc {
+  min-height: 70px;
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+  line-height: 1.45;
+}
+
+.lifestyle-metrics-wrap {
+  min-height: 98px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.lifestyle-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  width: fit-content;
+  max-width: 100%;
+  white-space: nowrap;
+  border: 1px solid var(--border-color);
+  line-height: 1.3;
+}
+
+.lifestyle-card-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.85rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 54px;
+}
+
+.lifestyle-price-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lifestyle-price-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.lifestyle-price-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+/* 3. Practical Service Cards Alignment (Home 2) */
+/* Top 3 Columns */
+.practical-service-badges {
+  min-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.practical-service-title {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.practical-service-desc {
+  min-height: 76px;
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.45;
+}
+
+.practical-service-deliverables {
+  min-height: 138px;
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.practical-service-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.85rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 54px;
+}
+
+.service-fee-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-fee-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.service-fee-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.practical-service-footer .btn,
+.practical-wide-footer .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Bottom 2 Wide Columns */
+.practical-wide-badges {
+  min-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.practical-wide-title {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.practical-wide-desc {
+  min-height: 72px;
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.practical-wide-subbox {
+  min-height: 128px;
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.practical-wide-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.85rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 54px;
+}
+
+@media (max-width: 991.98px) {
+  .testimonial-quote-box,
+  .testimonial-profile-wrap,
+  .lifestyle-card-desc,
+  .lifestyle-metrics-wrap,
+  .practical-service-title,
+  .practical-service-desc,
+  .practical-service-deliverables,
+  .practical-wide-desc,
+  .practical-wide-subbox {
+    min-height: auto;
+  }
+}
+
+
+
 

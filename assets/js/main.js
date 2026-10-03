@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileOffcanvasNav();
   initNavbarAuth();
   initAdmissionsMatcher();
+  initHome1Interactions();
+  initHome2ServiceTools();
 });
 
 /* ==========================================
@@ -679,4 +681,301 @@ function initNavbarAuth() {
     });
   }
 }
+
+/* ==========================================
+   Home 1: Welcoming & Interactive Engine
+   ========================================== */
+function initHome1Interactions() {
+  // 1. Goal Chips Switcher
+  const goalChips = document.querySelectorAll('.goal-chip-btn');
+  const goalAdviceText = document.getElementById('welcomingGoalAdvice');
+  const goalAdviceHeading = document.getElementById('welcomingGoalHeading');
+
+  const goalDescriptions = {
+    'settle': {
+      title: 'Family & Permanent Relocation',
+      desc: 'Looking for safety, world-class free healthcare, top-ranking schools, and a permanent home where your entire family can thrive with dignity.'
+    },
+    'career': {
+      title: 'Global Career & Skilled Migration',
+      desc: 'High-income opportunities in tech, engineering, healthcare, and finance with fast-track permanent residency under Canadian Express Entry or Australia GSM.'
+    },
+    'study': {
+      title: 'World-Class Education & Post-Study Work',
+      desc: 'Top global university admissions, generous tuition scholarships, and guaranteed 2 to 4-year post-graduation work authorization leading to citizenship.'
+    },
+    'invest': {
+      title: 'Business, Investment & Global Mobility',
+      desc: 'Sovereign Golden Visas and residency-by-investment programs providing visa-free access to 180+ countries and tax-optimized wealth preservation.'
+    }
+  };
+
+  goalChips.forEach(chip => {
+    chip.addEventListener('click', (e) => {
+      e.preventDefault();
+      goalChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      const goal = chip.getAttribute('data-goal');
+      if (goal && goalDescriptions[goal] && goalAdviceHeading && goalAdviceText) {
+        goalAdviceHeading.textContent = goalDescriptions[goal].title;
+        goalAdviceText.textContent = goalDescriptions[goal].desc;
+      }
+    });
+  });
+
+  // 2. Interactive Readiness Scorecard
+  const readinessForm = document.getElementById('welcomingReadinessForm');
+  if (readinessForm) {
+    const scoreVal = document.getElementById('welcomingScoreValue');
+    const statusText = document.getElementById('welcomingScoreStatus');
+    const adviceText = document.getElementById('welcomingScoreAdvice');
+    const recommendedRoute = document.getElementById('welcomingRecommendedRoute');
+
+    function updateReadiness() {
+      let score = 30; // base score
+      const ageSelect = document.getElementById('readinessAge');
+      const eduSelect = document.getElementById('readinessEdu');
+      const expSelect = document.getElementById('readinessExp');
+      const langSelect = document.getElementById('readinessLang');
+
+      if (ageSelect) score += parseInt(ageSelect.value || 0, 10);
+      if (eduSelect) score += parseInt(eduSelect.value || 0, 10);
+      if (expSelect) score += parseInt(expSelect.value || 0, 10);
+      if (langSelect) score += parseInt(langSelect.value || 0, 10);
+
+      score = Math.min(100, Math.max(25, score));
+
+      if (scoreVal) scoreVal.textContent = score;
+
+      if (statusText && adviceText && recommendedRoute) {
+        if (score >= 80) {
+          statusText.className = 'badge bg-success-subtle text-success fs-6 px-3 py-1 rounded-pill';
+          statusText.textContent = 'Outstanding Readiness (High PR Probability)';
+          adviceText.textContent = 'Your profile is highly competitive! You meet the top tiers for federal invitations with an estimated 4-6 month timeline.';
+          recommendedRoute.textContent = 'Canada Express Entry (Federal Skilled Worker) / Australia 189 PR';
+        } else if (score >= 60) {
+          statusText.className = 'badge bg-primary-subtle text-primary fs-6 px-3 py-1 rounded-pill';
+          statusText.textContent = 'Good Readiness (Provincial Nomination Recommended)';
+          adviceText.textContent = 'You have strong fundamentals! A provincial nomination (PNP) or employer sponsorship stream will guarantee your permanent invitation.';
+          recommendedRoute.textContent = 'Ontario / BC PNP Tech Pathway or Germany Chancenkarte';
+        } else {
+          statusText.className = 'badge bg-warning-subtle text-warning fs-6 px-3 py-1 rounded-pill';
+          statusText.textContent = 'Preliminary Readiness (Bridging Pathway Recommended)';
+          adviceText.textContent = 'A student-to-PR bridge or targeted language scoring improvement will elevate you directly into the permanent resident pool.';
+          recommendedRoute.textContent = 'Study Abroad Master\'s + Post-Graduation Work Permit (PGWP)';
+        }
+      }
+    }
+
+    readinessForm.addEventListener('change', updateReadiness);
+    updateReadiness();
+  }
+
+  // 3. Interactive Journey Stepper
+  const journeyNodes = document.querySelectorAll('.journey-node-card');
+  const journeyDetailContainer = document.getElementById('journeyDetailBox');
+
+  const journeyDetails = [
+    {
+      title: 'Phase 1: Warm Welcome & Holistic Profile Discovery',
+      counselorAdvice: 'We listen to your personal story, assess your academic credentials, evaluate family needs, and calculate your exact point scores across 45+ global visa streams with zero guesswork.',
+      deliverables: ['Credential equivalency pre-check', 'Personalized visa pathway roadmap', 'Transparent timeline and budget blueprint'],
+      timeline: 'Days 1 - 3'
+    },
+    {
+      title: 'Phase 2: Stress-Free Dossier Assembly & Legal Vetting',
+      counselorAdvice: 'No stress over paperwork. Our legal team coordinates sworn translations, apostilles, reference letters, and police checks, ensuring every document is 100% compliant with consular regulations.',
+      deliverables: ['Certified sworn translations & notarization', 'Employer reference letter drafting with matching NOC codes', 'Settlement funds verification'],
+      timeline: 'Weeks 2 - 4'
+    },
+    {
+      title: 'Phase 3: Authorized Government Filing & Case Officer Representation',
+      counselorAdvice: 'Your case is lodged through registered attorney portals with formal legal representation letters. We handle all case officer inquiries, biometric appointments, and medical coordination directly.',
+      deliverables: ['Official portal lodgement with attorney seal', 'Real-time application status tracking', 'Proactive response to procedural fairness notes'],
+      timeline: 'Months 2 - 5'
+    },
+    {
+      title: 'Phase 4: Visa Celebration & Welcome Concierge On Arrival',
+      counselorAdvice: 'When your visa is stamped, our partnership is just beginning! Our Welcome Concierge team coordinates your airport reception, transitional housing, social insurance (SIN), and community integration.',
+      deliverables: ['COPR & Passport Stamping Assistance', 'Airport reception & First-48-Hours Welcome Kit', 'Banking, Healthcare (OHIP/Medicare) & SIN/TFN enrollment'],
+      timeline: 'Arrival Day & Beyond'
+    }
+  ];
+
+  journeyNodes.forEach((node, idx) => {
+    node.addEventListener('click', () => {
+      journeyNodes.forEach(n => n.classList.remove('active'));
+      node.classList.add('active');
+
+      const data = journeyDetails[idx];
+      if (data && journeyDetailContainer) {
+        journeyDetailContainer.innerHTML = `
+          <div class="p-4 bg-surface rounded-4 border shadow-sm mt-3 animate-fade-in">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+              <h4 class="fs-5 fw-bold mb-0 text-primary">${data.title}</h4>
+              <span class="badge bg-secondary-subtle text-secondary fw-semibold px-3 py-1 rounded-pill">
+                <i class="bi bi-clock-history me-1"></i> ${data.timeline}
+              </span>
+            </div>
+            <p class="text-muted mb-3">${data.counselorAdvice}</p>
+            <div class="row g-2">
+              ${data.deliverables.map(item => `
+                <div class="col-md-4">
+                  <div class="p-2 bg-alt rounded small text-main d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-success fs-6"></i>
+                    <span>${item}</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+    });
+  });
+
+  // 4. Lifestyle Destination Filter
+  const lifestyleTabs = document.querySelectorAll('[data-lifestyle-filter]');
+  lifestyleTabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      lifestyleTabs.forEach(t => t.classList.remove('active', 'btn-primary-aura'));
+      tab.classList.add('active', 'btn-primary-aura');
+
+      const filter = tab.getAttribute('data-lifestyle-filter');
+      const cards = document.querySelectorAll('.lifestyle-card-col');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-lifestyle-type');
+        if (filter === 'all' || cat === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+/* ==========================================
+   Home 2: Practical, Detailed & Service Tools
+   ========================================== */
+function initHome2ServiceTools() {
+  // 1. Interactive Statutory Fee & Cost Matrix Calculator
+  const feeForm = document.getElementById('statutoryFeeCalcForm');
+  if (feeForm) {
+    const feeGovtEl = document.getElementById('calcGovtFee');
+    const feeMedicalEl = document.getElementById('calcMedicalFee');
+    const feeEcaEl = document.getElementById('calcEcaFee');
+    const feeLegalEl = document.getElementById('calcLegalFee');
+    const feeTotalEl = document.getElementById('calcTotalBudget');
+
+    const pricingModel = {
+      'canada': {
+        'skilled': { govt: 1365, med: 350, eca: 260, legal: 2800 },
+        'corporate': { govt: 1550, med: 350, eca: 0, legal: 3800 },
+        'appeals': { govt: 500, med: 0, eca: 0, legal: 4500 },
+        'investor': { govt: 2140, med: 350, eca: 260, legal: 7500 },
+        'family': { govt: 1080, med: 350, eca: 0, legal: 2200 }
+      },
+      'australia': {
+        'skilled': { govt: 4640, med: 420, eca: 550, legal: 3400 },
+        'corporate': { govt: 3100, med: 420, eca: 0, legal: 4200 },
+        'appeals': { govt: 3374, med: 0, eca: 0, legal: 4800 },
+        'investor': { govt: 9450, med: 420, eca: 0, legal: 8900 },
+        'family': { govt: 8850, med: 420, eca: 0, legal: 2600 }
+      },
+      'uk': {
+        'skilled': { govt: 1420, med: 700, eca: 210, legal: 2900 },
+        'corporate': { govt: 2400, med: 700, eca: 0, legal: 4500 },
+        'appeals': { govt: 140, med: 0, eca: 0, legal: 3800 },
+        'investor': { govt: 1623, med: 700, eca: 0, legal: 9500 },
+        'family': { govt: 1846, med: 700, eca: 0, legal: 2400 }
+      },
+      'germany': {
+        'skilled': { govt: 100, med: 150, eca: 200, legal: 2200 },
+        'corporate': { govt: 250, med: 150, eca: 0, legal: 3200 },
+        'appeals': { govt: 300, med: 0, eca: 0, legal: 3600 },
+        'investor': { govt: 500, med: 150, eca: 0, legal: 6500 },
+        'family': { govt: 100, med: 150, eca: 0, legal: 1800 }
+      }
+    };
+
+    function recalculateFees() {
+      const country = (document.getElementById('feeCountrySelect')?.value || 'canada').toLowerCase();
+      const service = (document.getElementById('feeServiceSelect')?.value || 'skilled').toLowerCase();
+      const dependentsMultiplier = parseFloat(document.getElementById('feeDependentsSelect')?.value || '1');
+
+      const countryData = pricingModel[country] || pricingModel['canada'];
+      const data = countryData[service] || countryData['skilled'];
+
+      const govt = Math.round(data.govt * (dependentsMultiplier > 1 ? dependentsMultiplier * 0.8 : 1));
+      const med = Math.round(data.med * dependentsMultiplier);
+      const eca = data.eca;
+      const legal = Math.round(data.legal * (dependentsMultiplier > 1 ? 1 + (dependentsMultiplier - 1) * 0.35 : 1));
+      const total = govt + med + eca + legal;
+
+      if (feeGovtEl) feeGovtEl.textContent = `$${govt.toLocaleString()}`;
+      if (feeMedicalEl) feeMedicalEl.textContent = `$${med.toLocaleString()}`;
+      if (feeEcaEl) feeEcaEl.textContent = `$${eca.toLocaleString()}`;
+      if (feeLegalEl) feeLegalEl.textContent = `$${legal.toLocaleString()}`;
+      if (feeTotalEl) feeTotalEl.textContent = `$${total.toLocaleString()}`;
+    }
+
+    feeForm.addEventListener('change', recalculateFees);
+    recalculateFees();
+  }
+
+  // 2. Interactive Document Audit & Pre-Filing Diagnostic Checklist
+  const checkItems = document.querySelectorAll('.doc-audit-checkbox');
+  const readinessGauge = document.getElementById('docReadinessGaugeProgress');
+  const readinessPercentText = document.getElementById('docReadinessPercent');
+  const readinessBadge = document.getElementById('docReadinessBadge');
+  const readinessTip = document.getElementById('docReadinessTip');
+
+  if (checkItems.length > 0 && readinessGauge) {
+    function updateDocAudit() {
+      let checkedCount = 0;
+      checkItems.forEach(cb => {
+        const itemWrap = cb.closest('.doc-checklist-item');
+        if (cb.checked) {
+          checkedCount++;
+          if (itemWrap) itemWrap.classList.add('checked');
+        } else {
+          if (itemWrap) itemWrap.classList.remove('checked');
+        }
+      });
+
+      const percent = Math.round((checkedCount / checkItems.length) * 100);
+      readinessGauge.style.width = `${percent}%`;
+      if (readinessPercentText) readinessPercentText.textContent = `${percent}%`;
+
+      if (readinessBadge && readinessTip) {
+        if (percent === 100) {
+          readinessBadge.className = 'badge bg-success text-white px-3 py-1';
+          readinessBadge.textContent = '100% Audit Ready for Lodgement';
+          readinessTip.textContent = 'All statutory documents verified! Dossier can be submitted to government case officers immediately.';
+        } else if (percent >= 66) {
+          readinessBadge.className = 'badge bg-primary text-white px-3 py-1';
+          readinessBadge.textContent = 'Substantially Complete (70%+)';
+          readinessTip.textContent = 'Core credentials verified. Complete the remaining items to initiate case officer pre-lodgement review.';
+        } else if (percent >= 33) {
+          readinessBadge.className = 'badge bg-warning text-dark px-3 py-1';
+          readinessBadge.textContent = 'Documentation In-Progress';
+          readinessTip.textContent = 'Foundational identity gathered. Begin your police clearances and certified translations now.';
+        } else {
+          readinessBadge.className = 'badge bg-secondary text-white px-3 py-1';
+          readinessBadge.textContent = 'Preliminary Stage';
+          readinessTip.textContent = 'Check off documents as you assemble them to track your official consular filing status.';
+        }
+      }
+    }
+
+    checkItems.forEach(cb => {
+      cb.addEventListener('change', updateDocAudit);
+    });
+    updateDocAudit();
+  }
+}
+
 
