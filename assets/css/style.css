@@ -726,6 +726,16 @@ header.sticky-top {
     justify-content: space-between !important;
   }
 
+  .offcanvas .nav-link.dropdown-toggle::after {
+    transition: transform 0.25s ease !important;
+    transform-origin: center !important;
+  }
+
+  .offcanvas .nav-link.dropdown-toggle.show::after,
+  .offcanvas .nav-link.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg) !important;
+  }
+
   .offcanvas .nav-link i {
     font-size: 1.15rem !important;
     width: 22px !important;

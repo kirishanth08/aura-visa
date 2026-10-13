@@ -349,52 +349,28 @@ function initTooltips() {
    Mobile Offcanvas Navigation & Dropdown Accordions
    ========================================== */
 function initMobileOffcanvasNav() {
-  const dropdownToggles = document.querySelectorAll('.offcanvas .dropdown-toggle');
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', function(e) {
-      if (window.innerWidth >= 992) return;
+  const offcanvasEl = document.getElementById('offcanvasNavbar');
 
-      e.preventDefault();
-      e.stopPropagation();
-
-      const dropdownParent = this.closest('.dropdown');
-      if (!dropdownParent) return;
-
-      const menu = dropdownParent.querySelector('.dropdown-menu');
-      if (!menu) return;
-
-      const isCurrentlyOpen = menu.classList.contains('show');
-
-      document.querySelectorAll('.offcanvas .dropdown-menu.show').forEach(openMenu => {
-        if (openMenu !== menu) {
-          openMenu.classList.remove('show');
-          const siblingToggle = openMenu.closest('.dropdown')?.querySelector('.dropdown-toggle');
-          if (siblingToggle) {
-            siblingToggle.classList.remove('show');
-            siblingToggle.setAttribute('aria-expanded', 'false');
-          }
-        }
-      });
-
-      if (isCurrentlyOpen) {
+  // Reset offcanvas submenus when drawer is closed so it reopens in a clean state
+  if (offcanvasEl) {
+    offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+      document.querySelectorAll('.offcanvas .dropdown-menu.show').forEach(menu => {
         menu.classList.remove('show');
-        this.classList.remove('show');
-        this.setAttribute('aria-expanded', 'false');
-      } else {
-        menu.classList.add('show');
-        this.classList.add('show');
-        this.setAttribute('aria-expanded', 'true');
-      }
+      });
+      document.querySelectorAll('.offcanvas .dropdown-toggle.show, .offcanvas .dropdown-toggle[aria-expanded="true"]').forEach(toggle => {
+        toggle.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
     });
-  });
+  }
 
+  // Auto-close offcanvas on mobile when clicking navigation links or dropdown items
   const dropdownItems = document.querySelectorAll('.offcanvas .dropdown-item, .offcanvas .nav-link:not(.dropdown-toggle)');
   dropdownItems.forEach(item => {
     item.addEventListener('click', function() {
       if (window.innerWidth >= 992) return;
       const href = this.getAttribute('href');
-      if (href && href !== '#') {
-        const offcanvasEl = document.getElementById('offcanvasNavbar');
+      if (href && href !== '#' && !href.startsWith('javascript:')) {
         if (offcanvasEl && typeof bootstrap !== 'undefined' && bootstrap.Offcanvas) {
           const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
           if (bsOffcanvas) bsOffcanvas.hide();
